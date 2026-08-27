@@ -1,0 +1,21 @@
+# Normalise line endings for text files
+* text=auto
+
+# Review items: one file per item, LF everywhere so iOS (Working Copy), macOS
+# and Windows agree byte-for-byte. (Deliberately NO merge=union: it corrupts
+# this layout on concurrent appends — see docs/FEEDBACK_SCHEMA.md.)
+feedback/*.md text eol=lf
+feedback.md    text eol=lf
+
+# LaTeX sources and toolkit files
+*.tex text eol=lf
+*.bib text eol=lf
+*.md  text eol=lf
+*.py  text eol=lf
+*.sh  text eol=lf
+*.yml text eol=lf
+
+# Binaries
+*.pdf binary
+*.png binary
+*.jpg binary

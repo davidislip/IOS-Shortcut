@@ -1,0 +1,34 @@
+\section{Methodology}
+\label{sec:method}
+
+Let $K$ be a bounded, compactly supported kernel and $h = h_n \to 0$ a
+bandwidth sequence. The Nadaraya--Watson estimator is
+\begin{equation}
+  \hat m_h(x) = \frac{\sum_{i=1}^n K\!\left(\frac{x - X_i}{h}\right) Y_i}
+                     {\sum_{i=1}^n K\!\left(\frac{x - X_i}{h}\right)}.
+  \label{eq:nw}
+\end{equation}
+
+\begin{theorem}[Uniform consistency]
+\label{thm:main}
+Suppose $m$ is Lipschitz, $f$ is bounded away from zero on $[0,1]$, and
+$nh/\log n \to \infty$. Then
+\[
+  \sup_{x \in [0,1]} \bigl|\hat m_h(x) - m(x)\bigr| \xrightarrow{\;p\;} 0 .
+\]
+\end{theorem}
+
+\begin{proof}
+The bias term is handled by the Lipschitz condition. For the stochastic
+term, a standard chaining argument over a grid of mesh $h^2$ combined
+with Bernstein's inequality yields the rate. We therefore conclude that
+the estimator is consistent uniformly over the unit interval, which is
+the sufficient condition required for the affine correction step in
+Section~\ref{sec:conclusion}.
+\end{proof}
+
+\begin{lemma}
+\label{lem:variance}
+Under the assumptions of Theorem~\ref{thm:main}, the variance of the
+stochastic term is of order $(nh)^{-1}$ uniformly in $x$.
+\end{lemma}
