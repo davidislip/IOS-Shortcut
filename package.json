@@ -1,0 +1,27 @@
+{
+  "name": "cppad",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline C++ learning app for iPad: real Clang in WebAssembly, an editor, a terminal, and AI-generated lessons.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check-lessons": "node scripts/check-lessons.mjs",
+    "generate-lesson": "node scripts/generate-lesson.mjs"
+  },
+  "dependencies": {
+    "@bjorn3/browser_wasi_shim": "0.4.2",
+    "@codemirror/lang-cpp": "^6.0.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@lezer/cpp": "^1.1.6",
+    "@lezer/highlight": "^1.2.1",
+    "@yowasp/clang": "22.0.0-git20542-10",
+    "codemirror": "^6.0.2",
+    "marked": "^15.0.0"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
+    "esbuild": "^0.25.0"
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>cppad</title>
+  <meta name="description" content="Learn C++ offline: lessons, an editor and a terminal with a real compiler.">
+  <meta name="theme-color" content="#16181d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="cppad">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-tab="lesson">
+  <header class="topbar">
+    <button id="btn-menu" class="icon-btn" type="button" aria-label="Lessons">☰</button>
+    <div class="brand">cpp<span>ad</span></div>
+    <div id="lesson-title" class="topbar-title"></div>
+    <button id="btn-toggle-lesson" class="icon-btn wide-only" type="button" aria-label="Show or hide the lesson" title="Show/hide lesson">▤</button>
+    <button id="btn-run" class="run-btn" type="button" title="Compile and run (⌘↩)">▶ Run</button>
+  </header>
+
+  <main class="panes">
+    <section id="lesson-pane" class="pane">
+      <article id="lesson" class="lesson"></article>
+      <footer class="lesson-actions">
+        <button id="btn-check" type="button">Check ✓</button>
+        <button id="btn-done" type="button">Mark done</button>
+        <span class="spacer"></span>
+        <button id="btn-next" type="button">Next lesson →</button>
+      </footer>
+    </section>
+
+    <section id="code-pane" class="pane">
+      <div class="pane-head">
+        <span id="file-name" class="file-name">main.cpp</span>
+        <span class="spacer"></span>
+        <button id="btn-reset" type="button" title="Restore the starter code">Reset</button>
+        <button id="btn-font-down" type="button" aria-label="Smaller text">A−</button>
+        <button id="btn-font-up" type="button" aria-label="Larger text">A+</button>
+      </div>
+      <div id="editor"></div>
+      <div id="keybar" class="keybar" role="toolbar" aria-label="Symbol keys"></div>
+    </section>
+
+    <section id="term-pane" class="pane">
+      <div class="pane-head">
+        <span class="file-name">terminal</span>
+        <span class="spacer"></span>
+        <button id="btn-eof" class="when-running" type="button" title="Send end-of-input (ctrl-D)">EOF</button>
+        <button id="btn-stop" class="when-running danger" type="button" title="Stop the program (ctrl-C)">■ Stop</button>
+        <button id="btn-clear" type="button">Clear</button>
+      </div>
+      <div id="terminal" class="terminal"></div>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <button type="button" data-tab="lesson" class="active">📖 Lesson</button>
+    <button type="button" data-tab="code">✎ Code</button>
+    <button type="button" data-tab="term">❯_ Terminal</button>
+  </nav>
+
+  <div id="drawer-scrim"></div>
+  <aside id="drawer" aria-label="Lessons">
+    <div class="drawer-head">
+      <div class="brand">cpp<span>ad</span></div>
+      <div id="progress-text" class="dim"></div>
+      <div class="progress"><div id="progress-bar"></div></div>
+    </div>
+    <ul id="lesson-list"></ul>
+    <div class="drawer-foot">
+      <button id="compiler-status" type="button" data-state="missing"></button>
+      <p class="dim small">New lessons are written by Claude on a schedule and appear here next time you're online. Add this page to your Home Screen for the best offline experience.</p>
+    </div>
+  </aside>
+
+  <div id="toast" role="status"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

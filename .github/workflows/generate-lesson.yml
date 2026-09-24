@@ -1,0 +1,48 @@
+name: Generate lesson
+
+on:
+  schedule:
+    # Mondays and Thursdays, 10:00 UTC. Edit to taste.
+    - cron: "0 10 * * 1,4"
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Topic (leave blank for the next one in lessons/CURRICULUM.md)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: generate-lesson
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - id: gen
+        run: node scripts/generate-lesson.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ inputs.topic }}
+      - name: Commit lesson
+        run: |
+          git config user.name "cppad-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lessons/
+          git commit -m "Add lesson: ${{ steps.gen.outputs.title }}"
+          git push
+
+  deploy:
+    needs: generate
+    uses: ./.github/workflows/deploy.yml
