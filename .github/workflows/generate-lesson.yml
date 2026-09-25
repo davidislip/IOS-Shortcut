@@ -25,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true # in case the textbook is stored with Git LFS
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -35,6 +37,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOPIC: ${{ inputs.topic }}
+          TEXTBOOK_URL: ${{ secrets.TEXTBOOK_URL }}
       - name: Commit lesson
         run: |
           git config user.name "cppad-bot"

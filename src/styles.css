@@ -126,6 +126,7 @@ body.is-running .run-btn { opacity: .5; }
 .lesson blockquote p { margin: .3em 0; }
 .lesson table { border-collapse: collapse; font-size: .9em; }
 .lesson th, .lesson td { border: 1px solid var(--line); padding: 4px 10px; }
+.lesson-source { color: var(--warn); font-size: 14px; margin-top: 4px; }
 .lesson-meta { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
 .code-card { margin: 1em 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .code-card.starter { border-color: #3e6a2f; }

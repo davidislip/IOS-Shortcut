@@ -21,15 +21,28 @@ It's a web app (PWA). Add it to your Home Screen and it opens full-screen like a
 
 ## New lessons
 
-`.github/workflows/generate-lesson.yml` runs on Mondays and Thursdays. It:
+`.github/workflows/generate-lesson.yml` runs twice a week (Mondays and Thursdays). It:
 
-1. asks Claude for the next topic in [`lessons/CURRICULUM.md`](lessons/CURRICULUM.md),
-2. compiles every full program in the lesson and checks that the solution prints exactly the expected output (and sends any failures back to Claude to fix),
-3. commits the lesson to `main` and redeploys.
+1. picks the next topic: the **next section of your textbook** if there is one (see below), otherwise the next topic in [`lessons/CURRICULUM.md`](lessons/CURRICULUM.md),
+2. has Claude write the lesson for a complete beginner, one idea at a time,
+3. compiles every full program in the lesson and checks that the solution prints exactly the expected output, sending any failures back to Claude to fix,
+4. commits the lesson to `main` and redeploys.
 
 The app picks up new lessons the next time it's online and marks them **new**.
 
-To steer what you learn, edit `CURRICULUM.md`. To request a specific topic now, go to **Actions → Generate lesson → Run workflow** (this works from the GitHub iPhone/iPad app too) and type a topic.
+To request a specific topic now, go to **Actions → Generate lesson → Run workflow** (this works from the GitHub iPhone/iPad app too) and type a topic.
+
+### Using your textbook
+
+Put one C++ textbook (`.pdf`, `.md` or `.txt`) in [`textbook/`](textbook/). The generator works through it from page 1:
+each lesson teaches the next section, skips things that don't apply here (preface, installing a compiler, IDE setup),
+and records the pages it covered in `source_pages`, so the next lesson picks up where it left off. Each lesson shows
+"📖 Textbook pages 45–52" so you can read along. Claude writes its own explanations and exercises rather than copying the book.
+
+**If the repo is public, a book committed here is public too.** Keep it private by hosting the file elsewhere and adding its
+download URL as an Actions secret named `TEXTBOOK_URL`. Details in [`textbook/README.md`](textbook/README.md).
+
+To preview what Claude would be given for the next lesson without calling the API: `DRY_RUN=1 npm run generate-lesson`.
 
 ### Lesson format
 
@@ -63,6 +76,7 @@ npm install
 npm run build          # -> dist/
 npm run serve          # http://localhost:8080
 npm run check-lessons  # compile + run every lesson with the same toolchain
+DRY_RUN=1 npm run generate-lesson                        # show the prompt for the next lesson
 ANTHROPIC_API_KEY=... npm run generate-lesson             # write the next lesson
 TOPIC="std::variant" ANTHROPIC_API_KEY=... npm run generate-lesson
 ```

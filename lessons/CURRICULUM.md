@@ -1,5 +1,8 @@
 # Curriculum roadmap
 
+If there's a textbook in `textbook/`, lessons follow the book instead, and this
+roadmap is only used once the book is finished (or when there's no book).
+
 The lesson generator picks the first topic below that isn't covered yet by an
 existing lesson. Edit freely: reorder, add topics you care about, or mark a
 line with `(skip)`. Lessons are generated in order, so this is how you steer
