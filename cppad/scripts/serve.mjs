@@ -1,11 +1,11 @@
-// Tiny static server for local testing: node scripts/serve.mjs [port]
+// Tiny static server for local testing: node scripts/serve.mjs [port] [dir]
 // (Serves dist/ without COOP/COEP headers on purpose, like GitHub Pages, so
 // the service worker's header injection gets exercised.)
 import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 
-const root = "dist";
+const root = process.argv[3] ?? "dist";
 const port = Number(process.argv[2] ?? 8080);
 const types = {
   ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css",
