@@ -2,7 +2,7 @@
 
 A self-contained C++ learning app for the subway:
 
-- **Lessons**: Markdown tutorials, each ending in a small exercise with an automatic output check. New lessons are written by Claude from your textbook whenever you ask, and verified by compiling and running them before they're published.
+- **Lessons**: Markdown tutorials, each ending in a small exercise with an automatic output check. New lessons are written by Claude from your textbooks whenever you ask, and verified by compiling and running them before they're published.
 - **Editor**: CodeMirror with C++ highlighting and a row of symbol keys (`{ } ; < > :: <<` …) so you don't have to hunt through the iPad keyboard.
 - **Terminal**: a simulated shell (`run`, `check`, `g++ -O2 main.cpp`, `./main`, `cat`, `flags`, `help` …) with coloured compiler errors you can tap to jump to the line, interactive `std::cin`, and a Stop button for infinite loops.
 - **A real compiler on the device**: Clang/LLVM 22 compiled to WebAssembly ([YoWASP](https://yowasp.org/)) builds your code to WebAssembly and runs it locally. After the one-time download (≈27 MB), nothing needs the network.
@@ -25,7 +25,7 @@ Claude app) and say, for example:
 > add 2 lessons from the textbook
 
 Claude follows the [`cppad-add-lessons`](../.claude/skills/cppad-add-lessons/SKILL.md) skill: it reads the next
-pages of your textbook (or the next topic in [`lessons/CURRICULUM.md`](lessons/CURRICULUM.md) if there's no book),
+pages of your textbooks (or the next topic in [`lessons/CURRICULUM.md`](lessons/CURRICULUM.md) if there's no book),
 writes the lessons for a complete beginner, checks that every program compiles and that each solution prints exactly
 the expected output, and commits them. Once they're on `main`, the *Pages* workflow redeploys, and the app picks them
 up the next time it's online and marks them **new**.
@@ -33,17 +33,21 @@ up the next time it's online and marks them **new**.
 You can also ask for a specific topic ("add a lesson on std::map"), a different number of lessons, or changes to an
 existing lesson.
 
-### Using your textbook
+### Using your textbooks
 
-Put one C++ textbook (`.pdf`, `.md` or `.txt`) in [`textbook/`](textbook/). Lessons work through it from page 1:
-each lesson teaches the next section, skips things that don't apply here (preface, installing a compiler, IDE setup),
-and records the pages it covered in `source_pages`, so the next lesson picks up where it left off. Each lesson shows
-"📖 Textbook pages 45–52" so you can read along. Claude writes its own explanations and exercises rather than copying the book.
+Put your C++ textbooks (`.pdf`, `.md` or `.txt`) in [`textbook/`](textbook/). Lessons work through them one after
+another, in file-name order (rename them `1-…`, `2-…` to choose), each from its first chapter: every lesson teaches
+the next section, skips things that don't apply here (preface, installing a compiler, IDE setup), and records the
+book and pages it covered (`source`, `source_pages`), so the next lesson picks up where it left off. Each lesson shows
+"📖 A Tour of C++, pages 5–7", using the page numbers printed in the book, so you can read along. Claude writes its
+own explanations and exercises rather than copying the book.
 
-`npm run next-pages` shows where you are in the book and extracts the next pages to `textbook/.next-pages.txt`.
+`npm run next-pages` shows how far the lessons have got in each book and extracts the next pages to
+`textbook/.next-pages.txt`.
 
-**If the repo is public, a book committed here is public too.** See [`textbook/README.md`](textbook/README.md) for
-keeping it elsewhere.
+**The books stay on your computer.** `textbook/` is git-ignored (except its README) because this repo is public, and
+a committed book would be published. See [`textbook/README.md`](textbook/README.md) for Claude Code sessions that
+don't run on your computer.
 
 ### Lesson format
 
@@ -53,6 +57,8 @@ id: 9
 title: std::map and counting words
 concept: std::map, operator[], structured bindings
 minutes: 12
+source: A Tour of C++  ← textbook lessons only: the book…
+source_pages: 94-96    ← …and the pages printed in it
 ---
 # Title
 
@@ -79,7 +85,7 @@ npm install
 npm run build          # -> dist/
 npm run serve          # http://localhost:8080
 npm run check-lessons  # compile + run every lesson with the same toolchain
-npm run next-pages     # where the lessons are in the textbook; extracts the next pages
+npm run next-pages     # where the lessons are in the textbooks; extracts the next pages
 ```
 
 Layout:

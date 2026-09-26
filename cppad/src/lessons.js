@@ -66,7 +66,7 @@ const marked = new Marked({
 
 export function renderLesson(lesson) {
   const { meta } = lesson;
-  const header = `<div class="lesson-meta">${meta.id != null ? `Lesson ${escapeHtml(String(meta.id))}` : ""}${meta.minutes ? ` · ~${escapeHtml(String(meta.minutes))} min` : ""}${meta.concept ? ` · ${escapeHtml(String(meta.concept))}` : ""}</div>${meta.source_pages ? `<div class="lesson-source">📖 Textbook pages ${escapeHtml(String(meta.source_pages).replace("-", "–"))}</div>` : ""}`;
+  const header = `<div class="lesson-meta">${meta.id != null ? `Lesson ${escapeHtml(String(meta.id))}` : ""}${meta.minutes ? ` · ~${escapeHtml(String(meta.minutes))} min` : ""}${meta.concept ? ` · ${escapeHtml(String(meta.concept))}` : ""}</div>${meta.source_pages ? `<div class="lesson-source">📖 ${meta.source ? `${escapeHtml(String(meta.source))}, pages` : "Textbook pages"} ${escapeHtml(String(meta.source_pages).replace("-", "–"))}</div>` : ""}`;
   const title = meta.title && !/^\s*#\s/.test(lesson.body) ? `<h1>${escapeHtml(meta.title)}</h1>` : "";
   return header + title + marked.parse(lesson.body);
 }

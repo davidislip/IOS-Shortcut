@@ -1,18 +1,23 @@
-# Your textbook goes here
+# Your textbooks go here
 
-Drop **one** C++ textbook in this folder as a `.pdf`, `.md` or `.txt` file.
-When you ask Claude Code to add lessons, it works through the book in order,
-from page 1: each new lesson covers the next section and records the pages
-it used in its `source_pages` front matter. The app shows those pages so you
-can read along. When the book runs out, lessons come from
-`lessons/CURRICULUM.md`.
+Drop your C++ textbooks in this folder as `.pdf`, `.md` or `.txt` files.
+When you ask Claude Code to add lessons, it works through them one after
+another, in file-name order (rename them `1-…`, `2-…` to change the order),
+each from its first chapter. Every new lesson covers the next section and
+records the book and the printed page numbers it used (`source` and
+`source_pages` in its front matter); the app shows them so you can read
+along. When the books run out, lessons come from `lessons/CURRICULUM.md`.
 
-- Claude writes original explanations and exercises based on the book; it
-  doesn't copy the book's text into lessons.
-- The book is never published with the app; only the lessons are.
-- **If this repository is public, the book would be public too.** In that
-  case don't commit it here. Put it somewhere private with a direct-download
-  link, and set `TEXTBOOK_URL` to that link as an environment variable in
-  your Claude Code environment settings.
-- Files over 50 MB: GitHub warns at 50 MB and rejects files over 100 MB,
-  so use Git LFS (`git lfs track "textbook/*.pdf"`) or `TEXTBOOK_URL`.
+- Claude writes original explanations and exercises based on the books; it
+  doesn't copy their text into lessons.
+- **The books stay on your computer.** Everything in this folder except this
+  README is git-ignored, because this repository is public and a committed
+  book would be public too. Only the lessons are published.
+- So "add lessons" works in a Claude Code session on your computer. For
+  sessions that don't have your files (e.g. claude.ai/code), put the books
+  somewhere private with direct-download links and set `TEXTBOOK_URL` to
+  those links, separated by spaces and in reading order, as an environment
+  variable in your Claude Code environment settings.
+- If the repository becomes private and you want to commit a book anyway,
+  `git add -f` it. GitHub warns at 50 MB and rejects files over 100 MB, so
+  use Git LFS (`git lfs track "textbook/*.pdf"`) for big ones.

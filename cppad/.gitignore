@@ -1,4 +1,7 @@
 node_modules/
 dist/
 .DS_Store
-textbook/.next-pages.txt
+# Textbooks stay on your computer: this repo is public, so a committed book
+# would be published (see textbook/README.md). Also covers .next-pages.txt.
+textbook/*
+!textbook/README.md

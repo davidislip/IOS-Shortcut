@@ -5,7 +5,9 @@
 //   node scripts/check-lessons.mjs lessons/009-*.md
 import { readdir, readFile } from "node:fs/promises";
 import { basename } from "node:path";
+import { pathToFileURL } from "node:url";
 import { parseLesson, normalizeOutput } from "../src/lesson-format.js";
+import { parsePageRange } from "./textbook.mjs";
 import { compile, run } from "./toolchain.mjs";
 
 process.removeAllListeners("warning"); // node:wasi is "experimental"
@@ -19,6 +21,12 @@ export async function checkLesson(text) {
   if (!lesson.starter) problems.push("no ```cpp starter block");
   if (!lesson.solution) problems.push("no ```cpp solution block");
   if (lesson.expected == null) problems.push("no ```expected block");
+  if (meta.source_pages != null && !parsePageRange(meta.source_pages)) {
+    problems.push("`source_pages` must be a page or a range, e.g. 12-14");
+  }
+  if ((meta.source != null) !== (meta.source_pages != null)) {
+    problems.push("`source` (the book) and `source_pages` go together");
+  }
 
   const blocks = [...body.matchAll(/^```(cpp[^\n]*)\n([\s\S]*?)^```[ \t]*$/gm)];
   for (const [, info, code] of blocks) {
@@ -45,7 +53,7 @@ export async function checkLesson(text) {
   return problems;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   let files = process.argv.slice(2);
   if (!files.length) {
     files = (await readdir("lessons")).filter((f) => /^\d.*\.md$/.test(f)).sort().map((f) => `lessons/${f}`);

@@ -1,6 +1,6 @@
 ---
 name: cppad-add-lessons
-description: Write new cppad C++ lessons, from the next pages of the learner's textbook (cppad/textbook/) or from cppad/lessons/CURRICULUM.md, check that they compile and produce their expected output, and commit them. Use when asked to add, write or generate lessons for cppad, or "add lessons from the textbook".
+description: Write new cppad C++ lessons, from the next pages of the learner's textbooks (cppad/textbook/) or from cppad/lessons/CURRICULUM.md, check that they compile and produce their expected output, and commit them. Use when asked to add, write or generate lessons for cppad, or "add lessons from the textbook".
 ---
 
 # Adding cppad lessons
@@ -14,11 +14,12 @@ writing those lessons. Unless the learner says otherwise, add **2 lessons** per 
 All commands run in `cppad/`.
 
 1. `npm ci` if `node_modules/` is missing.
-2. `npm run next-pages` prints the next lesson id and the next textbook page, and writes
-   the next ~40 pages of extracted text to `textbook/.next-pages.txt`. Read that file.
-   - If it says there's no textbook, or the textbook is finished, take the next uncovered
-     topic from `lessons/CURRICULUM.md` instead, and leave out `source_pages`.
-   - If the learner named a topic, teach that topic and leave out `source_pages`.
+2. `npm run next-pages` prints the next lesson id, the book to use next (the books are read
+   one after another) and its next printed page, and writes the next ~40 pages of extracted
+   text to `textbook/.next-pages.txt`. Read that file.
+   - If it says there's no textbook, or the textbooks are finished, take the next uncovered
+     topic from `lessons/CURRICULUM.md` instead, and leave out `source` and `source_pages`.
+   - If the learner named a topic, teach that topic and leave out `source` and `source_pages`.
 3. Read 1–2 existing lessons (e.g. `lessons/003-decisions-and-loops.md`) for format and tone,
    and skim the titles and concepts of all the lessons so you don't repeat one.
 4. Write each lesson to `lessons/NNN-short-slug.md` (3-digit id, slug from the title).
@@ -27,11 +28,11 @@ All commands run in `cppad/`.
    program with the app's toolchain and runs the solution against `expected` (and `stdin`).
    Fix and re-run until it passes. Never weaken `expected` to match wrong output without
    understanding why.
-6. Commit only the lesson files, with a message like `cppad: add lessons 9-10 (textbook pp. 12-31)`,
+6. Commit only the lesson files, with a message like `cppad: add lessons 9-10 (A Tour of C++ pp. 12-31)`,
    and push. The app picks lessons up once they're on `main` (the Pages workflow deploys)
    and marks them **new**. If you're working on a branch, open a PR and tell the learner
    the lessons appear after merging.
-7. Tell the learner the lesson titles, the textbook pages covered, and where the next lesson
+7. Tell the learner the lesson titles, the book and pages covered, and where the next lesson
    will start.
 
 ## The learner
@@ -62,7 +63,8 @@ id: <number>
 title: <short title>
 concept: <comma-separated key concepts>
 minutes: <estimate, 10–15>
-source_pages: <first>-<last>      # only for textbook lessons
+source: <book title, exactly as next-pages prints it>   # only for textbook lessons
+source_pages: <first>-<last>      # printed page numbers in that book
 ---
 # <Title>
 
@@ -90,8 +92,10 @@ headers. Fragments without `main` are fine for illustration.
 - The exercise takes 5–10 minutes, has a clear spec, and shows the expected output before the starter.
 - `> 💡` for tips, `> ⚠️` for pitfalls.
 
-## Using the textbook
+## Using the textbooks
 
+- The books in `textbook/` are read one after another, in file-name order; `next-pages` says
+  which one is next. They stay on the learner's computer (git-ignored), so never commit them.
 - The book sets the order and scope: teach the next section, not something from later.
 - Write your own explanations, examples and exercises. Don't copy the book's prose (at most a
   short phrase); reusing its terminology and the idea behind an example is fine.
@@ -100,7 +104,9 @@ headers. Fragments without `main` are fine for illustration.
   walkthroughs, history), and content existing lessons already teach well, but go deeper
   where the book adds substance.
 - One lesson = one teachable idea, usually one book section (a few pages).
-- `source_pages` starts at the first page after the previous textbook lesson (the page
-  `next-pages` reports, including any skipped pages) and ends at the last page this lesson
-  teaches. Don't end mid-idea, and don't claim pages you didn't teach: the next lesson
-  starts on the page after.
+- `source_pages` uses the page numbers printed in the book (the `number` of each `<page>` in
+  `.next-pages.txt`, not its `pdf-page`), so the learner can read along. It starts at the page
+  `next-pages` reports (including any skipped pages; or on the previous lesson's last page, if
+  this lesson's section starts partway down that page) and ends at the last page this lesson
+  teaches. Don't end mid-idea, and don't claim pages you didn't teach: the next lesson starts
+  on the page after.

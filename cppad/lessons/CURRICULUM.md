@@ -1,14 +1,14 @@
 # Curriculum roadmap
 
-If there's a textbook in `textbook/`, lessons follow the book instead, and this
-roadmap is only used once the book is finished (or when there's no book).
+If there are textbooks in `textbook/`, lessons follow the books instead, and
+this roadmap is only used once they're finished (or when there's no book).
 
 When adding lessons without a textbook, Claude picks the first topic below
 that isn't covered yet by an existing lesson. Edit freely: reorder, add topics you care about, or mark a
 line with `(skip)`. Lessons are added in order, so this is how you steer
 what you learn next.
 
-## Foundations (lessons 1–8, written)
+## Foundations
 - Hello world, compiling, std::cout
 - Variables, types, auto, const
 - if/else, loops, range-for
