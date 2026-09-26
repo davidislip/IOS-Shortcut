@@ -1,0 +1,27 @@
+name: cppad · Check
+
+on:
+  pull_request:
+    paths: ["cppad/**", ".github/workflows/cppad-check.yml"]
+  push:
+    branches-ignore: [main]
+    paths: ["cppad/**", ".github/workflows/cppad-check.yml"]
+
+defaults:
+  run:
+    working-directory: cppad
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: cppad/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - name: Compile and run every lesson
+        run: npm run check-lessons

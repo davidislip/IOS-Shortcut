@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#16181d"/>
+  <rect x="40" y="40" width="432" height="432" rx="84" fill="#1d2027" stroke="#313640" stroke-width="6"/>
+  <text x="84" y="236" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-weight="700" font-size="120" fill="#8ee06f">&gt;_</text>
+  <text x="84" y="392" font-family="Menlo, 'DejaVu Sans Mono', monospace" font-weight="700" font-size="150" fill="#5fb3ff">C++</text>
+</svg>
