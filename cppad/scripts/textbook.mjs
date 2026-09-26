@@ -1,5 +1,5 @@
-// Loads the learner's textbook as an array of page texts so the lesson
-// generator can work through it in order.
+// Loads the learner's textbook as an array of page texts so lessons can
+// work through it in order.
 //
 // Sources, in order of preference:
 //   1. the first .pdf / .md / .txt file in textbook/ (README.md excluded)
@@ -14,7 +14,7 @@ export async function loadTextbook(dir = "textbook") {
   let bytes;
   let files = [];
   try {
-    files = (await readdir(dir)).filter((f) => /\.(pdf|md|txt)$/i.test(f) && f.toLowerCase() !== "readme.md").sort();
+    files = (await readdir(dir)).filter((f) => !f.startsWith(".") && /\.(pdf|md|txt)$/i.test(f) && f.toLowerCase() !== "readme.md").sort();
   } catch {}
   if (files.length) {
     name = files[0];

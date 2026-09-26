@@ -1,5 +1,5 @@
 // Node-side helpers to compile and run C++ with the same toolchain the app
-// uses in the browser. Used by check-lessons.mjs and generate-lesson.mjs.
+// uses in the browser. Used by check-lessons.mjs.
 import { runClang } from "@yowasp/clang";
 import { WASI } from "node:wasi";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";

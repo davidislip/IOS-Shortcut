@@ -2,7 +2,7 @@
 
 A self-contained C++ learning app for the subway:
 
-- **Lessons**: Markdown tutorials, each ending in a small exercise with an automatic output check. New lessons are written by Claude on a schedule and verified by compiling and running them before they're published.
+- **Lessons**: Markdown tutorials, each ending in a small exercise with an automatic output check. New lessons are written by Claude from your textbook whenever you ask, and verified by compiling and running them before they're published.
 - **Editor**: CodeMirror with C++ highlighting and a row of symbol keys (`{ } ; < > :: <<` …) so you don't have to hunt through the iPad keyboard.
 - **Terminal**: a simulated shell (`run`, `check`, `g++ -O2 main.cpp`, `./main`, `cat`, `flags`, `help` …) with coloured compiler errors you can tap to jump to the line, interactive `std::cin`, and a Stop button for infinite loops.
 - **A real compiler on the device**: Clang/LLVM 22 compiled to WebAssembly ([YoWASP](https://yowasp.org/)) builds your code to WebAssembly and runs it locally. After the one-time download (≈27 MB), nothing needs the network.
@@ -16,33 +16,34 @@ It's a web app (PWA). Add it to your Home Screen and it opens full-screen like a
 2. **Merge to `main`**. The *Pages* workflow builds the site and publishes it to
    `https://davidislip.github.io/IOS-Shortcut/cppad/`.
 3. **On the iPad** (on Wi-Fi): open that URL in Safari, then tap **Share → Add to Home Screen**. Open the app from the Home Screen, open the ☰ menu and tap **Download compiler**. Once it says *Compiler ready · offline*, you're set for the subway.
-4. **For AI-generated lessons**: add a repository secret `ANTHROPIC_API_KEY`
-   (**Settings → Secrets and variables → Actions → New repository secret**).
 
 ## New lessons
 
-`.github/workflows/cppad-generate-lesson.yml` (at the repo root) runs twice a week (Mondays and Thursdays). It:
+Lessons are added on demand, no API key needed. Open a Claude Code session on this repo (claude.ai/code, or the
+Claude app) and say, for example:
 
-1. picks the next topic: the **next section of your textbook** if there is one (see below), otherwise the next topic in [`lessons/CURRICULUM.md`](lessons/CURRICULUM.md),
-2. has Claude write the lesson for a complete beginner, one idea at a time,
-3. compiles every full program in the lesson and checks that the solution prints exactly the expected output, sending any failures back to Claude to fix,
-4. commits the lesson to `main` and redeploys.
+> add 2 lessons from the textbook
 
-The app picks up new lessons the next time it's online and marks them **new**.
+Claude follows the [`cppad-add-lessons`](../.claude/skills/cppad-add-lessons/SKILL.md) skill: it reads the next
+pages of your textbook (or the next topic in [`lessons/CURRICULUM.md`](lessons/CURRICULUM.md) if there's no book),
+writes the lessons for a complete beginner, checks that every program compiles and that each solution prints exactly
+the expected output, and commits them. Once they're on `main`, the *Pages* workflow redeploys, and the app picks them
+up the next time it's online and marks them **new**.
 
-To request a specific topic now, go to **Actions → cppad · Generate lesson → Run workflow** (this works from the GitHub iPhone/iPad app too) and type a topic.
+You can also ask for a specific topic ("add a lesson on std::map"), a different number of lessons, or changes to an
+existing lesson.
 
 ### Using your textbook
 
-Put one C++ textbook (`.pdf`, `.md` or `.txt`) in [`textbook/`](textbook/). The generator works through it from page 1:
+Put one C++ textbook (`.pdf`, `.md` or `.txt`) in [`textbook/`](textbook/). Lessons work through it from page 1:
 each lesson teaches the next section, skips things that don't apply here (preface, installing a compiler, IDE setup),
 and records the pages it covered in `source_pages`, so the next lesson picks up where it left off. Each lesson shows
 "📖 Textbook pages 45–52" so you can read along. Claude writes its own explanations and exercises rather than copying the book.
 
-**If the repo is public, a book committed here is public too.** Keep it private by hosting the file elsewhere and adding its
-download URL as an Actions secret named `TEXTBOOK_URL`. Details in [`textbook/README.md`](textbook/README.md).
+`npm run next-pages` shows where you are in the book and extracts the next pages to `textbook/.next-pages.txt`.
 
-To preview what Claude would be given for the next lesson without calling the API: `DRY_RUN=1 npm run generate-lesson`.
+**If the repo is public, a book committed here is public too.** See [`textbook/README.md`](textbook/README.md) for
+keeping it elsewhere.
 
 ### Lesson format
 
@@ -78,9 +79,7 @@ npm install
 npm run build          # -> dist/
 npm run serve          # http://localhost:8080
 npm run check-lessons  # compile + run every lesson with the same toolchain
-DRY_RUN=1 npm run generate-lesson                        # show the prompt for the next lesson
-ANTHROPIC_API_KEY=... npm run generate-lesson             # write the next lesson
-TOPIC="std::variant" ANTHROPIC_API_KEY=... npm run generate-lesson
+npm run next-pages     # where the lessons are in the textbook; extracts the next pages
 ```
 
 Layout:
@@ -92,5 +91,5 @@ Layout:
 | `src/runner-worker.js` | runs your program (WASI) in a Web Worker; blocking stdin via `SharedArrayBuffer` |
 | `src/terminal.js`, `src/editor.js` | terminal emulator, CodeMirror setup + key row |
 | `src/sw.js` | service worker: offline caching and the COOP/COEP headers that `SharedArrayBuffer` needs (GitHub Pages can't set headers) |
-| `scripts/` | lesson checker and generator, local dev server |
+| `scripts/` | lesson checker, textbook page extraction, local dev server |
 | `lessons/` | the lessons and the curriculum roadmap |
