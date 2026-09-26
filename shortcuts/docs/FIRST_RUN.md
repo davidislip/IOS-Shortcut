@@ -83,7 +83,7 @@ with your own paper you see your sentence and your file.
 If `validate` reports errors, the Text block in the shortcut was altered by
 the keyboard — see [TROUBLESHOOTING.md](TROUBLESHOOTING.md) § Desktop
 validate errors. Open the item file on the desktop and compare it with
-`templates/review-item.md`.
+`feedback/TEMPLATE.md`.
 
 ## 6. Clean up
 

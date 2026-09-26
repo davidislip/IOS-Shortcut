@@ -1,7 +1,7 @@
 # Implementation Spec (v2): Mobile LaTeX Review — iOS Shortcuts + Working Copy
 
 > **Status:** implemented. This file is the product and engineering
-> specification; the deliverables it describes are in this repository
+> specification; the deliverables it describes are in this folder
 > (`README.md` is the front door, `docs/README.md` the reading guide).
 > Section 15 lists what changed from the v1 draft and why.
 >

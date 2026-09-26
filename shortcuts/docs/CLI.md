@@ -180,7 +180,7 @@ an explicit `Still OPEN:` list. `--json` gives the same data.
 ## Tests
 
 `tests/test_feedback.py` uses `unittest` (so the stdlib-only promise holds;
-pytest runs the same file). Run:
+pytest runs the same file). In the toolkit clone, run from `shortcuts/`:
 
 ```
 python -m unittest discover -s tests -v

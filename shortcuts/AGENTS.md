@@ -1,10 +1,12 @@
 # Instructions for coding agents (Claude Code, Codex, others)
 
-This repository is a toolkit for reviewing a LaTeX paper's PDF on iPhone/iPad
+This folder is a toolkit for reviewing a LaTeX paper's PDF on iPhone/iPad
 (iOS Shortcuts + Working Copy), collecting the comments as one small Markdown
 file per item under `feedback/`, and having an AI agent resolve them on the
 desktop. The specification is `plan_mobile_ios_working_copy.md`; user-facing
-documentation is in `docs/` (start with `docs/README.md`).
+documentation is in `docs/` (start with `docs/README.md`). It is the
+`shortcuts/` folder of the iOS projects monorepo: paths and commands below
+are relative to this folder, so run them from here.
 
 ## Layout
 
@@ -19,8 +21,9 @@ documentation is in `docs/` (start with `docs/README.md`).
 - `docs/shortcuts/*.md` — tap-by-tap build recipes for the iOS Shortcuts.
 - `templates/` — the exact text blocks the shortcuts and the CLI emit.
 - `examples/sample-paper/` — small compilable paper
-  (`latexmk -pdf -jobname=paper main.tex` → `paper.pdf`) used by the tests and
-  as a demo repository to clone into Working Copy.
+  (`latexmk -pdf -jobname=paper main.tex` → `paper.pdf`) used by the tests,
+  and as a demo: copy it into a repository of its own (`docs/INSTALL.md`) and
+  clone that into Working Copy.
 - `tests/` — `unittest` suite (`python -m unittest discover -s tests`).
 
 ## Resolving review feedback

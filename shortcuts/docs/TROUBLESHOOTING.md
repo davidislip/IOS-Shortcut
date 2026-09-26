@@ -67,7 +67,7 @@ add a real Python to PATH.
 
 | Message | Cause | Fix |
 |---|---|---|
-| `cannot resolve an ID from heading 'Rev-…'` | Auto-capitalisation changed `rev-` when the block was typed | Fix the file (`## Review rev-…`), then re-paste the Text block in the shortcut from `templates/review-item.md`. |
+| `cannot resolve an ID from heading 'Rev-…'` | Auto-capitalisation changed `rev-` when the block was typed | Fix the file (`## Review rev-…`), then re-paste the Text block in the shortcut from `feedback/TEMPLATE.md`. |
 | `missing **PDF text** section` / `missing **Feedback**` | Smart Punctuation turned `**` or `>` into other characters, or the heading words were retyped | Same: re-paste the template; never type the block. |
 | `invalid status` | The `**Status:**` line was altered | Re-paste; fix the file to `**Status:** OPEN`. |
 | `file name … does not match ID` (warning) | The **Path** in step 13 does not use the same `[ID]` variable as the heading | Make both use the `ID` variable. |

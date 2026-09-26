@@ -15,10 +15,11 @@ every command below.
 
 ## 2. Run the installer
 
-From a clone of this toolkit, where `/path/to/paper-repo` is your local
-clone of the paper repository:
+From a clone of this repository (the toolkit is its `shortcuts/` folder),
+where `/path/to/paper-repo` is your local clone of the paper repository:
 
 ```text
+cd shortcuts
 python scripts/install_toolkit.py /path/to/paper-repo
 ```
 
@@ -87,23 +88,24 @@ python scripts/feedback.py validate      # OK: 0 items (0 open, 0 done, 0 wontfi
 
 ## 5. On the iPhone / iPad
 
-1. Install and set up Working Copy, clone the repository, enable the Files
-   location — [WORKING_COPY_SETUP.md](WORKING_COPY_SETUP.md).
+1. Install and set up Working Copy, clone the paper repository, enable the
+   Files location — [WORKING_COPY_SETUP.md](WORKING_COPY_SETUP.md).
 2. Build the shortcuts — [shortcuts/README.md](shortcuts/README.md)
    (01 and 03 are required).
 3. Run the first-capture test — [FIRST_RUN.md](FIRST_RUN.md).
 
 ## Try it with the sample paper first (recommended)
 
-`examples/sample-paper/` in this toolkit is a small paper that compiles and
-already contains `feedback/README.md` and a tracked `paper.pdf`. To rehearse
-the whole loop without touching your real paper:
+`shortcuts/examples/sample-paper/` in a clone of this repository is a small
+paper that compiles and already contains `feedback/README.md` and a tracked
+`paper.pdf`. To rehearse the whole loop without touching your real paper:
 
-1. Copy `examples/sample-paper/` somewhere, `git init`, commit, and push it
-   to a scratch remote (a new, empty private GitHub repo is fine:
-   `git remote add origin <url>` then `git push -u origin HEAD`). Run the
-   installer on it (`python scripts/install_toolkit.py /path/to/sample-copy`),
-   commit, push.
+1. Copy that folder somewhere, `git init`, commit, and push it to a scratch
+   remote (a new, empty private GitHub repo is fine:
+   `git remote add origin <url>` then `git push -u origin HEAD`). From
+   `shortcuts/`, run the installer on it
+   (`python scripts/install_toolkit.py /path/to/sample-copy`), then commit
+   and push the copy.
 2. Clone that remote in Working Copy and build the shortcuts against it.
 3. Capture two or three items from `paper.pdf`, run **Finish Paper Review**,
    pull on the desktop, run `python scripts/feedback.py locate --all` and

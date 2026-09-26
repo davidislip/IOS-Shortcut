@@ -31,17 +31,18 @@ Need to justify why this convergence is uniform.
 
 **Desktop (once per paper)**
 
-1. From a clone of this toolkit,
+1. From the `shortcuts/` folder of a clone of this repository,
    `python scripts/install_toolkit.py /path/to/paper-repo` (your local clone
    of the paper) — copies the CLI, the agent prompt, `feedback/README.md`,
    and merges `.gitattributes` / `AGENTS.md` ([docs/INSTALL.md](docs/INSTALL.md)).
-2. Build the PDF with `[T1]{fontenc}` + `lmodern` and **commit `paper.pdf`**
+2. In the paper repo, build the PDF with `[T1]{fontenc}` + `lmodern` and
+   **commit `paper.pdf`**
    ([docs/PDF_COPY_FIDELITY.md](docs/PDF_COPY_FIDELITY.md)).
 3. `git commit && git push`.
 
 **iPhone / iPad (once)**
 
-4. Install Working Copy, add your Git host, clone the repository, enable the
+4. Install Working Copy, add your Git host, clone the paper repo, enable the
    Files location ([docs/WORKING_COPY_SETUP.md](docs/WORKING_COPY_SETUP.md)).
 5. Build **Add Paper Feedback** and **Finish Paper Review** tap by tap from
    [docs/shortcuts/](docs/shortcuts/README.md) (≈20 minutes; iOS cannot
@@ -69,7 +70,7 @@ Need to justify why this convergence is uniform.
 * Desktop: Python 3.9+ (stdlib only), git, LaTeX with `latexmk`, Claude Code
   or Codex. Full list: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md).
 
-## Repository layout
+## Folder layout
 
 ```text
 docs/                      user documentation (start at docs/README.md)
@@ -140,6 +141,8 @@ plan_mobile_ios_working_copy.md   the specification and its change log
 * Math copied from a PDF is garbage in every reader; select prose.
 
 ## Tests
+
+From `shortcuts/`:
 
 ```text
 python -m unittest discover -s tests -v      # 135 tests, standard library only
