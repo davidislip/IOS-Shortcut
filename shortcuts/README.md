@@ -145,7 +145,7 @@ plan_mobile_ios_working_copy.md   the specification and its change log
 From `shortcuts/`:
 
 ```text
-python -m unittest discover -s tests -v      # 135 tests, standard library only
+python -m unittest discover -s tests -v      # 136 tests, standard library only
 ```
 
 (`python -m pytest -q tests` works too.) The suites use temporary copies of

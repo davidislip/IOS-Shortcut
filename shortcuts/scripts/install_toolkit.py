@@ -162,6 +162,10 @@ def install(target: Path, force: bool, dry_run: bool) -> int:
         print(f"error: {target} is the toolkit itself - pass the paper repository to install into",
               file=sys.stderr)
         return 1
+    if target.resolve() in TOOLKIT.parents:
+        print(f"error: {target} contains the toolkit ({TOOLKIT.as_posix()}) - pass the paper repository to install into",
+              file=sys.stderr)
+        return 1
     if not (target / ".git").exists():
         print(f"warning: {target} has no .git directory - is this the paper repository?")
 
@@ -213,7 +217,7 @@ def install(target: Path, force: bool, dry_run: bool) -> int:
     print("  1. Review the changes (git status), then commit and push them from the desktop:")
     print('       git add -A && git commit -m "Add mobile review toolkit" && git push')
     print("  2. Make sure the compiled PDF (e.g. paper.pdf) is committed - the phone reads it from the repo.")
-    print("  3. On the iPhone/iPad: clone the repository in Working Copy (docs/WORKING_COPY_SETUP.md).")
+    print("  3. On the iPhone/iPad: clone the paper repository in Working Copy (docs/WORKING_COPY_SETUP.md).")
     print("  4. Build the shortcuts from docs/shortcuts/ (01 and 03 are required).")
     print("  5. Run the first-capture test (docs/FIRST_RUN.md).")
     return 0

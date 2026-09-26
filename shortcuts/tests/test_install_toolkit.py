@@ -166,6 +166,13 @@ class TestInstall(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertIn("toolkit itself", err)
 
+    def test_refuses_a_folder_that_contains_the_toolkit(self):
+        # e.g. the root of the monorepo clone the toolkit lives in (shortcuts/)
+        code, out, err = run([REPO.parent, "--dry-run"])
+        self.assertEqual(code, 1)
+        self.assertIn("contains the toolkit", err)
+        self.assertNotIn("create", out)
+
 
 if __name__ == "__main__":
     unittest.main()
