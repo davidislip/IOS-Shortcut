@@ -1,4 +1,4 @@
-// Shared by the app (browser) and the Node scripts (build, check, generate).
+// Shared by the app (browser) and the Node scripts (build, check, next-pages).
 //
 // A lesson is a Markdown file with a small front-matter header:
 //
