@@ -12,14 +12,16 @@ const CLANG_CACHE = "cppad-clang-__CLANG_VERSION__";
 self.addEventListener("install", (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(SHELL_CACHE);
-    await cache.addAll(SHELL);
+    // no-cache: revalidate with the server, so a new worker never stores the
+    // previous version from the HTTP cache (GitHub Pages sends max-age=600).
+    await cache.addAll(SHELL.map((url) => new Request(url, { cache: "no-cache" })));
     // Prefetch every lesson so they're readable offline.
     try {
       const res = await fetch("lessons/index.json", { cache: "no-cache" });
       const index = await res.clone().json();
       const lessons = await caches.open(LESSON_CACHE);
       await lessons.put("lessons/index.json", res);
-      await Promise.all(index.map((l) => lessons.add(`lessons/${l.file}`).catch(() => {})));
+      await Promise.all(index.map((l) => lessons.add(new Request(`lessons/${l.file}`, { cache: "no-cache" })).catch(() => {})));
     } catch {}
     await self.skipWaiting();
   })());

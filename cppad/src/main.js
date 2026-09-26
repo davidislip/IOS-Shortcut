@@ -560,6 +560,12 @@ async function registerServiceWorker() {
     console.warn("service worker registration failed", e);
     return;
   }
+  // A Home Screen app coming back from the background doesn't reload, so it
+  // wouldn't look for a new version of the app until it's relaunched.
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState !== "visible") return;
+    navigator.serviceWorker.getRegistration().then((r) => r?.update()).catch(() => {});
+  });
   navigator.serviceWorker.addEventListener("controllerchange", () => {
     if (!hadController) {
       // First install: reload once so the worker can add the cross-origin

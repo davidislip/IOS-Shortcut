@@ -162,7 +162,12 @@ details.solution summary { cursor: pointer; color: var(--warn); }
   display: flex; gap: 5px; overflow-x: auto; padding: 6px 8px;
   background: var(--bg-2); border-top: 1px solid var(--line);
   scrollbar-width: none;
+  /* sideways scrolling only: no double-tap zoom when a key is tapped twice fast */
+  touch-action: pan-x;
+  /* holding a key must not start text selection or the callout on its label */
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
 }
+.keybar button.pressed { filter: brightness(1.3); }
 .keybar::-webkit-scrollbar { display: none; }
 .keybar button {
   flex: 0 0 auto; min-width: 40px; min-height: 38px; padding: 4px 8px;

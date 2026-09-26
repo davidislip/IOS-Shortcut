@@ -10,7 +10,9 @@ import { oneDark } from "@codemirror/theme-one-dark";
 
 const KEYS = [
   { label: "⇥", insert: "    ", title: "Tab" },
-  "{", "}", "(", ")", "[", "]", "<", ">", ";", ":", "\"", "'", "&", "*", "=", "+", "-", "/", "#", "!", "|", ",", ".", "_",
+  "{", "}", "(", ")", "[", "]", "<", ">", ";", ":", "\"", "'",
+  { label: "\\n", insert: "\\n", title: "Newline escape (\\n)" },
+  "&", "*", "=", "+", "-", "/", "#", "!", "|", ",", ".", "_",
   { label: "<<", insert: " << " },
   { label: "::", insert: "::" },
   { label: "←", move: -1, title: "Cursor left" },
@@ -45,21 +47,60 @@ export function createEditor(parent, keybar, { onChange, onRun }) {
     }),
   });
 
+  const press = (spec) => {
+    if (spec.cmd) spec.cmd(view);
+    else if (spec.move) {
+      const pos = Math.max(0, Math.min(view.state.doc.length, view.state.selection.main.head + spec.move));
+      view.dispatch({ selection: { anchor: pos } });
+    } else insertText(view, spec.insert);
+    view.focus();
+  };
+
+  // A key acts when the finger lifts without having moved, so sliding the row
+  // to reach other keys doesn't type the key the slide started on. A slide
+  // shows up as movement, as the row scrolling, or as pointercancel (the
+  // browser taking over the gesture to scroll); any of them cancels the press.
+  // Presses are tracked per pointer so two overlapping fingers both type.
+  const downs = new Map(); // pointerId -> { btn, x, y, scroll }
+  let lastScroll = -Infinity;
+  const release = (id) => {
+    const d = downs.get(id);
+    d?.btn.classList.remove("pressed");
+    downs.delete(id);
+    return d;
+  };
+  keybar.addEventListener("scroll", () => {
+    lastScroll = performance.now();
+    for (const id of [...downs.keys()]) release(id);
+  }, { passive: true });
+  const moved = (d, e) => Math.hypot(e.clientX - d.x, e.clientY - d.y) > 10;
   for (const k of KEYS) {
     const spec = typeof k === "string" ? { label: k, insert: k } : k;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.textContent = spec.label;
     btn.title = spec.title ?? spec.label;
-    // pointerdown + preventDefault keeps focus (and the keyboard) in the editor.
     btn.addEventListener("pointerdown", (e) => {
+      // preventDefault keeps focus (and the keyboard) in the editor.
       e.preventDefault();
-      if (spec.cmd) spec.cmd(view);
-      else if (spec.move) {
-        const pos = Math.max(0, Math.min(view.state.doc.length, view.state.selection.main.head + spec.move));
-        view.dispatch({ selection: { anchor: pos } });
-      } else insertText(view, spec.insert);
-      view.focus();
+      if (e.button !== 0) return;
+      // A tap that stops a still-coasting row only stops it, as elsewhere in iOS.
+      if (performance.now() - lastScroll < 150) return;
+      // Mouse and trackpad: keep getting this pointer's events after it leaves the key.
+      try { btn.setPointerCapture(e.pointerId); } catch {}
+      downs.set(e.pointerId, { btn, x: e.clientX, y: e.clientY, scroll: keybar.scrollLeft });
+      btn.classList.add("pressed");
+    });
+    btn.addEventListener("pointermove", (e) => {
+      const d = downs.get(e.pointerId);
+      if (d && moved(d, e)) release(e.pointerId);
+    }, { passive: true });
+    btn.addEventListener("pointercancel", (e) => release(e.pointerId), { passive: true });
+    btn.addEventListener("pointerup", (e) => {
+      const d = release(e.pointerId);
+      if (!d || d.btn !== btn || keybar.scrollLeft !== d.scroll || moved(d, e)) return;
+      e.preventDefault();
+      press(spec);
     });
     keybar.append(btn);
   }
