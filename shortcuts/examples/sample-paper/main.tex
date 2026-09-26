@@ -1,0 +1,39 @@
+% Sample paper used by the mobile-review toolkit tests and as a demo repository.
+% Build with:  latexmk -pdf -jobname=paper main.tex     (produces paper.pdf)
+\documentclass[11pt]{article}
+
+% Copy/paste-friendly PDF text: T1 encoding + Latin Modern (Type 1, not bitmap).
+% LaTeX 2021-06-01 or newer with pdfTeX also adds the ToUnicode map automatically,
+% so ligatures such as "fi" copy as two letters. See docs/PDF_COPY_FIDELITY.md.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\title{Uniform Convergence of a Kernel Estimator\\ \large (sample paper for the mobile review workflow)}
+\author{A.~Reviewer \and B.~Author}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study a kernel-type estimator of a regression function and establish
+sufficient conditions for its uniform consistency. The analysis is
+efficient in the sense that it requires only finite second moments of
+the noise.
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/methodology}
+\input{sections/conclusion}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
