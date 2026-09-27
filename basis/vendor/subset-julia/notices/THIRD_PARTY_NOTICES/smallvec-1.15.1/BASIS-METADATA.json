@@ -1,0 +1,11 @@
+{
+  "name": "smallvec",
+  "version": "1.15.1",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/servo/rust-smallvec",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

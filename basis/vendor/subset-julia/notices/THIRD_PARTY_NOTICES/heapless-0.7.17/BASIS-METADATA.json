@@ -1,0 +1,11 @@
+{
+  "name": "heapless",
+  "version": "0.7.17",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/japaric/heapless",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

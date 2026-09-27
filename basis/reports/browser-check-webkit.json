@@ -1,0 +1,17 @@
+{
+  "engine": "webkit",
+  "browser": "26.0",
+  "checkedAt": "2026-09-26T19:17:48.819Z",
+  "physicalIPad": false,
+  "checks": [],
+  "errors": [],
+  "passed": false,
+  "failure": "locator.waitFor: Timeout 180000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#offline-state').filter({ hasText: 'Ready for offline use' }) to be visible\u001b[22m\n\n    at ready (C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\scripts\\browser-check.mjs:26:85)\n    at async file:///C:/Users/david/Documents/IOS%20Shortcut/basis/scripts/browser-check.mjs:40:5\n    at async check (C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\scripts\\browser-check.mjs:20:3)\n    at async file:///C:/Users/david/Documents/IOS%20Shortcut/basis/scripts/browser-check.mjs:38:3",
+  "ui": {
+    "run-state": "Ready",
+    "offline-state": "Offline download did not finish. Existing cached versions are retained; reconnect and reload to retry.",
+    "runtime-state": "SubsetJuliaVM 0.11.1 · ABI 3 · Julia subset, local WebAssembly",
+    "output": "",
+    "value": ""
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "engine": "chromium",
+  "browser": "153.0.8010.50",
+  "checkedAt": "2026-09-26T20:45:33.168Z",
+  "profile": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\.tools\\browser-profile-PSht2y",
+  "physicalIPad": false,
+  "checks": [
+    {
+      "name": "install complete offline pack and initialize Julia",
+      "passed": true,
+      "ms": 7798
+    },
+    {
+      "name": "matrix values render in row and column order",
+      "passed": true,
+      "ms": 756
+    },
+    {
+      "name": "new Julia computation after offline reload",
+      "passed": true,
+      "ms": 9212
+    },
+    {
+      "name": "Julia highlighting distinguishes adjoints, characters, Unicode and nested comments offline",
+      "passed": true,
+      "ms": 181
+    },
+    {
+      "name": "indent, undo, redo and keyboard execution preserve source",
+      "passed": true,
+      "ms": 3891
+    },
+    {
+      "name": "rectangular least squares in offline browser",
+      "passed": true,
+      "ms": 2418
+    },
+    {
+      "name": "dimension error is visible and the next run recovers",
+      "passed": true,
+      "ms": 1833
+    },
+    {
+      "name": "stop runaway code and restart worker",
+      "passed": true,
+      "ms": 4103
+    },
+    {
+      "name": "draft and offline pack survive closing tab",
+      "passed": true,
+      "ms": 2952
+    },
+    {
+      "name": "cold browser restart preserves offline execution and draft",
+      "passed": true,
+      "ms": 9283
+    },
+    {
+      "name": "export preserves the current Julia source",
+      "passed": true,
+      "ms": 379
+    },
+    {
+      "name": "tablet and narrow viewport fit without horizontal overflow",
+      "passed": true,
+      "ms": 87
+    }
+  ],
+  "errors": [],
+  "runtime": "SubsetJuliaVM 0.11.1 · ABI 3 · Julia subset, local WebAssembly",
+  "provenance": {
+    "build": "848aa0d4108161b9",
+    "runtime": {
+      "name": "subset_julia_vm_web",
+      "version": "0.11.1",
+      "license": "MIT OR Apache-2.0",
+      "sha256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548",
+      "bytes": 38248564,
+      "selection": "locked",
+      "lock": {
+        "file": "runtime-lock.json",
+        "sha256": "c046b2d990a9ece894a2cf3e50c505d09c36ace5d4c85907df7e3cd8169a5ca9",
+        "metadata": {
+          "schemaVersion": 1,
+          "runtimeDir": "runtime-build/pkg",
+          "noticesDir": "upstream/julia-vm-oss",
+          "version": "0.11.1",
+          "wasmSHA256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548",
+          "provenanceSHA256": "04a88916904c6622313f1f86c7aead88d7712b49042e6013409c9907ae6906ff",
+          "glueSHA256": "c4d3b6120ff48cf25114237b3d2bd3741c23511dca2e85d0629d58505999b7ea"
+        }
+      },
+      "glueSHA256": "c4d3b6120ff48cf25114237b3d2bd3741c23511dca2e85d0629d58505999b7ea",
+      "sourceBuild": {
+        "record": "./runtime/runtime-provenance.json",
+        "recordSHA256": "04a88916904c6622313f1f86c7aead88d7712b49042e6013409c9907ae6906ff",
+        "verifiedWasmSHA256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548",
+        "metadata": {
+          "builtAt": "2026-09-26T19:12:13.0311010Z",
+          "source": "https://github.com/AtelierArith/julia-vm-oss",
+          "revision": "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+          "modified": true,
+          "trackedPatchSHA256": "6f058071f20922deceb0b1032947c87c2b553f8781b0b77ae14ffaa932dde12b",
+          "rust": "rustc 1.95.0 (59807616e 2026-04-14)",
+          "wasmPack": "wasm-pack 0.15.0",
+          "wasmBindgen": "wasm-bindgen 0.2.122",
+          "nativeProfile": "release-fast",
+          "nativeOptLevel": "3, with subset_julia_vm_compile and subset_julia_vm at 1",
+          "nativeIncrementalCrates": [
+            "subset_julia_vm_compile",
+            "subset_julia_vm"
+          ],
+          "wasmProfile": "release-fast",
+          "wasmOptLevel": "1",
+          "wasmLTO": false,
+          "wasmIncremental": true,
+          "buildJobs": 2,
+          "embeddedBaseCache": true,
+          "embeddedPreludeCache": true,
+          "baseCacheSHA256": "f4f4ca1e8d200ec8e2f2709e301c7f604e295e6dbe63ae93efc93ce958e31a90",
+          "preludeCacheSHA256": "c2dbcf7e9bd0413c3288d968c7e82a9ecddb017068f94ec654c31a7692b6e1bd",
+          "nativeSHA256": "fb2968f5a7a9013519e0f094e574c59c45552ab8716d96c9b66a0021a87186ed",
+          "wasmOpt": false,
+          "command": "powershell -File basis/scripts/build-runtime.ps1 -Stage Wasm -WasmProfile release-fast -Jobs 2",
+          "rebuildCommand": "powershell -File basis/scripts/build-runtime.ps1 -Stage All -WasmProfile release-fast -Jobs 2",
+          "wasmSHA256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548"
+        }
+      },
+      "distributionCheckout": null
+    }
+  },
+  "highlighting": {
+    "comments": "#= outer comment\n#= nested comment =#\nstill a comment\n=#",
+    "strings": "'x'\"hello # text\"",
+    "lastLine": "A' * A",
+    "lastLineStrings": 0,
+    "numbers": 5,
+    "keywordColor": "rgb(120, 59, 132)",
+    "textColor": "rgb(24, 62, 56)"
+  },
+  "passed": true
+}

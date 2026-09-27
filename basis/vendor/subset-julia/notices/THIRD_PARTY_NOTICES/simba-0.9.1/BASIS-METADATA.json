@@ -1,0 +1,10 @@
+{
+  "name": "simba",
+  "version": "0.9.1",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/dimforge/simba",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE"
+  ]
+}

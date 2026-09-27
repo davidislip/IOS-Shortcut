@@ -1,0 +1,10 @@
+{
+  "name": "serde-wasm-bindgen",
+  "version": "0.6.5",
+  "license": "MIT",
+  "repository": "https://github.com/RReverser/serde-wasm-bindgen",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE"
+  ]
+}

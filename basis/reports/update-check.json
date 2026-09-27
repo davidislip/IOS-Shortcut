@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-09-27T16:18:48.490Z",
+  "physicalIPad": false,
+  "engine": "chromium",
+  "checks": [
+    {
+      "name": "served target matches the completed local build",
+      "passed": true,
+      "ms": 138
+    },
+    {
+      "name": "copy the historical project-owned profile without changing its source",
+      "passed": true,
+      "ms": 9867
+    },
+    {
+      "name": "open the real old beige build while offline",
+      "passed": true,
+      "ms": 6714
+    },
+    {
+      "name": "save a distinct learner draft through the old editor",
+      "passed": true,
+      "ms": 1019
+    },
+    {
+      "name": "direct updater activates the new dark pack and preserves the exact draft",
+      "passed": true,
+      "ms": 12505
+    },
+    {
+      "name": "new dark build reloads offline and executes the preserved Julia source",
+      "passed": true,
+      "ms": 7088
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "targetBuild": "d5a47404320c194d",
+  "runtimeSHA256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548",
+  "originalProfile": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\.tools\\browser-profile-PSht2y",
+  "profile": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\.tools\\update-profile-eswohJ\\profile",
+  "originalProfileModified": false,
+  "browser": "153.0.8010.50",
+  "before": {
+    "url": "http://127.0.0.1:4174/",
+    "build": "848aa0d4108161b9",
+    "theme": null,
+    "bodyBackground": "rgba(0, 0, 0, 0)",
+    "rootBackground": "rgb(244, 242, 236)",
+    "cacheNames": [
+      "basis-848aa0d4108161b9",
+      "basis-d5a47404320c194d"
+    ],
+    "savedDraft": "using LinearAlgebra\n\n# Reconstruct b from the columns of A.\nA = [2.0 1.0; 1.0 3.0]\nb = [4.0, 5.0]\n\nx = A \\ b\nprintln(\"Reconstruction error: \", norm(b - A * x))\nx"
+  },
+  "draft": "# Preserved by updater\n40 + 2",
+  "after": {
+    "url": "http://127.0.0.1:4174/",
+    "build": "d5a47404320c194d",
+    "theme": "dark",
+    "bodyBackground": "rgb(22, 24, 29)",
+    "rootBackground": "rgb(22, 24, 29)",
+    "cacheNames": [
+      "basis-848aa0d4108161b9",
+      "basis-d5a47404320c194d"
+    ],
+    "savedDraft": "# Preserved by updater\n40 + 2"
+  },
+  "draftPreserved": true,
+  "offline": {
+    "url": "http://127.0.0.1:4174/",
+    "build": "d5a47404320c194d",
+    "theme": "dark",
+    "bodyBackground": "rgb(22, 24, 29)",
+    "rootBackground": "rgb(22, 24, 29)",
+    "cacheNames": [
+      "basis-848aa0d4108161b9",
+      "basis-d5a47404320c194d"
+    ],
+    "savedDraft": "# Preserved by updater\n40 + 2"
+  },
+  "offlineResult": 42
+}

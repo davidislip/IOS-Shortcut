@@ -1,0 +1,379 @@
+diff --git a/subset_julia_vm/src/julia/base/array.jl b/subset_julia_vm/src/julia/base/array.jl
+index b9ac5fc..6301407 100644
+--- a/subset_julia_vm/src/julia/base/array.jl
++++ b/subset_julia_vm/src/julia/base/array.jl
+@@ -2801,9 +2801,15 @@ function _hvncat_calcindex(offsets, inneroffsets, outdims, nd::Int)
+     return Ai
+ end
+ 
+-# vec: flatten array to 1D vector (type-preserving)
+-function vec(arr)
+-    return collect(arr)
++# Upstream Base/abstractarraymath.jl: flatten by reshaping shared storage,
++# preserving vector identity. collect(matrix) retains its dimensions and copies
++# its storage, so it cannot implement vec (local BASIS-001).
++function vec(arr::AbstractArray)
++    return reshape(arr, length(arr))
++end
++
++function vec(arr::AbstractVector)
++    return arr
+ end
+ 
+ # =============================================================================
+diff --git a/subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl b/subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl
+index 82ce8df..e389291 100644
+--- a/subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl
++++ b/subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl
+@@ -24,6 +24,7 @@ export UpperTriangular, LowerTriangular, UnitUpperTriangular, UnitLowerTriangula
+ export Bidiagonal, Tridiagonal, SymTridiagonal
+ export Transpose, Adjoint
+ export Factorization, LU, QR, Cholesky, Eigen, SVD, issuccess
++export SingularException
+ export Schur, GeneralizedSchur, Hessenberg, LQ, LDLt, BunchKaufman
+ export GeneralizedEigen, GeneralizedSVD
+ export schur, schur!, ordschur, ordschur!
+@@ -1247,24 +1248,6 @@ function Base.:*(G::Givens, A::AbstractMatrix)
+     return lmul!(G, result)
+ end
+ 
+-function _permute_vector(p, b)
+-    n = length(p)
+-    result = zeros(n)
+-    for i in 1:n
+-        result[i] = b[p[i]]
+-    end
+-    return result
+-end
+-
+-function _reciprocal_singular_values(S)
+-    n = length(S)
+-    result = zeros(n)
+-    for i in 1:n
+-        result[i] = 1.0 / S[i]
+-    end
+-    return result
+-end
+-
+ # =============================================================================
+ # Linear Algebra Decompositions
+ # =============================================================================
+@@ -1274,6 +1257,11 @@ end
+ 
+ abstract type Factorization end
+ 
++# Upstream LinearAlgebra/src/exceptions.jl. Local issue BASIS-001.
++struct SingularException <: Exception
++    info::Int64
++end
++
+ struct LU <: Factorization
+     L
+     U
+@@ -1531,29 +1519,219 @@ function inv(A)
+     return Base.inv(A)
+ end
+ 
++# BEGIN BASIS-001 SOLVES
++# Upstream generic.jl selects LU for square matrices and rank-revealing QR for
++# rectangular matrices. The available backend has unpivoted QR: use it for
++# full-column-rank systems and SVD for minimum-norm wide/rank-deficient solves.
++# Keep the actual solves here in Pure Julia; never form inv(A) or A' * A.
++
++function _check_solve_rows(m, B)
++    if size(B, 1) != m
++        throw(DimensionMismatch("matrix has $m rows, but right hand side has $(size(B, 1)) rows"))
++    end
++end
++
++function _check_solve_finite(A)
++    for j in 1:size(A, 2)
++        for i in 1:size(A, 1)
++            if !isfinite(A[i, j])
++                throw(ArgumentError("matrix contains Infs or NaNs"))
++            end
++        end
++    end
++end
++
++function _solve_zeros(A, B, n)::Matrix{Float64}
++    # The dense real decomposition backend and Basis solve contract use
++    # Float64 work arrays. A dynamically computed Type argument to zeros can
++    # lose its T binding inside learner functions (local BASIS-001).
++    return zeros(n, size(B, 2))
++end
++
++function _diagonal_solve(A, B)
++    n = size(A, 1)
++    X = _solve_zeros(A, B, n)
++    for i in 1:n
++        if iszero(A[i, i])
++            throw(SingularException(Int64(i)))
++        end
++        for c in 1:size(B, 2)
++            X[i, c] = B[i, c] / A[i, i]
++        end
++    end
++    return X
++end
++
++function _forward_substitute(L, B)
++    n = size(L, 1)
++    _check_solve_rows(n, B)
++    if size(L, 2) != n
++        throw(DimensionMismatch("triangular solve requires a square factor"))
++    end
++    X = _solve_zeros(L, B, n)
++    for i in 1:n
++        if iszero(L[i, i])
++            throw(SingularException(Int64(i)))
++        end
++        for c in 1:size(B, 2)
++            value = B[i, c]
++            for j in 1:(i - 1)
++                value = value - L[i, j] * X[j, c]
++            end
++            X[i, c] = value / L[i, i]
++        end
++    end
++    return X
++end
++
++function _back_substitute(R, B)
++    n = size(R, 2)
++    _check_solve_rows(n, B)
++    if size(R, 1) != n
++        throw(DimensionMismatch("triangular solve requires a square factor"))
++    end
++    X = _solve_zeros(R, B, n)
++    for i in n:-1:1
++        if iszero(R[i, i])
++            throw(SingularException(Int64(i)))
++        end
++        for c in 1:size(B, 2)
++            value = B[i, c]
++            for j in (i + 1):n
++                value = value - R[i, j] * X[j, c]
++            end
++            X[i, c] = value / R[i, i]
++        end
++    end
++    return X
++end
++
++function _lu_solve(F::LU, B)
++    n = size(F.L, 1)
++    _check_solve_rows(n, B)
++    PB = _solve_zeros(F.L, B, n)
++    for c in 1:size(B, 2)
++        for i in 1:n
++            PB[i, c] = B[F.p[i], c]
++        end
++    end
++    return _back_substitute(F.U, _forward_substitute(F.L, PB))
++end
++
++function _svd_solve(F::SVD, B, rtol, include_cutoff)
++    _check_solve_rows(size(F.U, 1), B)
++    k = length(F.S)
++    X = _solve_zeros(F.V, B, size(F.V, 1))
++    if k == 0
++        return X
++    end
++    tol = rtol * F.S[1]
++    # Matrix least squares excludes zeros. Explicit SVD solves follow upstream
++    # searchsortedlast's inclusive cutoff, including its all-zero NaN result.
++    for j in 1:k
++        if F.S[j] > tol || (include_cutoff && F.S[j] == tol)
++            for c in 1:size(B, 2)
++                value = zero(eltype(X))
++                for i in 1:size(B, 1)
++                    value = value + conj(F.U[i, j]) * B[i, c]
++                end
++                value = value / F.S[j]
++                for i in 1:size(X, 1)
++                    X[i, c] = X[i, c] + F.V[i, j] * value
++                end
++            end
++        end
++    end
++    return X
++end
++
++function _qr_solve(F::QR, B)
++    _check_solve_rows(size(F.Q, 1), B)
++    if size(F.R, 1) < size(F.R, 2)
++        throw(DimensionMismatch("QR solve requires at least as many rows as columns"))
++    end
++    return _back_substitute(F.R, adjoint(F.Q) * B)
++end
++
++function _cholesky_solve(F::Cholesky, B)
++    return _back_substitute(F.U, _forward_substitute(F.L, B))
++end
++
++function _matrix_solve(A, B)
++    m = size(A, 1)
++    n = size(A, 2)
++    _check_solve_rows(m, B)
++    if m == 0 || n == 0
++        return _solve_zeros(A, B, n)
++    end
++    if m == n
++        if istril(A)
++            if istriu(A)
++                return _diagonal_solve(A, B)
++            end
++            return _forward_substitute(A, B)
++        end
++        if istriu(A)
++            return _back_substitute(A, B)
++        end
++        _check_solve_finite(A)
++        return _lu_solve(lu(A), B)
++    end
++    _check_solve_finite(A)
++    rtol = min(m, n) * eps(Float64)
++    if m > n
++        F = qr(A)
++        # Unpivoted R's diagonal alone is not a reliable rank test. Its SVD
++        # has the same singular values as A without forming normal equations.
++        S = svd(F.R)
++        if S.S[n] > rtol * S.S[1]
++            return _qr_solve(F, B)
++        end
++        return _svd_solve(S, adjoint(F.Q) * B, rtol, false)
++    end
++    return _svd_solve(svd(A), B, rtol, false)
++end
++
+ function Base.:\(A::AbstractMatrix, b::AbstractVector)
+-    return inv(A) * b
++    return vec(_matrix_solve(A, reshape(b, length(b), 1)))
+ end
+ 
+ function Base.:\(A::AbstractMatrix, B::AbstractMatrix)
+-    return inv(A) * B
++    return _matrix_solve(A, B)
+ end
+ 
+ function Base.:\(F::LU, b::AbstractVector)
+-    return F.U \ (F.L \ _permute_vector(F.p, b))
++    return vec(_lu_solve(F, reshape(b, length(b), 1)))
++end
++
++function Base.:\(F::LU, B::AbstractMatrix)
++    return _lu_solve(F, B)
+ end
+ 
+ function Base.:\(F::QR, b::AbstractVector)
+-    return F.R \ (transpose(F.Q) * b)
++    return vec(_qr_solve(F, reshape(b, length(b), 1)))
++end
++
++function Base.:\(F::QR, B::AbstractMatrix)
++    return _qr_solve(F, B)
+ end
+ 
+ function Base.:\(F::Cholesky, b::AbstractVector)
+-    return F.U \ (F.L \ b)
++    return vec(_cholesky_solve(F, reshape(b, length(b), 1)))
++end
++
++function Base.:\(F::Cholesky, B::AbstractMatrix)
++    return _cholesky_solve(F, B)
+ end
+ 
+ function Base.:\(F::SVD, b::AbstractVector)
+-    return F.V * (Diagonal(_reciprocal_singular_values(F.S)) * (transpose(F.U) * b))
++    return vec(_svd_solve(F, reshape(b, length(b), 1), eps(Float64), true))
++end
++
++function Base.:\(F::SVD, B::AbstractMatrix)
++    return _svd_solve(F, B, eps(Float64), true)
+ end
++# END BASIS-001 SOLVES
+ 
+ function Base.:/(A::AbstractMatrix, B::AbstractMatrix)
+     return A * inv(B)
+diff --git a/subset_julia_vm/tests/fixtures/array/vec_1d.jl b/subset_julia_vm/tests/fixtures/array/vec_1d.jl
+index 4146e0a..1b86260 100644
+--- a/subset_julia_vm/tests/fixtures/array/vec_1d.jl
++++ b/subset_julia_vm/tests/fixtures/array/vec_1d.jl
+@@ -6,6 +6,8 @@ using Test
+     a = [1.0, 2.0, 3.0, 4.0]
+     b = vec(a)
+     @test (length(b)) == 4
++    @test size(b) == (4,)
++    @test b === a
+ end
+ 
+ true  # Test passed
+diff --git a/subset_julia_vm/tests/fixtures/array/vec_2d.jl b/subset_julia_vm/tests/fixtures/array/vec_2d.jl
+index 484a728..3e0cabd 100644
+--- a/subset_julia_vm/tests/fixtures/array/vec_2d.jl
++++ b/subset_julia_vm/tests/fixtures/array/vec_2d.jl
+@@ -13,6 +13,15 @@ using Test
+     m[2, 3] = 6.0
+     v = vec(m)
+     @test (v[3]) == 3.0
++    # Local BASIS-001: element access alone missed collect(matrix)'s wrong
++    # matrix shape and copied storage. vec must be a vector sharing memory.
++    @test size(v) == (6,)
++    @test v == [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
++    v[2] = 20.0
++    @test m[2, 1] == 20.0
++    m[1, 2] = 30.0
++    @test v[3] == 30.0
++    @test size(vec(zeros(0, 3))) == (0,)
+ end
+ 
+ true  # Test passed
+diff --git a/subset_julia_vm/tests/fixtures/linalg/manifest.toml b/subset_julia_vm/tests/fixtures/linalg/manifest.toml
+index fbb976d..20b31e0 100644
+--- a/subset_julia_vm/tests/fixtures/linalg/manifest.toml
++++ b/subset_julia_vm/tests/fixtures/linalg/manifest.toml
+@@ -425,3 +425,27 @@ name = "linalg_matrix_decompositions_ios_7772"
+ file = "matrix_decompositions_ios_7772.jl"
+ expected = true
+ description = "iOS matrix-decompositions sample: \\, eigen, svd forwarders reach the builtin instead of overflowing (Issue #7772)"
++
++[[tests]]
++name = "linalg_basis_square_solve"
++file = "basis_square_solve.jl"
++expected = true
++description = "Stable square and factorization solves with multi-swap LU pivots and matrix RHS (local BASIS-001)"
++
++[[tests]]
++name = "linalg_basis_rectangular_solve"
++file = "basis_rectangular_solve.jl"
++expected = true
++description = "Tall least squares, wide/rank-deficient minimum-norm solves, and zero singular values (local BASIS-001)"
++
++[[tests]]
++name = "linalg_basis_solve_errors_shapes"
++file = "basis_solve_errors_shapes.jl"
++expected = true
++description = "Catchable solve errors, nonfinite factorization input, and empty/RHS shape preservation (local BASIS-001)"
++
++[[tests]]
++name = "linalg_basis_learner_function_solve"
++file = "basis_learner_function_solve.jl"
++expected = true
++description = "Function-local square, tall, rank-deficient, and wide solves bind Float64 work arrays across scales (local BASIS-001)"
+diff --git a/subset_julia_vm_vm/src/vm/builtins_linalg.rs b/subset_julia_vm_vm/src/vm/builtins_linalg.rs
+index 13d89da..683600f 100644
+--- a/subset_julia_vm_vm/src/vm/builtins_linalg.rs
++++ b/subset_julia_vm_vm/src/vm/builtins_linalg.rs
+@@ -663,7 +663,10 @@ impl<R: RngLike> Vm<R> {
+                 // Create a column vector with row indices and apply the permutation
+                 let perm = lu.p();
+                 let mut indices: DMatrix<f64> = DMatrix::from_fn(nrows, 1, |i, _| i as f64);
+-                perm.inv_permute_rows(&mut indices);
++                // Match nalgebra's LU solve: P * A = L * U, so p indexes P * A.
++                // Inverting P only appeared correct for a single row swap.
++                // Regression: linalg/basis_square_solve.jl (local BASIS-001).
++                perm.permute_rows(&mut indices);
+                 let p_data: Vec<i64> = indices.as_slice().iter().map(|&x| (x as i64) + 1).collect();
+ 
+                 // Return (L, U, p) tuple

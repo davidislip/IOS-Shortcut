@@ -1,0 +1,11 @@
+{
+  "name": "half",
+  "version": "2.7.1",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/VoidStarKat/half-rs",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

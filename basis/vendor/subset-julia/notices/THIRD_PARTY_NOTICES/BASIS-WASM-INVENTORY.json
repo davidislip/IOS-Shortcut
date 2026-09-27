@@ -1,0 +1,527 @@
+{
+  "source": "https://github.com/AtelierArith/julia-vm-oss",
+  "revision": "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+  "wasmSHA256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548",
+  "cargoLockSHA256": "7b5a6b81450760f4721acde481fd74586dab4715a65b920bfbb39da781c39a13",
+  "scope": "Conservative registry-crate input inventory observed in WASM target dependency files; not a claim that every listed crate contributes live code. Upstream direct-dependency and bundled Julia-package notices are also retained, including notices for other targets. Local Rust workspace crates use the root license; the vendored astro-float-num and Julia-derived source notices are included separately.",
+  "crates": [
+    {
+      "crate": "aho-corasick-1.1.4",
+      "name": "aho-corasick",
+      "version": "1.1.4",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/aho-corasick"
+    },
+    {
+      "crate": "approx-0.5.1",
+      "name": "approx",
+      "version": "0.5.1",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/brendanzab/approx"
+    },
+    {
+      "crate": "astro-float-0.9.5",
+      "name": "astro-float",
+      "version": "0.9.5",
+      "license": "MIT",
+      "repository": "https://github.com/stencillogic/astro-float"
+    },
+    {
+      "crate": "bincode-1.3.3",
+      "name": "bincode",
+      "version": "1.3.3",
+      "license": "MIT",
+      "repository": "https://github.com/servo/bincode"
+    },
+    {
+      "crate": "bit-set-0.8.0",
+      "name": "bit-set",
+      "version": "0.8.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/contain-rs/bit-set"
+    },
+    {
+      "crate": "bit-vec-0.8.0",
+      "name": "bit-vec",
+      "version": "0.8.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/contain-rs/bit-vec"
+    },
+    {
+      "crate": "block-buffer-0.10.4",
+      "name": "block-buffer",
+      "version": "0.10.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/utils"
+    },
+    {
+      "crate": "bytemuck-1.25.0",
+      "name": "bytemuck",
+      "version": "1.25.0",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/Lokathor/bytemuck"
+    },
+    {
+      "crate": "byteorder-1.5.0",
+      "name": "byteorder",
+      "version": "1.5.0",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/byteorder"
+    },
+    {
+      "crate": "cfg-if-1.0.4",
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cfg-if"
+    },
+    {
+      "crate": "cobs-0.3.0",
+      "name": "cobs",
+      "version": "0.3.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jamesmunns/cobs.rs"
+    },
+    {
+      "crate": "console_error_panic_hook-0.1.7",
+      "name": "console_error_panic_hook",
+      "version": "0.1.7",
+      "license": "Apache-2.0/MIT",
+      "repository": "https://github.com/rustwasm/console_error_panic_hook"
+    },
+    {
+      "crate": "crypto-common-0.1.7",
+      "name": "crypto-common",
+      "version": "0.1.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/traits"
+    },
+    {
+      "crate": "digest-0.10.7",
+      "name": "digest",
+      "version": "0.10.7",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/traits"
+    },
+    {
+      "crate": "either-1.16.0",
+      "name": "either",
+      "version": "1.16.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rayon-rs/either"
+    },
+    {
+      "crate": "fancy-regex-0.18.0",
+      "name": "fancy-regex",
+      "version": "0.18.0",
+      "license": "MIT",
+      "repository": "https://github.com/fancy-regex/fancy-regex"
+    },
+    {
+      "crate": "futures-core-0.3.32",
+      "name": "futures-core",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs"
+    },
+    {
+      "crate": "futures-task-0.3.32",
+      "name": "futures-task",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs"
+    },
+    {
+      "crate": "futures-util-0.3.32",
+      "name": "futures-util",
+      "version": "0.3.32",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/futures-rs"
+    },
+    {
+      "crate": "generic-array-0.14.7",
+      "name": "generic-array",
+      "version": "0.14.7",
+      "license": "MIT",
+      "repository": "https://github.com/fizyk20/generic-array.git"
+    },
+    {
+      "crate": "getrandom-0.2.17",
+      "name": "getrandom",
+      "version": "0.2.17",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/getrandom"
+    },
+    {
+      "crate": "half-2.7.1",
+      "name": "half",
+      "version": "2.7.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/VoidStarKat/half-rs"
+    },
+    {
+      "crate": "hash32-0.2.1",
+      "name": "hash32",
+      "version": "0.2.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/japaric/hash32"
+    },
+    {
+      "crate": "heapless-0.7.17",
+      "name": "heapless",
+      "version": "0.7.17",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/japaric/heapless"
+    },
+    {
+      "crate": "itertools-0.10.5",
+      "name": "itertools",
+      "version": "0.10.5",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/rust-itertools/itertools"
+    },
+    {
+      "crate": "itoa-1.0.18",
+      "name": "itoa",
+      "version": "1.0.18",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/itoa"
+    },
+    {
+      "crate": "js-sys-0.3.99",
+      "name": "js-sys",
+      "version": "0.3.99",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/js-sys"
+    },
+    {
+      "crate": "lazy_static-1.5.0",
+      "name": "lazy_static",
+      "version": "1.5.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang-nursery/lazy-static.rs"
+    },
+    {
+      "crate": "logos-0.15.1",
+      "name": "logos",
+      "version": "0.15.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/maciejhirsz/logos"
+    },
+    {
+      "crate": "matrixmultiply-0.3.10",
+      "name": "matrixmultiply",
+      "version": "0.3.10",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/bluss/matrixmultiply/"
+    },
+    {
+      "crate": "memchr-2.8.0",
+      "name": "memchr",
+      "version": "2.8.0",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/memchr"
+    },
+    {
+      "crate": "nalgebra-0.34.2",
+      "name": "nalgebra",
+      "version": "0.34.2",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/dimforge/nalgebra"
+    },
+    {
+      "crate": "num-bigint-0.4.6",
+      "name": "num-bigint",
+      "version": "0.4.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-bigint"
+    },
+    {
+      "crate": "num-complex-0.4.6",
+      "name": "num-complex",
+      "version": "0.4.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-complex"
+    },
+    {
+      "crate": "num-integer-0.1.46",
+      "name": "num-integer",
+      "version": "0.1.46",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-integer"
+    },
+    {
+      "crate": "num-rational-0.4.2",
+      "name": "num-rational",
+      "version": "0.4.2",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-rational"
+    },
+    {
+      "crate": "num-traits-0.2.19",
+      "name": "num-traits",
+      "version": "0.2.19",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-traits"
+    },
+    {
+      "crate": "once_cell-1.21.4",
+      "name": "once_cell",
+      "version": "1.21.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/matklad/once_cell"
+    },
+    {
+      "crate": "pin-project-lite-0.2.17",
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/pin-project-lite"
+    },
+    {
+      "crate": "postcard-1.1.3",
+      "name": "postcard",
+      "version": "1.1.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/jamesmunns/postcard"
+    },
+    {
+      "crate": "ppv-lite86-0.2.21",
+      "name": "ppv-lite86",
+      "version": "0.2.21",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/cryptocorrosion/cryptocorrosion"
+    },
+    {
+      "crate": "rand-0.8.6",
+      "name": "rand",
+      "version": "0.8.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/rand"
+    },
+    {
+      "crate": "rand_chacha-0.3.1",
+      "name": "rand_chacha",
+      "version": "0.3.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/rand"
+    },
+    {
+      "crate": "rand_core-0.6.4",
+      "name": "rand_core",
+      "version": "0.6.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/rand"
+    },
+    {
+      "crate": "rawpointer-0.2.1",
+      "name": "rawpointer",
+      "version": "0.2.1",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/bluss/rawpointer/"
+    },
+    {
+      "crate": "regex-1.12.3",
+      "name": "regex",
+      "version": "1.12.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex"
+    },
+    {
+      "crate": "regex-automata-0.4.14",
+      "name": "regex-automata",
+      "version": "0.4.14",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex"
+    },
+    {
+      "crate": "regex-syntax-0.8.10",
+      "name": "regex-syntax",
+      "version": "0.8.10",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/regex"
+    },
+    {
+      "crate": "safe_arch-0.7.4",
+      "name": "safe_arch",
+      "version": "0.7.4",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/Lokathor/safe_arch"
+    },
+    {
+      "crate": "serde-1.0.228",
+      "name": "serde",
+      "version": "1.0.228",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde"
+    },
+    {
+      "crate": "serde-wasm-bindgen-0.6.5",
+      "name": "serde-wasm-bindgen",
+      "version": "0.6.5",
+      "license": "MIT",
+      "repository": "https://github.com/RReverser/serde-wasm-bindgen"
+    },
+    {
+      "crate": "serde_core-1.0.228",
+      "name": "serde_core",
+      "version": "1.0.228",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde"
+    },
+    {
+      "crate": "serde_json-1.0.150",
+      "name": "serde_json",
+      "version": "1.0.150",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/json"
+    },
+    {
+      "crate": "serde_spanned-1.1.1",
+      "name": "serde_spanned",
+      "version": "1.1.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml"
+    },
+    {
+      "crate": "sha2-0.10.9",
+      "name": "sha2",
+      "version": "0.10.9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/RustCrypto/hashes"
+    },
+    {
+      "crate": "simba-0.9.1",
+      "name": "simba",
+      "version": "0.9.1",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/dimforge/simba"
+    },
+    {
+      "crate": "slab-0.4.12",
+      "name": "slab",
+      "version": "0.4.12",
+      "license": "MIT",
+      "repository": "https://github.com/tokio-rs/slab"
+    },
+    {
+      "crate": "smallvec-1.15.1",
+      "name": "smallvec",
+      "version": "1.15.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/servo/rust-smallvec"
+    },
+    {
+      "crate": "stable_deref_trait-1.2.1",
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/storyyeller/stable_deref_trait"
+    },
+    {
+      "crate": "strum-0.27.2",
+      "name": "strum",
+      "version": "0.27.2",
+      "license": "MIT",
+      "repository": "https://github.com/Peternator7/strum"
+    },
+    {
+      "crate": "thiserror-2.0.18",
+      "name": "thiserror",
+      "version": "2.0.18",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/thiserror"
+    },
+    {
+      "crate": "toml-0.9.12+spec-1.1.0",
+      "name": "toml",
+      "version": "0.9.12+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml"
+    },
+    {
+      "crate": "toml_datetime-0.7.5+spec-1.1.0",
+      "name": "toml_datetime",
+      "version": "0.7.5+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml"
+    },
+    {
+      "crate": "toml_parser-1.1.2+spec-1.1.0",
+      "name": "toml_parser",
+      "version": "1.1.2+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml"
+    },
+    {
+      "crate": "toml_writer-1.1.1+spec-1.1.0",
+      "name": "toml_writer",
+      "version": "1.1.1+spec-1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/toml-rs/toml"
+    },
+    {
+      "crate": "typenum-1.20.0",
+      "name": "typenum",
+      "version": "1.20.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/paholg/typenum"
+    },
+    {
+      "crate": "unicode-ident-1.0.24",
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "repository": "https://github.com/dtolnay/unicode-ident"
+    },
+    {
+      "crate": "wasm-bindgen-0.2.122",
+      "name": "wasm-bindgen",
+      "version": "0.2.122",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen"
+    },
+    {
+      "crate": "wasm-bindgen-shared-0.2.122",
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.122",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/shared"
+    },
+    {
+      "crate": "wide-0.7.33",
+      "name": "wide",
+      "version": "0.7.33",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/Lokathor/wide"
+    },
+    {
+      "crate": "winnow-0.7.15",
+      "name": "winnow",
+      "version": "0.7.15",
+      "license": "MIT",
+      "repository": "https://github.com/winnow-rs/winnow"
+    },
+    {
+      "crate": "winnow-1.0.3",
+      "name": "winnow",
+      "version": "1.0.3",
+      "license": "MIT",
+      "repository": "https://github.com/winnow-rs/winnow"
+    },
+    {
+      "crate": "zerocopy-0.8.48",
+      "name": "zerocopy",
+      "version": "0.8.48",
+      "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/google/zerocopy"
+    },
+    {
+      "crate": "zmij-1.0.21",
+      "name": "zmij",
+      "version": "1.0.21",
+      "license": "MIT",
+      "repository": "https://github.com/dtolnay/zmij"
+    }
+  ]
+}

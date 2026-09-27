@@ -1,0 +1,34 @@
+{
+  "engine": "Windows Playwright WebKit",
+  "version": "26.0",
+  "checkedAt": "2026-09-26T19:24:33.595Z",
+  "physicalIPad": false,
+  "console": [],
+  "failedRequests": [],
+  "storage": {
+    "secure": true,
+    "serviceWorker": true,
+    "caches": "object",
+    "offlineText": "Offline download did not finish. Existing cached versions are retained; reconnect and reload to retry."
+  },
+  "cacheProbes": [
+    {
+      "asset": "./icon.svg",
+      "error": "TypeError: Failed writing data to the file system",
+      "name": "TypeError",
+      "message": "Failed writing data to the file system"
+    },
+    {
+      "asset": "./runtime/subset_julia_vm_web_bg.wasm",
+      "error": "TypeError: Failed writing data to the file system",
+      "name": "TypeError",
+      "message": "Failed writing data to the file system"
+    }
+  ],
+  "learnerFunction": {
+    "state": "Complete",
+    "value": "Bool\n\ntrue\n",
+    "output": "",
+    "passed": true
+  }
+}

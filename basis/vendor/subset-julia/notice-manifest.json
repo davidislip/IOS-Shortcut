@@ -1,0 +1,1229 @@
+{
+  "sourceRevision": "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/aho-corasick-1.1.4/BASIS-METADATA.json",
+      "sha256": "1ebad5c9876565a74219bbbe3c5b7f6343ba81b246c57ef944bdf287fcdb74b8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/aho-corasick-1.1.4/COPYING",
+      "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/aho-corasick-1.1.4/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/aho-corasick-1.1.4/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/approx-0.5.1/BASIS-METADATA.json",
+      "sha256": "abff0a84fa14ed4141cb03917ebb787a50efbb76628e1048f189ac0e2042f473"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/approx-0.5.1/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/astro-float-0.9.5/BASIS-METADATA.json",
+      "sha256": "cd80cb1d99bfb434462d52caabae8d4e2b5bbd5c3505279c386284989cdbe34d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/astro-float-0.9.5/LICENSE",
+      "sha256": "d17c9d85fdad82e98000a1574a7d0521d0dc5ab7af8ea988922755a9bcdd60c5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/astro-float-0.9.5/METADATA.txt",
+      "sha256": "5403de8dc4c9a6578e949896368c1917d4c4f761a9408ff5ba4cf5f286d69e0b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/astro-float-num-vendored/LICENSE",
+      "sha256": "838ebf82637db8d3279daa94afd90e67a212827858e99715461c5cd9399d6e89"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/astro-float-num-vendored/METADATA.txt",
+      "sha256": "278142bcfb5ddd2030bf31dcbd893377031d715e4d393c76dca491b0f78fa457"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/BASIS-NOTICES.md",
+      "sha256": "92dec594a565f1cc6dbfba44b05db12ec258d6897aee067e35a389f5fa5c30c7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/BASIS-WASM-INVENTORY.json",
+      "sha256": "7474109ad0cd1b4603f0ab9b60aacc20f75a2f29c90f9c0b3645ac064b706b64"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bincode-1.3.3/BASIS-METADATA.json",
+      "sha256": "a3d994164cff3aec62317d6468d2c4c60c6f1b20866adac3e7728adf0659241d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bincode-1.3.3/LICENSE.md",
+      "sha256": "237710d4c9dd8eb7fead2c9c433be493a878f547d1093812feff43d18abe5896"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bincode-1.3.3/METADATA.txt",
+      "sha256": "04a4d0d25571a2c45b3cc2823ef00ea41e43d35217ced0d645eb0f56c42e441c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bit-set-0.8.0/BASIS-METADATA.json",
+      "sha256": "fb1b2de8acafc16a70d3f6e6f271ecc2ca70486dc97843cce9b7391decc62c77"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bit-set-0.8.0/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bit-set-0.8.0/LICENSE-MIT",
+      "sha256": "f51ac2c59a222f7476ce507ca879960e2b64ea64bb2786eefdbeb7b0b538d1b7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bit-vec-0.8.0/BASIS-METADATA.json",
+      "sha256": "7bdc471f624d2d2dc99f44e4f960fb60c45abadc1d6c8665507a69a27ff6ad85"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bit-vec-0.8.0/LICENSE-APACHE",
+      "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bit-vec-0.8.0/LICENSE-MIT",
+      "sha256": "f51ac2c59a222f7476ce507ca879960e2b64ea64bb2786eefdbeb7b0b538d1b7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/block-buffer-0.10.4/BASIS-METADATA.json",
+      "sha256": "e8aab58da0ce0addb6d36acd3bfa27f15fc28ec7978ce3609c3df4ea1ec37771"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/block-buffer-0.10.4/LICENSE-APACHE",
+      "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/block-buffer-0.10.4/LICENSE-MIT",
+      "sha256": "d5c22aa3118d240e877ad41c5d9fa232f9c77d757d4aac0c2f943afc0a95e0ef"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bytemuck-1.25.0/BASIS-METADATA.json",
+      "sha256": "af4d69c78b91082c3b88f9d98bb4d40ca96cc99977f9e4da823fe5c5c9f97603"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bytemuck-1.25.0/LICENSE-APACHE",
+      "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bytemuck-1.25.0/LICENSE-MIT",
+      "sha256": "9df9ba60a11af705f2e451b53762686e615d86f76b169cf075c3237730dbd7e2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/bytemuck-1.25.0/LICENSE-ZLIB",
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/byteorder-1.5.0/BASIS-METADATA.json",
+      "sha256": "723e834620ac2d76a1b6bd0f1956ac66f9f3d961d3c35dc922cf56ad6e9a0f1e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/byteorder-1.5.0/COPYING",
+      "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/byteorder-1.5.0/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/byteorder-1.5.0/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cfg-if-1.0.4/BASIS-METADATA.json",
+      "sha256": "a1fb300b90b5c36b387a509e03316fdd63faffe465111733ae76b02cb6356ee7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cfg-if-1.0.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cfg-if-1.0.4/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cobs-0.3.0/BASIS-METADATA.json",
+      "sha256": "8d70315757297448346e173826e6bace1dfaef86378789defaa12a7c04392d0a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cobs-0.3.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cobs-0.3.0/LICENSE-MIT",
+      "sha256": "e0cfa1006a64520633de6bfbf563f5b1bea04ef0c5b73f049681931fa297dda3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/console_error_panic_hook-0.1.7/BASIS-METADATA.json",
+      "sha256": "d41a3e26894ef9c41027bcd8833fdc5f5742c5a65b54a02c2dbc1a0c70921aba"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/console_error_panic_hook-0.1.7/LICENSE-APACHE",
+      "sha256": "353b508bbc50274d47a23729f568bab2618e3d0eaa10208616f5fd475255b896"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/console_error_panic_hook-0.1.7/LICENSE-MIT",
+      "sha256": "77674336af8ded214dc3ae07da631c7dd35cc8205f39298474ba98a889e57272"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/console_error_panic_hook-0.1.7/METADATA.txt",
+      "sha256": "fcd5a5e5f17cd11ad604a27a09a92794c2b61b8ab7b285e1853d2e82d2b88c4f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-codegen-0.115.1/LICENSE",
+      "sha256": "b4671407c0ea0b64c757ced56d89f031581afd9083a4b47d9051fb1886bb3b68"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-codegen-0.115.1/METADATA.txt",
+      "sha256": "0420fbc912a835e7d6f23e5054f6f1ff4ac7cb9e5187c293ff58ea1963f4b082"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-frontend-0.115.1/LICENSE",
+      "sha256": "b4671407c0ea0b64c757ced56d89f031581afd9083a4b47d9051fb1886bb3b68"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-frontend-0.115.1/METADATA.txt",
+      "sha256": "f18ee432b387eaaeee4f9355fa455f06d212f717c15a5becf7aa3b65989f7336"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-jit-0.115.1/LICENSE",
+      "sha256": "b4671407c0ea0b64c757ced56d89f031581afd9083a4b47d9051fb1886bb3b68"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-jit-0.115.1/METADATA.txt",
+      "sha256": "99cd98a2a60f329aaf4580cdcda311f86290c4274755811a68cd1ad439bb43ee"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-module-0.115.1/LICENSE",
+      "sha256": "b4671407c0ea0b64c757ced56d89f031581afd9083a4b47d9051fb1886bb3b68"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-module-0.115.1/METADATA.txt",
+      "sha256": "3af1841a6495736383ca9e3dcd258edf1d1a3a184ab9815fba8f1eb8dca0f86d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-object-0.115.1/LICENSE",
+      "sha256": "b4671407c0ea0b64c757ced56d89f031581afd9083a4b47d9051fb1886bb3b68"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/cranelift-object-0.115.1/METADATA.txt",
+      "sha256": "9a6e9d67d265c6665bb2ea97885af02e525fa7c6b8c6461e709251de09737540"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/criterion-0.8.2/LICENSE-APACHE",
+      "sha256": "7cfd738c53d61c79f07e348f622bf7707c9084237054d37fbe07788a75f5881c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/criterion-0.8.2/LICENSE-MIT",
+      "sha256": "4a07151fc9c07d82b3408cf4b387925370a3d60ed3610c35dbe69bae8f1935d3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/criterion-0.8.2/METADATA.txt",
+      "sha256": "6097d8401ed22298000e31e559450091feb077c9a5c5724dfebeb3f2cec07063"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/crypto-common-0.1.7/BASIS-METADATA.json",
+      "sha256": "329fa21168b2b4098fc63a070e071efb76dc6f4b58bd910a3ae322946cc44cc4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/crypto-common-0.1.7/LICENSE-APACHE",
+      "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/crypto-common-0.1.7/LICENSE-MIT",
+      "sha256": "3521672491a3479422d5fe1aca6645dd2984090f85da6e5205abfb18fb7a6897"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/digest-0.10.7/BASIS-METADATA.json",
+      "sha256": "af963f87898d3226f89d7e70124bbc33c54339788a9b6b68e2ace82f59270f60"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/digest-0.10.7/LICENSE-APACHE",
+      "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/digest-0.10.7/LICENSE-MIT",
+      "sha256": "9e0dfd2dd4173a530e238cb6adb37aa78c34c6bc7444e0e10c1ab5d8881f63ba"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/either-1.16.0/BASIS-METADATA.json",
+      "sha256": "0f7e4444ba410d81accefbfd1de6ddb509cab7bd89ab9b9093c0edf56b7fb7db"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/either-1.16.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/either-1.16.0/LICENSE-MIT",
+      "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/fancy-regex-0.18.0/BASIS-METADATA.json",
+      "sha256": "6c443b8167c84c8751796d370654cc62ef4cae8d25691b5364a51f576dc77fdc"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/fancy-regex-0.18.0/LICENSE",
+      "sha256": "3bc70e239e91272782006c638fc0452a714d384224f11f0923036b7be07cf9b5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-core-0.3.32/BASIS-METADATA.json",
+      "sha256": "a7e838dd3914c115e07de654906062f8bbd4efc6671414f3189227195a88ebe1"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-core-0.3.32/LICENSE-APACHE",
+      "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-core-0.3.32/LICENSE-MIT",
+      "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-task-0.3.32/BASIS-METADATA.json",
+      "sha256": "fe2cb839a960a044a93bbe72614329289db47492189ed2ba975e7cc76346b87c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-task-0.3.32/LICENSE-APACHE",
+      "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-task-0.3.32/LICENSE-MIT",
+      "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-util-0.3.32/BASIS-METADATA.json",
+      "sha256": "c2c71320dd95b0c63be976a4ddff2669ca4498dc2cf54556c2d3176c7422129a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-util-0.3.32/LICENSE-APACHE",
+      "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/futures-util-0.3.32/LICENSE-MIT",
+      "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/generic-array-0.14.7/BASIS-METADATA.json",
+      "sha256": "6e4946f4b1dde452f0e2e8aa5ac6eb29a189d0f24dc9a41dd58f933281f32203"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/generic-array-0.14.7/LICENSE",
+      "sha256": "c09aae9d3c77b531f56351a9947bc7446511d6b025b3255312d3e3442a9a7583"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/getrandom-0.2.17/BASIS-METADATA.json",
+      "sha256": "b9cfbc4edb4f242b7cf70fb3a5d5cd8aa66463d1e8fa3a46fb9fabe01e7dd9cf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/getrandom-0.2.17/LICENSE-APACHE",
+      "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/getrandom-0.2.17/LICENSE-MIT",
+      "sha256": "42fa16951ce7f24b5a467a40e5b449a1d41e662f97ca779864f053f39e097737"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/getrandom-0.2.17/METADATA.txt",
+      "sha256": "984effb5f3889c2cfd436006c46caa208695266a54f533b8e5b59d675285484c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/gimli-0.31.1/LICENSE-APACHE",
+      "sha256": "7cfd738c53d61c79f07e348f622bf7707c9084237054d37fbe07788a75f5881c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/gimli-0.31.1/LICENSE-MIT",
+      "sha256": "fceec72e827b021cda4ce5e838aaa6c8eaf35ce199af802437bbe4ee70bbb7c0"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/gimli-0.31.1/METADATA.txt",
+      "sha256": "ab55163a5da96a243ff94077992b13233a5f50d728682f5359355ef77a3b8c08"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/half-2.7.1/BASIS-METADATA.json",
+      "sha256": "825732d092863d6f22a659b1c9c204b5bfa63f79e74ae0e10dc9b50cd18e69a9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/half-2.7.1/LICENSE-APACHE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/half-2.7.1/LICENSE-MIT",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/half-2.7.1/METADATA.txt",
+      "sha256": "9afd43ec77400f8db4922a269c64eea5e55829274c94dcf83558d0fdc15c8761"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/hash32-0.2.1/BASIS-METADATA.json",
+      "sha256": "398c49fcd12f00b18a701906495ce60063883fb37fb4cd64a631bfe722785c66"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/hash32-0.2.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/hash32-0.2.1/LICENSE-MIT",
+      "sha256": "c986bcdb83103d4ddf58aeb7b5302359782e54dc4eea14a0cc27c62dcbd50729"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/heapless-0.7.17/BASIS-METADATA.json",
+      "sha256": "623afa48c1f3a879bc36c8011f58cf189984ad127d97980c48b99c9d65c38582"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/heapless-0.7.17/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/heapless-0.7.17/LICENSE-MIT",
+      "sha256": "035e70219855119df4273b3c5b97543ae82e0dd60c520416e759107c602f651b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/insta-1.47.2/LICENSE",
+      "sha256": "7cfd738c53d61c79f07e348f622bf7707c9084237054d37fbe07788a75f5881c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/insta-1.47.2/METADATA.txt",
+      "sha256": "68582bbe284fc6bc24f2ea469cf33d61129e6174b4b56a3ec970638309d04a3b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/itertools-0.10.5/BASIS-METADATA.json",
+      "sha256": "c5eb46b0b3b81386698cb7a3f284ae4f7156ba284b15aacacb352b7a09a2f27d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/itertools-0.10.5/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/itertools-0.10.5/LICENSE-MIT",
+      "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/itoa-1.0.18/BASIS-METADATA.json",
+      "sha256": "9ceb9d201220966d0a79c4b9def8f3515fd13ee026447ce22a775d1753674cc4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/itoa-1.0.18/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/itoa-1.0.18/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/js-sys-0.3.99/BASIS-METADATA.json",
+      "sha256": "abf153a845c6fba7391152eb8e24a49f2bb2578d3eb7da0dcf2e08d2f89743db"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/js-sys-0.3.99/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/js-sys-0.3.99/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/js-sys-0.3.99/METADATA.txt",
+      "sha256": "075c4956728e227960fd247e84358ed0a8b11017186be3695bfab19dcd38a255"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Distributions-0.25.0/LICENSE.md",
+      "sha256": "afcd236a60fd10126dccc739720d6ab33ef0758e2de959ee1d9899ffc551b4d7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Distributions-0.25.0/METADATA.txt",
+      "sha256": "9e7a175ae74b07bbd246400db9512ed6a7885b6ea2f3706e82164cb48e6f9025"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Example-1.0.0/LICENSE",
+      "sha256": "bae2562a849eda6515a0ff3aa4f8d4be88f698cca8bfe90a9a139aac4a06be86"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Example-1.0.0/METADATA.txt",
+      "sha256": "a5de42856999616f49ed5a179ea5de7f424e87a2ebc3191bafcb701c3c45e500"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Interact-0.10.4/LICENSE.md",
+      "sha256": "e25dc8c197b2eb66580a3145c23da34d4335ee5464980b319aac8d7ccdf11b26"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Interact-0.10.4/METADATA.txt",
+      "sha256": "cffe6233e91c5cbbe141ca3e968d6bd47400a21b6b3d80cffe2e24bf323acb91"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/JSXGraph-0.1.0/LICENSE.md",
+      "sha256": "7a25960a393b32c279bbc43f9c33b32f2eca1e397bc8c1f294c914f966b2eef5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/JSXGraph-0.1.0/METADATA.txt",
+      "sha256": "4b8df0a0ae453a9a231f4e2a4c6e29377c322758effda5dc839dea2db2299988"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Plots-0.1.0/LICENSE.md",
+      "sha256": "425c7e8eb075305be8bac979c8cc2d8f21c5ea470663d79fcd1c5414419212e7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Plots-0.1.0/METADATA.txt",
+      "sha256": "95f2208d352f74199ce7f1e8e6220cb2ef0beef8419f7c5214b9eda401d4ad11"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Primes-0.5.0/LICENSE.md",
+      "sha256": "85b0d398970442d61d05fbbaed076a5bec2f941d0baa1f484a7a1658e1d429f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Primes-0.5.0/METADATA.txt",
+      "sha256": "bcb1798bd19b3f24aaa7ea33f5ea793ac98b42c06f29c11db945fc36071062bf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/SpecialFunctions-2.5.0/LICENSE",
+      "sha256": "e54837b9c1a48f179dd3aa96e105ae42bb48cb300c75c2f65dbdc55c9910dec7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/SpecialFunctions-2.5.0/METADATA.txt",
+      "sha256": "5d551523c688681453fc418e07696cb0b6f0a7b3043982e96f418f0f2501af1b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/StatsBase-0.34.0/LICENSE.md",
+      "sha256": "bef602e00b9235264f8640a10d0b6d0b7f39677896b79ff7eb6d174079205aa8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/StatsBase-0.34.0/METADATA.txt",
+      "sha256": "ac256a7ad843327d709668db133e52d64904695a2535e033d0e674d36e1051c8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/StatsPlots-0.15.0/LICENSE.md",
+      "sha256": "6b1043cefedc878f5bff42f269e9a6a03c9343c7e293249898efa06b32163c8c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/StatsPlots-0.15.0/METADATA.txt",
+      "sha256": "e75ee17106ae5a0795bcafbcb75497277b4bac82a76fb1660d874424a5ea6332"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Symbolics-0.1.0/LICENSE.md",
+      "sha256": "a4b76a29646a63c8f772a0bfb2b97ef5f4a8652e2e38a661b7de7b9d1a6fd392"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-packages/Symbolics-0.1.0/METADATA.txt",
+      "sha256": "3f76eddc7e0d70f0a71e246c4e6318a01e88cda6131a280da2b7652ff752d164"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-source/LICENSE.md",
+      "sha256": "c349becf11ee093ce16f0c0526c0a26c970444171ce9a2a281f230dc07dbfb66"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-source/LINEARALGEBRA-LICENSE.md",
+      "sha256": "571e45e1593e1ff8fd2d193fd7289c4cfad65aa58c216a26e90ebf54c4c28b7e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/julia-source/METADATA.txt",
+      "sha256": "9b7abae6b45c08af3fbd547455bbc325c0281b84e0f9a3ccf9cb79ce82eecc91"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/lazy_static-1.5.0/BASIS-METADATA.json",
+      "sha256": "02cfbfd5c0a1ee7d94f073c924f69499120c3d0288e2a665cea35c60f0d42f09"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/lazy_static-1.5.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/lazy_static-1.5.0/LICENSE-MIT",
+      "sha256": "0621878e61f0d0fda054bcbe02df75192c28bde1ecc8289cbd86aeba2dd72720"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/logos-0.15.1/BASIS-METADATA.json",
+      "sha256": "4fd5ece0e2b3741af2c2c597475f03d6c1537b3c3bc3800eddf653aa62e3eb44"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/logos-0.15.1/LICENSE-APACHE",
+      "sha256": "f30735c11407534952947e1c7b7457ddf28847000bb038402495ad66f3d020a4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/logos-0.15.1/LICENSE-MIT",
+      "sha256": "112fcdb9f4935988cc2313e4cc38faaeccfff53eb1296499e618932d472908e0"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/logos-0.15.1/METADATA.txt",
+      "sha256": "84d6fa149037e7f891451b607a27a29bdd86e0f52cc69a05a83744fc7389b6f8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/matrixmultiply-0.3.10/BASIS-METADATA.json",
+      "sha256": "634bfe3e52c19c59d7364f1efea41d551117e8037434fd84f77329279602d2f0"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/matrixmultiply-0.3.10/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/matrixmultiply-0.3.10/LICENSE-MIT",
+      "sha256": "792d075c7bad6dac258a44e799eb64cbf465e24d9932d27669be08c5ec957e27"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/memchr-2.8.0/BASIS-METADATA.json",
+      "sha256": "40796a826bb115fba456f32ba2564f6f7722dc43d40a6b13e7631d28606b01f4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/memchr-2.8.0/COPYING",
+      "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/memchr-2.8.0/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/memchr-2.8.0/METADATA.txt",
+      "sha256": "f4ad09c3fe106902fcab0d3fa7b24ea0f8a6bbd7330eb8c00ecab843f07e7f52"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/memchr-2.8.0/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/nalgebra-0.34.2/BASIS-METADATA.json",
+      "sha256": "aa61c3219b64d4a7f4adc472156f46b90d1d6876b60b905c7d2daf103835bc41"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/nalgebra-0.34.2/LICENSE",
+      "sha256": "86ae51c591e742d80ce56823d35e2e176b53e38a99bd8499c85dae31ef4fe1f7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/nalgebra-0.34.2/METADATA.txt",
+      "sha256": "78160c21d1e71698bf7ca682ee6b44150379b66b4752e21f163f2206aa20f471"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-bigint-0.4.6/BASIS-METADATA.json",
+      "sha256": "69f17dd8fe268ffd4ff1f99628052e6a75658068906f582b29c06cb47ed68805"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-bigint-0.4.6/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-bigint-0.4.6/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-bigint-0.4.6/METADATA.txt",
+      "sha256": "6d6b6f227e9765a25084a0dc2e898cf00d66ac29ed724a97da8f12290c2c512f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-complex-0.4.6/BASIS-METADATA.json",
+      "sha256": "8e11b2c86fac57d6e3cc88d2acec3d7e13ce13e2a3d0c5b0bb3722c3fa90cf97"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-complex-0.4.6/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-complex-0.4.6/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-integer-0.1.46/BASIS-METADATA.json",
+      "sha256": "3aa2254484453d1e93ffa8a89645ff155f234c92bb9e5a9e2b4b020d3b5bc969"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-integer-0.1.46/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-integer-0.1.46/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-integer-0.1.46/METADATA.txt",
+      "sha256": "0926e1b1ecb8a24f28fdd4dce9ec0ee54adb791bfd4d2a9afa5305ff6bb9d294"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-rational-0.4.2/BASIS-METADATA.json",
+      "sha256": "1051ad9d684c43504e06a310ecf3e2d7fb970da785d9fc4783c0dc141dd35f64"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-rational-0.4.2/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-rational-0.4.2/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-traits-0.2.19/BASIS-METADATA.json",
+      "sha256": "65208d3caaab9ff762bcfce79345e9e10a1a1ec3aca94f0482005e8a2320526d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-traits-0.2.19/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-traits-0.2.19/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/num-traits-0.2.19/METADATA.txt",
+      "sha256": "14662c835c442247451fa47064d64e432a72837cb7c377f65dd531f90a1b1bcb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/object-0.36.7/LICENSE-APACHE",
+      "sha256": "7cfd738c53d61c79f07e348f622bf7707c9084237054d37fbe07788a75f5881c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/object-0.36.7/LICENSE-MIT",
+      "sha256": "e1f14c6888b0fed8428ed076191de0f11c74739df3fc676890bc19a62fb2471f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/object-0.36.7/METADATA.txt",
+      "sha256": "ed796aa9a7d0388c3553141fb48fc88c8fce944548741c4c30925dab50aa4713"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/once_cell-1.21.4/BASIS-METADATA.json",
+      "sha256": "2ddcabf5e4550aaeee616712c3c28f34cb2f8a6ea92030182ca382f625817fb5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/once_cell-1.21.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/once_cell-1.21.4/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/once_cell-1.21.4/METADATA.txt",
+      "sha256": "0da705782a158016dccd17ba6a24178fa8715153e38ad75c5bf242b3d1268a17"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/pin-project-lite-0.2.17/BASIS-METADATA.json",
+      "sha256": "998c70ecc3aa7fc49376be9513f62667d5e1c5ebe913b546cfe73d447de45226"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/pin-project-lite-0.2.17/LICENSE-APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/pin-project-lite-0.2.17/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/postcard-1.1.3/BASIS-METADATA.json",
+      "sha256": "13ad3a19e377a6b7de5176abbd7d159b4417a176dad0195aa724094d454bb2b5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/postcard-1.1.3/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/postcard-1.1.3/LICENSE-MIT",
+      "sha256": "177540cad091a40e8071db310bc3b6115c4e329a92a234609b60c154b008a888"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/ppv-lite86-0.2.21/BASIS-METADATA.json",
+      "sha256": "47ddb3005b56268b6d5c9233a00cd8c2e05ae0ba594eb6a595357e581a77bc82"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/ppv-lite86-0.2.21/LICENSE-APACHE",
+      "sha256": "0218327e7a480793ffdd4eb792379a9709e5c135c7ba267f709d6f6d4d70af0a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/ppv-lite86-0.2.21/LICENSE-MIT",
+      "sha256": "4cada0bd02ea3692eee6f16400d86c6508bbd3bafb2b65fed0419f36d4f83e8f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/pretty_assertions-1.4.1/LICENSE-APACHE",
+      "sha256": "2e54cd84a645bea25943c75dd8ae67cb291e66a47a11578333c9b4b3b6b86c85"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/pretty_assertions-1.4.1/LICENSE-MIT",
+      "sha256": "95957289f00a90ccbe04c7d792677e5b6ee2425a08c483b1c3aba194eb83ee29"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/pretty_assertions-1.4.1/METADATA.txt",
+      "sha256": "3049bb50446b0ff65fd119ac57aeafd350a9450cde1aff3cd8746900c208c21a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_chacha-0.3.1/BASIS-METADATA.json",
+      "sha256": "f2664b8126e7c8b470879640977876ae348d45d712380c26e16511a76985c3f5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_chacha-0.3.1/COPYRIGHT",
+      "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_chacha-0.3.1/LICENSE-APACHE",
+      "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_chacha-0.3.1/LICENSE-MIT",
+      "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_core-0.6.4/BASIS-METADATA.json",
+      "sha256": "aec30fd526cc6525ad835ebf9c2a6de5eb9927467a42d3d3f60e731ef9656f9c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_core-0.6.4/COPYRIGHT",
+      "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_core-0.6.4/LICENSE-APACHE",
+      "sha256": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand_core-0.6.4/LICENSE-MIT",
+      "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand-0.8.6/BASIS-METADATA.json",
+      "sha256": "0f15c8b7cf047337eae01afb5837891ccb6e8357a301a70be64b24fed67a1657"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand-0.8.6/COPYRIGHT",
+      "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand-0.8.6/LICENSE-APACHE",
+      "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rand-0.8.6/LICENSE-MIT",
+      "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rawpointer-0.2.1/BASIS-METADATA.json",
+      "sha256": "ce6515836d8c207676532d480ca30991ba744b65440ecc35ee4d7f6350d4791c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rawpointer-0.2.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rawpointer-0.2.1/LICENSE-MIT",
+      "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/README.md",
+      "sha256": "d5f652b50a0ff0a50d174c4d734a2691d455e982e6e97498a9657086c5a8bfba"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-1.12.3/BASIS-METADATA.json",
+      "sha256": "f06ffca41fc5663117c8b9016186fe53f1866e2f67a78505194c97e3ab3d1cb6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-1.12.3/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-1.12.3/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-1.12.3/METADATA.txt",
+      "sha256": "90a038456b033cb48fa87f41d504c1c769a92c97535c6d3adfcef97b1278eab9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-automata-0.4.14/BASIS-METADATA.json",
+      "sha256": "ce9b0a121f5d6ff95502b217017a23e24d36cae48d86f57603057a3353d75de6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-automata-0.4.14/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-automata-0.4.14/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-syntax-0.8.10/BASIS-METADATA.json",
+      "sha256": "d70e8d5bc3457c11a0379d5ad21b0a43c1a1e893f150add78b9439755de5861e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-syntax-0.8.10/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/regex-syntax-0.8.10/LICENSE-MIT",
+      "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rustyline-17.0.2/LICENSE",
+      "sha256": "3fd4cdd7c2b1feee8f9e76ece1ef1c187bc189b84d767829da418d3d4f83d4e4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/rustyline-17.0.2/METADATA.txt",
+      "sha256": "ed2fb1fc92d89aaab23644e662ec44d426be348855ed85aa81e0aa3a7dc733b8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/safe_arch-0.7.4/BASIS-METADATA.json",
+      "sha256": "f28d25d9b87b22f9ad1a430b57bab3a97ca44d5bfcda9332cc77056da32c3e42"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/safe_arch-0.7.4/LICENSE-APACHE.md",
+      "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/safe_arch-0.7.4/LICENSE-MIT.md",
+      "sha256": "e57011537d230b14e790f6666dc00816f7b371ebbd7da8a12491e51086fec278"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/safe_arch-0.7.4/LICENSE-ZLIB.md",
+      "sha256": "c43b9a9b1387ed53d2c49263838261129a010e280e3a174a792242c3e2c98db9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_core-1.0.228/BASIS-METADATA.json",
+      "sha256": "94936ef5ecf75782f97fa6d32be8909192d7b99764e39b29b6ebfee343db2042"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_core-1.0.228/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_core-1.0.228/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_json-1.0.150/BASIS-METADATA.json",
+      "sha256": "8b1505952608c78ac17ea4e3c609767d562025f2503e578f738656869520fe73"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_json-1.0.150/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_json-1.0.150/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_json-1.0.150/METADATA.txt",
+      "sha256": "ab52931a955bb27ac6fd23914b660e82eadcc1c24e86c55407c90301926b49e9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_spanned-1.1.1/BASIS-METADATA.json",
+      "sha256": "cc93259e22b8d4809a96c33b0b098637577db71e07a1d35a2beafc0b3a8e02cf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_spanned-1.1.1/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde_spanned-1.1.1/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde-1.0.228/BASIS-METADATA.json",
+      "sha256": "9ef4e08bfd753840427f3ccf0573534d0b12a9745c1147ad9770aee4bb4416a6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde-1.0.228/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde-1.0.228/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde-1.0.228/METADATA.txt",
+      "sha256": "18583db5717c4c9122e197f915f3216c3366fe99432e71fcbfcb200b6f2ccc26"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde-wasm-bindgen-0.6.5/BASIS-METADATA.json",
+      "sha256": "2d52fdf6d0cccb5dfa699b081077f7b32a5e663d09ff2700512b2c4adace3530"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde-wasm-bindgen-0.6.5/LICENSE",
+      "sha256": "62a81c033fcf173693b50f068939cd903d8a414d915776ff1fef5d5869aabcb7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/serde-wasm-bindgen-0.6.5/METADATA.txt",
+      "sha256": "89cb0fdecaf08b21d88b634b219ee7a7f80025f0d8d9af64dd689abbca15063f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/sha2-0.10.9/BASIS-METADATA.json",
+      "sha256": "1ed3ef2a77be7cf69b31862709465350bc27de8d69a05b856e601588744aa40d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/sha2-0.10.9/LICENSE-APACHE",
+      "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/sha2-0.10.9/LICENSE-MIT",
+      "sha256": "b4eb00df6e2a4d22518fcaa6a2b4646f249b3a3c9814509b22bd2091f1392ff1"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/sha2-0.10.9/METADATA.txt",
+      "sha256": "a05524aad74d72191364350b1589111f12f6c15fb38303abd8ed653b6c50a7e7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/simba-0.9.1/BASIS-METADATA.json",
+      "sha256": "07a6ee5935388665f7fa4902b3400ad63336ca1f631a0c827a99863ea9728b3f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/simba-0.9.1/LICENSE",
+      "sha256": "ceacfa4d7fa67df64ab09a56fe248c50a3bfc9bc00374d69bd74ad763b14b89c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/slab-0.4.12/BASIS-METADATA.json",
+      "sha256": "9133d5a260f3b7a58fc3cbe910b9c7ef5ec8abf448a6aab938eb7f17945e8a30"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/slab-0.4.12/LICENSE",
+      "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/smallvec-1.15.1/BASIS-METADATA.json",
+      "sha256": "21d3cb7fa2afb93ca881025a36a8380d199e7cad6d903930e5e540feba02d511"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/smallvec-1.15.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/smallvec-1.15.1/LICENSE-MIT",
+      "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/stable_deref_trait-1.2.1/BASIS-METADATA.json",
+      "sha256": "eba19c2e93d147f9042bcaa952a38b5e6fa174677deebb061d7c28cbf620e7a7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/stable_deref_trait-1.2.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/stable_deref_trait-1.2.1/LICENSE-MIT",
+      "sha256": "5e05b024f653a5ce199e77cbbbd42fb5553562ec714b819421ed0c3e552a75d7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/strum-0.27.2/BASIS-METADATA.json",
+      "sha256": "051b3b7ef7e98369bb570f903bf3cf7b5cf10145fd0f71c44659301ab54b8e6b"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/strum-0.27.2/LICENSE",
+      "sha256": "8bce3b45e49ecd1461f223b46de133d8f62cd39f745cfdaf81bee554b908bd42"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/target-lexicon-0.12.16/LICENSE",
+      "sha256": "b4671407c0ea0b64c757ced56d89f031581afd9083a4b47d9051fb1886bb3b68"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/target-lexicon-0.12.16/METADATA.txt",
+      "sha256": "85496141174361b026aaa007b043564673051f0b5a4c07408e0f07de15f32c15"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/tempfile-3.27.0/LICENSE-APACHE",
+      "sha256": "7cfd738c53d61c79f07e348f622bf7707c9084237054d37fbe07788a75f5881c"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/tempfile-3.27.0/LICENSE-MIT",
+      "sha256": "dfe708efe0178be9631613e9bc483b2b4e1d24b385b332116053d0ebb0dd7675"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/tempfile-3.27.0/METADATA.txt",
+      "sha256": "cb20ca2857fb461f84eaf7b21549b48dcc3eb2e77ef61a50915743262f77bece"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/thiserror-1.0.69/LICENSE-APACHE",
+      "sha256": "20fe7b00e904ed690e3b9fd6073784d3fc428141dbd10b81c01fd143d0797f58"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/thiserror-1.0.69/LICENSE-MIT",
+      "sha256": "36516aefdc84c5d5a1e7485425913a22dbda69eb1930c5e84d6ae4972b5194b9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/thiserror-1.0.69/METADATA.txt",
+      "sha256": "5d836b9c1047c69fac5ee1ae6222c97b8dedbb317f4ee462eb475994050276c3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/thiserror-2.0.18/BASIS-METADATA.json",
+      "sha256": "2d13cc56e250d8de75fa6315deacf934bab78f49eafc963c6766ce9a9404e571"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/thiserror-2.0.18/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/thiserror-2.0.18/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/thiserror-2.0.18/METADATA.txt",
+      "sha256": "8c1190a0d2e00783e722791672c6b4903e15532ff08a8f23a174012764dbd5df"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_datetime-0.7.5+spec-1.1.0/BASIS-METADATA.json",
+      "sha256": "c63bd69308b7058628b2f8b40ae507f022796a17182b1172b716069d3f9ef9ad"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_datetime-0.7.5+spec-1.1.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_datetime-0.7.5+spec-1.1.0/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_parser-1.1.2+spec-1.1.0/BASIS-METADATA.json",
+      "sha256": "a6104452c7d09f039c0cd7acbd8d5958077b7481dee6164f2e2320d32bba762f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_parser-1.1.2+spec-1.1.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_parser-1.1.2+spec-1.1.0/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_writer-1.1.1+spec-1.1.0/BASIS-METADATA.json",
+      "sha256": "dd1aa1b6b66b1f96a6075b8706bd55a5304b1c6b8789ae0c6a0bb1ba951f4b63"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_writer-1.1.1+spec-1.1.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml_writer-1.1.1+spec-1.1.0/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml-0.8.23/LICENSE-APACHE",
+      "sha256": "2e54cd84a645bea25943c75dd8ae67cb291e66a47a11578333c9b4b3b6b86c85"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml-0.8.23/LICENSE-MIT",
+      "sha256": "9e2d5a48a160d81f96d2c6697316e6d251e2efe157c749b3f03ac93e1caddada"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml-0.8.23/METADATA.txt",
+      "sha256": "58c7ca65e320749f199b97e7600e126a8b4c86fbbcfae01e0bfaa75960efbaaa"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml-0.9.12+spec-1.1.0/BASIS-METADATA.json",
+      "sha256": "99b1157640cc3b10815c072dae845c8bfa7921507bb154c091aadff390238e79"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml-0.9.12+spec-1.1.0/LICENSE-APACHE",
+      "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml-0.9.12+spec-1.1.0/LICENSE-MIT",
+      "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/toml-0.9.12+spec-1.1.0/METADATA.txt",
+      "sha256": "b61a5d10ecf9731bc33b7d177c49c58766a56725407946d1739dec8f3222b56d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/typenum-1.20.0/BASIS-METADATA.json",
+      "sha256": "faf49efcab1b70ae38b58a4d85309bf85d4817d1e03df164616d4e021cacdb7e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/typenum-1.20.0/LICENSE",
+      "sha256": "db11fec9946737df39ca3898d9cd8c10ec6f6c3a884a6802b0ad0b81b4e8f23a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/typenum-1.20.0/LICENSE-APACHE",
+      "sha256": "516b24e051bf5630880ebbd55c40a25ce9552ebaf8970a53e8976eb70e522406"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/typenum-1.20.0/LICENSE-MIT",
+      "sha256": "a825bd853ab71619a4923d7b4311221427848070ff44d990da39b0b274c1683f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/unicode-ident-1.0.24/BASIS-METADATA.json",
+      "sha256": "4e51ea22d78e6c7487659cd2ff5d789fcde1b21aaf9dc162509fb536e64ab7ba"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/unicode-ident-1.0.24/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/unicode-ident-1.0.24/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/unicode-ident-1.0.24/LICENSE-UNICODE",
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wasm-bindgen-0.2.122/BASIS-METADATA.json",
+      "sha256": "55cab059b34b1f6d61235857075f62a99c6cc25694e79ec9ce62512ee117cadb"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wasm-bindgen-0.2.122/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wasm-bindgen-0.2.122/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wasm-bindgen-0.2.122/METADATA.txt",
+      "sha256": "fd07d9a5679c9972770114ea2cd03c160c5a386d43ac025acf760af25d5803ba"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wasm-bindgen-shared-0.2.122/BASIS-METADATA.json",
+      "sha256": "65043adf8eed0737a204a5b2ea12e36cff191484255ea31d5cf358c4b3382a02"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wasm-bindgen-shared-0.2.122/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wasm-bindgen-shared-0.2.122/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wide-0.7.33/BASIS-METADATA.json",
+      "sha256": "e122862036ed7478bd34070c866acefdf231d087bf56999a23ecd347eb93bbd4"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/wide-0.7.33/LICENSE-ZLIB.md",
+      "sha256": "c43b9a9b1387ed53d2c49263838261129a010e280e3a174a792242c3e2c98db9"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/winnow-0.7.15/BASIS-METADATA.json",
+      "sha256": "49d8ee65865994718b7ef2b56ffb700ae7ab6007230ab00fe13c2de607051cc3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/winnow-0.7.15/LICENSE-MIT",
+      "sha256": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/winnow-1.0.3/BASIS-METADATA.json",
+      "sha256": "3e6ea74949f31e5e02dbf7e04b19a541acce10d2bfd02d8e75ba4bd4ae3c47df"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/winnow-1.0.3/LICENSE-MIT",
+      "sha256": "cb5aedb296c5246d1f22e9099f925a65146f9f0d6b4eebba97fd27a6cdbbab2d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/zerocopy-0.8.48/BASIS-METADATA.json",
+      "sha256": "a5cce519cb06f942c169aa6e4f4b41dc3556630281ae71c993696378f474b9db"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/zerocopy-0.8.48/LICENSE-APACHE",
+      "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/zerocopy-0.8.48/LICENSE-BSD",
+      "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/zerocopy-0.8.48/LICENSE-MIT",
+      "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/zmij-1.0.21/BASIS-METADATA.json",
+      "sha256": "e117d010b03c61622d9e32228a7a4224eb778dbd549891194f6968c884431c85"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES/zmij-1.0.21/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    }
+  ]
+}

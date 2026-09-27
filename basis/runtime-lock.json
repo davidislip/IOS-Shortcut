@@ -1,0 +1,9 @@
+{
+    "schemaVersion":  1,
+    "runtimeDir":  "vendor/subset-julia/pkg",
+    "noticesDir":  "vendor/subset-julia/notices",
+    "version":  "0.11.1",
+    "wasmSHA256":  "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548",
+    "provenanceSHA256":  "04a88916904c6622313f1f86c7aead88d7712b49042e6013409c9907ae6906ff",
+    "glueSHA256":  "c4d3b6120ff48cf25114237b3d2bd3741c23511dca2e85d0629d58505999b7ea"
+}

@@ -1,0 +1,4 @@
+Source licenses retained for Julia-derived Base and LinearAlgebra code.
+License texts copied without modification from the Julia 1.12.1 installation used for Basis parity checks.
+Sources: https://github.com/JuliaLang/julia/blob/v1.12.1/LICENSE.md and https://github.com/JuliaLang/LinearAlgebra.jl
+This app distributes the SubsetJuliaVM interpreter, not the official Julia executable.

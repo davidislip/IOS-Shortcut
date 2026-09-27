@@ -1,0 +1,11 @@
+{
+  "name": "regex-syntax",
+  "version": "0.8.10",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/rust-lang/regex",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

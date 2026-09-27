@@ -1,0 +1,11 @@
+{
+  "name": "bit-set",
+  "version": "0.8.0",
+  "license": "Apache-2.0 OR MIT",
+  "repository": "https://github.com/contain-rs/bit-set",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

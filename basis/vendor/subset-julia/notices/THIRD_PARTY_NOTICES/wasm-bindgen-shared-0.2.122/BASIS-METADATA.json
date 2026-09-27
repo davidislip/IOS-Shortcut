@@ -1,0 +1,11 @@
+{
+  "name": "wasm-bindgen-shared",
+  "version": "0.2.122",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/shared",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

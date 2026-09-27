@@ -1,0 +1,10 @@
+{
+  "name": "fancy-regex",
+  "version": "0.18.0",
+  "license": "MIT",
+  "repository": "https://github.com/fancy-regex/fancy-regex",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE"
+  ]
+}

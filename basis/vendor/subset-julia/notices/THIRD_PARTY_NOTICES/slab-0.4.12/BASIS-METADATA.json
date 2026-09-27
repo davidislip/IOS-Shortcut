@@ -1,0 +1,10 @@
+{
+  "name": "slab",
+  "version": "0.4.12",
+  "license": "MIT",
+  "repository": "https://github.com/tokio-rs/slab",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE"
+  ]
+}

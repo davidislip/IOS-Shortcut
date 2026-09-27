@@ -1,13 +1,14 @@
 name: Pages
 
 # One GitHub Pages site for the whole repo: each web project is built into
-# its own subfolder (cppad -> /cppad/), with pages/index.html at the root.
+# its own subfolder (cppad -> /cppad/, Basis -> /basis/), with pages/index.html at the root.
 
 on:
   push:
     branches: [main]
     paths:
       - "cppad/**"
+      - "basis/**"
       - "pages/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -34,17 +35,26 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: cppad/package-lock.json
+          cache-dependency-path: |
+            cppad/package-lock.json
+            basis/package-lock.json
       - name: Build cppad
         working-directory: cppad
         run: |
           npm ci
           npm run build
+      - name: Build and check Basis
+        working-directory: basis
+        run: |
+          npm ci
+          npm run build
+          npm test
       - name: Assemble site
         run: |
           mkdir -p _site
           cp -r pages/. _site/
           cp -r cppad/dist _site/cppad
+          cp -r basis/dist _site/basis
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

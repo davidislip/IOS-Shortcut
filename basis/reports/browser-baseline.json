@@ -1,0 +1,50 @@
+{
+  "browser": "153.0.8010.50",
+  "checkedAt": "2026-09-26T18:06:01.179Z",
+  "physicalIPad": false,
+  "checks": [
+    {
+      "name": "install complete offline pack and initialize Julia",
+      "passed": true,
+      "ms": 9861
+    },
+    {
+      "name": "matrix values render in row and column order",
+      "passed": true,
+      "ms": 1160
+    },
+    {
+      "name": "new Julia computation after offline reload",
+      "passed": true,
+      "ms": 9510
+    },
+    {
+      "name": "dimension error is visible and the next run recovers",
+      "passed": true,
+      "ms": 2641
+    },
+    {
+      "name": "stop runaway code and restart worker",
+      "passed": true,
+      "ms": 4477
+    },
+    {
+      "name": "draft and offline pack survive closing tab",
+      "passed": true,
+      "ms": 2962
+    },
+    {
+      "name": "cold browser restart preserves offline execution and draft",
+      "passed": true,
+      "ms": 6522
+    },
+    {
+      "name": "tablet and narrow viewport fit without horizontal overflow",
+      "passed": true,
+      "ms": 40
+    }
+  ],
+  "errors": [],
+  "runtime": "SubsetJuliaVM 0.12.2 · ABI 3 · Julia subset, local WebAssembly",
+  "passed": true
+}

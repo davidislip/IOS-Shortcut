@@ -1,0 +1,33 @@
+{
+  "engine": "Windows Playwright WebKit",
+  "version": "26.0",
+  "checkedAt": "2026-09-26T19:27:39.816Z",
+  "profile": "C:\\Users\\david\\AppData\\Local\\Temp\\bwd-QKSbzF",
+  "physicalIPad": false,
+  "console": [],
+  "failedRequests": [],
+  "storage": {
+    "secure": true,
+    "serviceWorker": true,
+    "caches": "object",
+    "offlineText": "Offline pack incomplete or a different build is active. Reload while connected to finish."
+  },
+  "cacheProbes": [
+    {
+      "asset": "./icon.svg",
+      "status": 200,
+      "cached": false
+    },
+    {
+      "asset": "./runtime/subset_julia_vm_web_bg.wasm",
+      "status": 200,
+      "cached": false
+    }
+  ],
+  "learnerFunction": {
+    "state": "Complete",
+    "value": "Bool\n\ntrue\n",
+    "output": "",
+    "passed": true
+  }
+}

@@ -1,0 +1,1804 @@
+{
+  "schemaVersion": 2,
+  "createdAt": "2026-09-26T17:21:39.529Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "options": {
+    "wasmDir": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\pkg",
+    "report": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\results-bundled-0.12.2.json",
+    "timeout": 30000,
+    "julia": "C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\bin\\julia.exe"
+  },
+  "artifacts": {
+    "wasm": {
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\pkg\\subset_julia_vm_web_bg.wasm",
+      "sha256": "4b4e4613382444e25fa41500e7fcbfa2c29c8af8149b047077687e1097eb2353"
+    },
+    "glue": {
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\pkg\\subset_julia_vm_web.js",
+      "sha256": "b5c0a3978e9b02ab27158179397eb1d53297508b423be3e4654229f1f0069ea4"
+    },
+    "suite": {
+      "sha256": "56037c723abcf838aeab9168fe95dae11b2ff7b9dd4adb78d5c9739ae0fef838",
+      "runnerSHA256": "8a1975b16d86c0205d9181154ff5899bed4ee07db787900dea4fa577338e0b61",
+      "workerSHA256": "b37c1ef7095b16faf358c66b23fc8b4e084d3cc39f6749bf2a2489139d1b08f1"
+    },
+    "playground": {
+      "revision": "561587e7a6f3914a24afd883a0dba52d51f3453d",
+      "branch": "basis/offline-scope",
+      "status": "?? basis-probes/"
+    }
+  },
+  "scope": "Local Node/V8 execution of local WASM with fetch disabled; not Safari/iPad, PWA, or general Julia compatibility validation.",
+  "cases": [
+    {
+      "name": "columns",
+      "expected": [
+        0,
+        0
+      ],
+      "concept": "matrix columns, slices, functions, loops",
+      "fixtureSHA256": "ee21367656cf04078d6805c75328bb309cf2c5aff0648fefb9747d74eb53a8d1",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.0,0.0\n",
+        "stderr": "",
+        "ms": 10167.031599999998,
+        "values": [
+          0,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0,
+          0
+        ],
+        "type": "result",
+        "id": 2,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 5477.2948
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "composition",
+      "expected": [
+        1,
+        3,
+        0
+      ],
+      "concept": "composition and transformed origin",
+      "fixtureSHA256": "9f844797ac6e0a013e152e57af1d54293ab9cbd41bbf0af44db86bbd8ca48a0f",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,3.0,0.0\n",
+        "stderr": "",
+        "ms": 6858.292600000001,
+        "values": [
+          1,
+          3,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1,
+          3,
+          0
+        ],
+        "type": "result",
+        "id": 3,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0, 3.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 10180.6224
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "dependence",
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "concept": "nullspace and nonunique coefficients",
+      "fixtureSHA256": "145c474f31da5a5266b0859663f6ec51e372aa4d916b5ff9f52d6780c7c31f40",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.0,0.0,0.0\n",
+        "stderr": "",
+        "ms": 5296.750800000002,
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "type": "result",
+        "id": 4,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.0, 0.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 6989.683900000004
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square",
+      "expected": [
+        1.4,
+        1.2
+      ],
+      "concept": "square solve",
+      "fixtureSHA256": "a52c511b83e4aa0a71589b2b851800cd64efa0a7241bdf334c76b5cb84cc949d",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.4,1.2\n",
+        "stderr": "",
+        "ms": 6214.825100000002,
+        "values": [
+          1.4,
+          1.2
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.4,
+          1.2
+        ],
+        "type": "result",
+        "id": 5,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.4, 1.2]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.4",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.4
+              },
+              {
+                "display": "1.2",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.2
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 4283.303199999995
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-pivot",
+      "expected": [
+        2,
+        -1,
+        3,
+        0
+      ],
+      "concept": "pivoting and reconstruction",
+      "fixtureSHA256": "949db8aa51842b6c843a303e0496677bb799bbae83b951a11ac71b5027dd78c4",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0,-1.0,3.0,0.0\n",
+        "stderr": "",
+        "ms": 7191.895800000006,
+        "values": [
+          2,
+          -1,
+          3,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2,
+          -1,
+          3,
+          0
+        ],
+        "type": "result",
+        "id": 6,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.0, -1.0, 3.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "-1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -1
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 4277.368200000004
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-matrix-rhs",
+      "expected": [
+        1,
+        -2,
+        3,
+        4,
+        2,
+        2,
+        0
+      ],
+      "concept": "square solve with two right-hand sides",
+      "fixtureSHA256": "db40dbac793383419996783eaab8a9b4d493b8f4630be8d1fd2a73a51d069946",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,-2.0,3.0,4.0,2.0,2.0,0.0\n",
+        "stderr": "",
+        "ms": 27876.9623,
+        "values": [
+          1,
+          -2,
+          3,
+          4,
+          2,
+          2,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1,
+          -2,
+          3,
+          4,
+          2,
+          2,
+          0
+        ],
+        "type": "result",
+        "id": 7,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0, -2.0, 3.0, 4.0, 2.0, 2.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "-2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -2
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              },
+              {
+                "display": "4.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 7,
+            "shape": [
+              7
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 7668.7925000000105
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-small-scale",
+      "expected": [
+        1,
+        -2,
+        0
+      ],
+      "concept": "scale-aware square solve below 1e-14",
+      "fixtureSHA256": "7f22d07b8e04ce41f06d0e04b95ae7e7c2af8334192884b67f926ae1214aa6cf",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0000000000000002,-2.0000000000000004,1.2037062152420224e-16\n",
+        "stderr": "",
+        "ms": 13998.439799999993,
+        "values": [
+          1.0000000000000002,
+          -2.0000000000000004,
+          1.2037062152420224e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.0000000000000002,
+          -2.0000000000000004,
+          1.2037062152420224e-16
+        ],
+        "type": "result",
+        "id": 8,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0000000000000002, -2.0000000000000004, 1.2037062152420224e-16]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0000000000000002",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.0000000000000002
+              },
+              {
+                "display": "-2.0000000000000004",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -2.0000000000000004
+              },
+              {
+                "display": "1.2037062152420224e-16",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.2037062152420224e-16
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 9698.2258
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-large-scale",
+      "expected": [
+        1,
+        -2,
+        0
+      ],
+      "concept": "scale-aware square solve above 1e14",
+      "fixtureSHA256": "15fdb419abc7885b3b8f6a8c17bab91caed1311027cbd66a625035f7cad05f42",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,-2.0,0.0\n",
+        "stderr": "",
+        "ms": 8573.226900000009,
+        "values": [
+          1,
+          -2,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0.9999999999999999,
+          -1.9999999999999998,
+          2.62144e-16
+        ],
+        "type": "result",
+        "id": 9,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.9999999999999999, -1.9999999999999998, 2.62144e-16]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.9999999999999999",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.9999999999999999
+              },
+              {
+                "display": "-1.9999999999999998",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -1.9999999999999998
+              },
+              {
+                "display": "2.62144e-16",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2.62144e-16
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 6342.005000000005
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "projection",
+      "expected": [
+        2,
+        1,
+        0
+      ],
+      "concept": "projection and orthogonal residual",
+      "fixtureSHA256": "078a6f3a3557160a54aa9d9a203d35a9a6c1e761dc9fd6eb34cbb862a4a01fce",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0,1.0,0.0\n",
+        "stderr": "",
+        "ms": 4063.0120000000024,
+        "values": [
+          2,
+          1,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2,
+          1,
+          0
+        ],
+        "type": "result",
+        "id": 10,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.0, 1.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 5023.075100000002
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "projection-function",
+      "expected": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "concept": "projection implemented as learner function",
+      "fixtureSHA256": "e5dd66fbd24151cdd34423ba48bdc2519b2ac6394fa5ad3b939f629ad236a09b",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0,1.0,0.0,0.0\n",
+        "stderr": "",
+        "ms": 3435.7468999999983,
+        "values": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "type": "result",
+        "id": 11,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.0, 1.0, 0.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 3871.58630000001
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "projection-zero",
+      "error": "zero direction",
+      "concept": "explicit zero-direction guard",
+      "fixtureSHA256": "9f2f117db4aa0443faf3be3a0855c3a0f0bc26766bc79ca9ef4e3c60e16020ce",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "LoadError: zero direction cannot define a line\nin expression starting at C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\projection-zero.jl:8\n",
+        "ms": 15802.396399999983,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "type": "result",
+        "id": 12,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: ErrorException: ErrorException(\"zero direction cannot define a line\")",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: ErrorException: ErrorException(\"zero direction cannot define a line\")",
+          "artifacts": []
+        },
+        "ms": 5754.744000000006
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares",
+      "expected": [
+        1.1666666666666667,
+        0.5
+      ],
+      "concept": "direct rectangular least squares",
+      "fixtureSHA256": "950a18e2a0cd6d4022aaa51632f0c72a1a27b7eafa9419c2651f1b02ff96ac47",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666663,0.5000000000000001\n",
+        "stderr": "",
+        "ms": 19250.021799999988,
+        "values": [
+          1.1666666666666663,
+          0.5000000000000001
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 13,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 7393.585299999977
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "least-squares-properties",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        0,
+        0.16666666666666666
+      ],
+      "concept": "nonzero residual with column-space orthogonality",
+      "fixtureSHA256": "0e4d457d05f2493ba4ea6a39144c598e9b58c85941e9ff820b77f759bcf871f7",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666663,0.5000000000000001,9.435081445006126e-17,0.1666666666666666\n",
+        "stderr": "",
+        "ms": 10256.567800000019,
+        "values": [
+          1.1666666666666663,
+          0.5000000000000001,
+          9.435081445006126e-17,
+          0.1666666666666666
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 14,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 7145.319600000017
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "least-squares-matrix-rhs",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        2,
+        -1,
+        2,
+        2,
+        0
+      ],
+      "concept": "rectangular solve with two right-hand sides",
+      "fixtureSHA256": "e572747ee7216b23a3a9df77d76865a2baaf5466232a9a221ab1b166aff5f1e0",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666663,0.5000000000000001,2.000000000000001,-1.0000000000000004,2.0,2.0,1.5274575480845734e-16\n",
+        "stderr": "",
+        "ms": 10474.665200000018,
+        "values": [
+          1.1666666666666663,
+          0.5000000000000001,
+          2.000000000000001,
+          -1.0000000000000004,
+          2,
+          2,
+          1.5274575480845734e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 15,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 4684.8954000000085
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "least-squares-near-dependent",
+      "expected": [
+        2,
+        -1,
+        0
+      ],
+      "atol": 0.000001,
+      "concept": "near dependence without normal equations",
+      "fixtureSHA256": "b2cea471c6d4f7799c22f472ad6b22ecfe27ffa017fbadc951115278ebaaa06b",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0000000118423777,-1.0000000118423775,2.4825341656599437e-16\n",
+        "stderr": "",
+        "ms": 8111.258499999996,
+        "values": [
+          2.0000000118423777,
+          -1.0000000118423775,
+          2.4825341656599437e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 16,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 4251.989499999996
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "least-squares-small-scale",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        0
+      ],
+      "concept": "small-scale rectangular solve",
+      "fixtureSHA256": "5d54170e58a53d9a3421524360cd84e5b74d910e547d8b7eeba054331af29301",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666665,0.4999999999999999,1.4127376785505196e-16\n",
+        "stderr": "",
+        "ms": 13462.149399999995,
+        "values": [
+          1.1666666666666665,
+          0.4999999999999999,
+          1.4127376785505196e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 17,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 5302.977199999994
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "least-squares-large-scale",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        0
+      ],
+      "concept": "large-scale rectangular solve",
+      "fixtureSHA256": "69c460c8974575028811b10db21d7b6b52e59076ddea1cc8e829d370bed8e0c5",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.166666666666666,0.5000000000000006,1.1908365381897762e-16\n",
+        "stderr": "",
+        "ms": 14129.695400000026,
+        "values": [
+          1.166666666666666,
+          0.5000000000000006,
+          1.1908365381897762e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 18,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 8440.289000000019
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "least-squares-rank-deficient",
+      "expected": [
+        0.6,
+        1.2,
+        0,
+        0
+      ],
+      "concept": "rank-deficient minimum-norm least squares",
+      "fixtureSHA256": "12c3de4808b9581ec13cb15c9815f8d7153e883bdbd6b4ee040cef8c8afa3744",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.6000000000000001,1.2000000000000002,1.7764797834319164e-16,0.0\n",
+        "stderr": "",
+        "ms": 12261.831000000006,
+        "values": [
+          0.6000000000000001,
+          1.2000000000000002,
+          1.7764797834319164e-16,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 19,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 4862.751199999999
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "wide-minimum-norm",
+      "expected": [
+        0.3333333333333333,
+        1.3333333333333333,
+        1.6666666666666667,
+        0,
+        0
+      ],
+      "concept": "underdetermined minimum-norm solve",
+      "fixtureSHA256": "9df7e5550ac9b3ee803b03e7a313b34e82618e2771db764142bf399f611312c2",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.33333333333333304,1.333333333333333,1.666666666666667,0.0,8.881784197001252e-16\n",
+        "stderr": "",
+        "ms": 13178.048999999999,
+        "values": [
+          0.33333333333333304,
+          1.333333333333333,
+          1.666666666666667,
+          0,
+          8.881784197001252e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 20,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 10248.298899999994
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "conditioning",
+      "expected": [
+        0.000001,
+        1,
+        0,
+        2
+      ],
+      "concept": "small residual versus solution error",
+      "fixtureSHA256": "380b13fb3d1306da04cfc2ec10a399f7e5862707541b76f17a0bee4f76d4fca7",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0e-6,1.0,0.0,2.0\n",
+        "stderr": "",
+        "ms": 19589.226999999984,
+        "values": [
+          0.000001,
+          1,
+          0,
+          2
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0.000001,
+          1,
+          0,
+          2
+        ],
+        "type": "result",
+        "id": 21,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0e-6, 1.0, 0.0, 2.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0e-6",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.000001
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 16801.352200000023
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "conditioning-sweep",
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "concept": "functions and loops over sensitivity examples",
+      "fixtureSHA256": "1cc519d0e7b602a7ef8ec610140db09d7e457e59a25875b2957065e56536b540",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,1.0,1.0\n",
+        "stderr": "",
+        "ms": 10048.838300000003,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 22,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: MethodError: no method matching zero(::DataType)",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: MethodError: no method matching zero(::DataType)",
+          "artifacts": []
+        },
+        "ms": 7977.339800000016
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "qr-least-squares",
+      "expected": [
+        1.1666666666666667,
+        0.5
+      ],
+      "concept": "explicit QR calculation",
+      "fixtureSHA256": "bdf63c4e888a9b24e3303beb9622c8d23f90b1a9232e826a94be3e8510b4fd4b",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.166666666666667,0.49999999999999967\n",
+        "stderr": "",
+        "ms": 7921.51449999999,
+        "values": [
+          1.166666666666667,
+          0.49999999999999967
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.1666666666666665,
+          0.5
+        ],
+        "type": "result",
+        "id": 23,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.1666666666666665, 0.5]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.5",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 7038.569900000002
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "broadcast",
+      "expected": [
+        5,
+        11,
+        1,
+        4
+      ],
+      "concept": "matrix multiply versus elementwise multiply",
+      "fixtureSHA256": "5f3352862912839227f49dd99b02d32b6aef7d42273f509fb6b2aaff5177fa3e",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__5.0,11.0,1.0,4.0\n",
+        "stderr": "",
+        "ms": 2083.136999999988,
+        "values": [
+          5,
+          11,
+          1,
+          4
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          5,
+          11,
+          1,
+          4
+        ],
+        "type": "result",
+        "id": 24,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[5.0, 11.0, 1.0, 4.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "5.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 5
+              },
+              {
+                "display": "11.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 11
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "4.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 670.5333000000101
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "array-language",
+      "expected": [
+        7,
+        10,
+        0,
+        1,
+        2,
+        3
+      ],
+      "concept": "mutation, ranges, broadcasting, transpose, array dimensions",
+      "fixtureSHA256": "4ae1dd112cefb7bf4ad9632708e57fafa4f7ed3cb367c69ab431d689618e9617",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__7.0,10.0,0.0,1.0,2.0,3.0\n",
+        "stderr": "",
+        "ms": 6642.8827000000165,
+        "values": [
+          7,
+          10,
+          0,
+          1,
+          2,
+          3
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          7,
+          10,
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "result",
+        "id": 25,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[7.0, 10.0, 0.0, 1.0, 2.0, 3.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "7.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 7
+              },
+              {
+                "display": "10.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 10
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 6,
+            "shape": [
+              6
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 4200.815899999987
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "dimension-error",
+      "error": "dimension|size",
+      "concept": "matrix multiply dimension diagnostic",
+      "fixtureSHA256": "fef7ade062d5b39e5112b243447719edd84c897e0cc32f8ba89a616297b85454",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "LoadError: DimensionMismatch: incompatible dimensions for matrix multiplication: tried to multiply a matrix of size (2, 2) with a vector of length 3. The second dimension of the matrix: 2, does not match the length of the vector: 3.\nin expression starting at C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\dimension-error.jl:1\n",
+        "ms": 28924.36440000002,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "type": "result",
+        "id": 26,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Matrix multiplication dimension mismatch: [2, 2] * [3]",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Matrix multiplication dimension mismatch: [2, 2] * [3]",
+          "artifacts": []
+        },
+        "ms": 595.9717999999993
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "solve-dimension-error",
+      "error": "dimension|size|length|rows",
+      "concept": "square solve RHS dimension diagnostic",
+      "fixtureSHA256": "3b5ef47d14ac0ce3276480aa27e71eaf79a4365bbab40efa188261c7611a2a14",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "LoadError: DimensionMismatch: arguments must have the same number of rows\nin expression starting at C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\solve-dimension-error.jl:2\n",
+        "ms": 27851.06109999999,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "type": "result",
+        "id": 27,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: ErrorException: DimensionMismatch(\"A has 2 columns, but x has 3 elements\")",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: ErrorException: DimensionMismatch(\"A has 2 columns, but x has 3 elements\")",
+          "artifacts": []
+        },
+        "ms": 10381.157800000045
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-dimension-error",
+      "error": "dimension|size|length|rows",
+      "concept": "rectangular solve RHS dimension diagnostic",
+      "fixtureSHA256": "895030c07b43b72cfd13cfef6bf3b2e20a1f5fce737aac1d176c4976034aa81f",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "LoadError: DimensionMismatch: arguments must have the same number of rows\nin expression starting at C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\least-squares-dimension-error.jl:2\n",
+        "ms": 17073.549100000004,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 28,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 5006.311400000006
+      },
+      "nativeAgreement": false
+    },
+    {
+      "name": "singular",
+      "error": "singular",
+      "concept": "singular square solve diagnostic",
+      "fixtureSHA256": "60472156dd68aec432664df1e98c2c12da54a3e95f16cbc5695c6991d3ada86f",
+      "native": {
+        "status": 0,
+        "killed": true,
+        "signal": "SIGTERM",
+        "stdout": "",
+        "stderr": "LoadError: ",
+        "error": "Command failed: C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\bin\\julia.exe --startup-file=no --history-file=no -e try; value = include(ARGS[1]); println(\"__BASIS_RESULT__\" * join(vec(value), \",\")); catch exception; showerror(stderr, exception); println(stderr); exit(2); end C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\singular.jl\nLoadError: ",
+        "ms": 30496.036900000006,
+        "values": null,
+        "pass": false
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "type": "result",
+        "id": 29,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix is singular",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix is singular",
+          "artifacts": []
+        },
+        "ms": 5347.1035000000265
+      },
+      "nativeAgreement": false
+    }
+  ],
+  "nativeRuntime": {
+    "status": 0,
+    "killed": false,
+    "signal": null,
+    "stdout": "julia version 1.12.1\n",
+    "stderr": "",
+    "ms": 936.5108
+  },
+  "runtime": {
+    "type": "ready",
+    "version": "0.12.2",
+    "abi": 3,
+    "initMs": 1070.4022999999997
+  },
+  "warmup": {
+    "type": "result",
+    "id": 1,
+    "result": {
+      "success": true,
+      "value": 2,
+      "typed_value": {
+        "display": "2",
+        "julia_type": "Int64",
+        "type": "int",
+        "value": 2
+      },
+      "output": "",
+      "artifacts": []
+    },
+    "ms": 17994.508199999997
+  },
+  "freshState": {
+    "defined": {
+      "type": "result",
+      "id": 30,
+      "result": {
+        "success": true,
+        "value": 99,
+        "typed_value": {
+          "display": "99",
+          "julia_type": "Int64",
+          "type": "int",
+          "value": 99
+        },
+        "output": "",
+        "artifacts": []
+      },
+      "ms": 801.6386000000057
+    },
+    "absent": {
+      "type": "result",
+      "id": 31,
+      "result": {
+        "success": false,
+        "value": null,
+        "typed_value": {
+          "message": "Runtime error: UndefVarError: `basis_private_value` not defined",
+          "type": "error"
+        },
+        "output": "",
+        "error_message": "Runtime error: UndefVarError: `basis_private_value` not defined",
+        "artifacts": []
+      },
+      "ms": 1363.484999999986
+    },
+    "pass": true
+  },
+  "cancellation": {
+    "runaway": {
+      "timedOut": true,
+      "timeoutMs": 1500
+    },
+    "pass": true
+  },
+  "restart": {
+    "type": "ready",
+    "version": "0.12.2",
+    "abi": 3,
+    "initMs": 705.703600000008
+  },
+  "recovery": {
+    "type": "result",
+    "id": 33,
+    "result": {
+      "success": true,
+      "value": 5,
+      "typed_value": {
+        "display": "5",
+        "julia_type": "Int64",
+        "type": "int",
+        "value": 5
+      },
+      "output": "",
+      "artifacts": []
+    },
+    "ms": 11040.520300000033
+  },
+  "summary": {
+    "selected": 28,
+    "executed": 28,
+    "passed": 17,
+    "failures": 11,
+    "nativePassed": 27,
+    "wasmPassed": 18,
+    "lifecycleSkipped": false,
+    "pass": false
+  },
+  "completedAt": "2026-09-26T17:28:29.910Z"
+}

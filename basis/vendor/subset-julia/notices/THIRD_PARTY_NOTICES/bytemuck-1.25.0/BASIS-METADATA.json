@@ -1,0 +1,12 @@
+{
+  "name": "bytemuck",
+  "version": "1.25.0",
+  "license": "Zlib OR Apache-2.0 OR MIT",
+  "repository": "https://github.com/Lokathor/bytemuck",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "LICENSE-ZLIB"
+  ]
+}

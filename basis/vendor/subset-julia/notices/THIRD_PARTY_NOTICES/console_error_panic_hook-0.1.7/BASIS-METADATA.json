@@ -1,0 +1,11 @@
+{
+  "name": "console_error_panic_hook",
+  "version": "0.1.7",
+  "license": "Apache-2.0/MIT",
+  "repository": "https://github.com/rustwasm/console_error_panic_hook",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

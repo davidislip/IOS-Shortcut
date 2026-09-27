@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-26T19:29:25.044Z",
+  "version": "26.0",
+  "profile": "C:\\Users\\david\\AppData\\Local\\Temp\\bwc-WPadZa",
+  "scope": "CacheStorage API on a plain origin page; Basis and Julia are not loaded.",
+  "probes": [
+    {
+      "name": "synthetic",
+      "url": "http://127.0.0.1:4174/cache-probe-synthetic",
+      "keys": [],
+      "matched": false,
+      "body": null
+    },
+    {
+      "name": "fetched",
+      "url": "http://127.0.0.1:4174/cache-probe-fetched",
+      "keys": [],
+      "matched": false,
+      "body": null
+    }
+  ]
+}

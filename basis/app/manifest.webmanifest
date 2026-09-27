@@ -1,0 +1,12 @@
+{
+  "id": "./",
+  "name": "Basis Julia Lab",
+  "short_name": "Basis",
+  "description": "Offline Julia workspace for learning linear algebra",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#16181d",
+  "theme_color": "#1d2027",
+  "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

@@ -1,0 +1,571 @@
+{
+  "createdAt": "2026-09-26T16:17:01.211Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32"
+  },
+  "wasmSHA256": "4b4e4613382444e25fa41500e7fcbfa2c29c8af8149b047077687e1097eb2353",
+  "scope": "Local Node/V8 execution of the exact bundled WASM; not Safari/iPad or PWA validation.",
+  "cases": [
+    {
+      "name": "columns",
+      "expected": [
+        0,
+        0
+      ],
+      "native": {
+        "pass": true,
+        "values": [
+          0,
+          0
+        ],
+        "status": 0,
+        "stderr": ""
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0,
+          0
+        ],
+        "type": "result",
+        "id": 2,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1287.3052000000007
+      }
+    },
+    {
+      "name": "square",
+      "expected": [
+        1.4,
+        1.2
+      ],
+      "native": {
+        "pass": true,
+        "values": [
+          1.4,
+          1.2
+        ],
+        "status": 0,
+        "stderr": ""
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.4,
+          1.2
+        ],
+        "type": "result",
+        "id": 3,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.4, 1.2]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.4",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.4
+              },
+              {
+                "display": "1.2",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.2
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 6027.953600000001
+      }
+    },
+    {
+      "name": "projection",
+      "expected": [
+        2,
+        1,
+        0
+      ],
+      "native": {
+        "pass": true,
+        "values": [
+          2,
+          1,
+          0
+        ],
+        "status": 0,
+        "stderr": ""
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2,
+          1,
+          0
+        ],
+        "type": "result",
+        "id": 4,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.0, 1.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 3649.5987999999998
+      }
+    },
+    {
+      "name": "least-squares",
+      "expected": [
+        1.1666666666666667,
+        0.5
+      ],
+      "native": {
+        "pass": true,
+        "values": [
+          1.1666666666666663,
+          0.5000000000000001
+        ],
+        "status": 0,
+        "stderr": ""
+      },
+      "wasm": {
+        "pass": false,
+        "values": null,
+        "type": "result",
+        "id": 5,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix must be square",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix must be square",
+          "artifacts": []
+        },
+        "ms": 2586.91
+      }
+    },
+    {
+      "name": "conditioning",
+      "expected": [
+        0.000001,
+        1,
+        0,
+        2
+      ],
+      "native": {
+        "pass": true,
+        "values": [
+          0.000001,
+          1,
+          0,
+          2
+        ],
+        "status": 0,
+        "stderr": ""
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0.000001,
+          1,
+          0,
+          2
+        ],
+        "type": "result",
+        "id": 6,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0e-6, 1.0, 0.0, 2.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0e-6",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.000001
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2184.7292000000016
+      }
+    },
+    {
+      "name": "qr-least-squares",
+      "expected": [
+        1.1666666666666667,
+        0.5
+      ],
+      "native": {
+        "pass": true,
+        "values": [
+          1.166666666666667,
+          0.49999999999999967
+        ],
+        "status": 0,
+        "stderr": ""
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.1666666666666665,
+          0.5
+        ],
+        "type": "result",
+        "id": 7,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.1666666666666665, 0.5]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.5",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2159.5167
+      }
+    },
+    {
+      "name": "broadcast",
+      "expected": [
+        5,
+        11,
+        1,
+        4
+      ],
+      "native": {
+        "pass": true,
+        "values": [
+          5,
+          11,
+          1,
+          4
+        ],
+        "status": 0,
+        "stderr": ""
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          5,
+          11,
+          1,
+          4
+        ],
+        "type": "result",
+        "id": 8,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[5.0, 11.0, 1.0, 4.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "5.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 5
+              },
+              {
+                "display": "11.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 11
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "4.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 259.6136999999944
+      }
+    },
+    {
+      "name": "dimension-error",
+      "expected": null,
+      "native": {
+        "pass": true,
+        "values": null,
+        "status": 1,
+        "stderr": "ERROR: LoadError: DimensionMismatch: incompatible dimensions for matrix multiplication: tried to multiply a matrix of size (2, 2) with a vector of length 3. The second dimension of the matrix: 2, does not match the length of the vector: 3.\nStacktrace:\n  [1] matmul_size_check_error(sizeA::Tuple{Int64, Int64}, sizeB::Tuple{Int64})\n    @ LinearAlgebra C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:431\n  [2] matmul_size_check\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:418 [inlined]\n  [3] matmul_size_check\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:441 [inlined]\n  [4] gemv!\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:629 [inlined]\n  [5] generic_matvecmul!\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:79 [inlined]\n  [6] _mul!\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:74 [inlined]\n  [7] mul!\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:71 [inlined]\n  [8] mul!\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:265 [inlined]\n  [9] *(A::Matrix{Float64}, x::Vector{Float64})\n    @ LinearAlgebra C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\matmul.jl:56\n [10] top-level scope\n    @ C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\dimension-error.jl:1\n [11] include(mapexpr::Function, mod::Module, _path::String)\n    @ Base .\\Base.jl:307\n [12] top-level scope\n    @ none:1\n [13] eval(m::Module, e::Any)\n    @ Core .\\boot.jl:489\n [14] exec_options(opts::Base.JLOptions)\n    @ Base .\\client.jl:283\n [15] _start()\n    @ Base .\\client.jl:550\nin expression starting at C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\dimension-error.jl:1\n"
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "type": "result",
+        "id": 9,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Matrix multiplication dimension mismatch: [2, 2] * [3]",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Matrix multiplication dimension mismatch: [2, 2] * [3]",
+          "artifacts": []
+        },
+        "ms": 249.78770000000077
+      }
+    },
+    {
+      "name": "singular",
+      "expected": null,
+      "native": {
+        "pass": true,
+        "values": null,
+        "status": 1,
+        "stderr": "ERROR: LoadError: SingularException(2)\nStacktrace:\n  [1] checknonsingular\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\factorization.jl:69 [inlined]\n  [2] _check_lu_success\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\lu.jl:84 [inlined]\n  [3] #lu!#180\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\lu.jl:92 [inlined]\n  [4] lu!\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\lu.jl:90 [inlined]\n  [5] lu!\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\lu.jl:89 [inlined]\n  [6] _lu\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\lu.jl:347 [inlined]\n  [7] lu(::Matrix{Float64}; kwargs::@Kwargs{})\n    @ LinearAlgebra C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\lu.jl:341\n  [8] lu\n    @ C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\lu.jl:341 [inlined]\n  [9] \\(A::Matrix{Float64}, B::Vector{Float64})\n    @ LinearAlgebra C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\share\\julia\\stdlib\\v1.12\\LinearAlgebra\\src\\generic.jl:1231\n [10] top-level scope\n    @ C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\singular.jl:2\n [11] include(mapexpr::Function, mod::Module, _path::String)\n    @ Base .\\Base.jl:307\n [12] top-level scope\n    @ none:1\n [13] eval(m::Module, e::Any)\n    @ Core .\\boot.jl:489\n [14] exec_options(opts::Base.JLOptions)\n    @ Base .\\client.jl:283\n [15] _start()\n    @ Base .\\client.jl:550\nin expression starting at C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\singular.jl:2\n"
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "type": "result",
+        "id": 10,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Type error: inv: matrix is singular",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Type error: inv: matrix is singular",
+          "artifacts": []
+        },
+        "ms": 1461.513500000001
+      }
+    }
+  ],
+  "runtime": {
+    "type": "ready",
+    "version": "0.12.2",
+    "abi": 3,
+    "initMs": 182.0949
+  },
+  "warmup": {
+    "type": "result",
+    "id": 1,
+    "result": {
+      "success": true,
+      "value": 2,
+      "typed_value": {
+        "display": "2",
+        "julia_type": "Int64",
+        "type": "int",
+        "value": 2
+      },
+      "output": "",
+      "artifacts": []
+    },
+    "ms": 3734.6699
+  },
+  "freshState": {
+    "defined": {
+      "type": "result",
+      "id": 11,
+      "result": {
+        "success": true,
+        "value": 99,
+        "typed_value": {
+          "display": "99",
+          "julia_type": "Int64",
+          "type": "int",
+          "value": 99
+        },
+        "output": "",
+        "artifacts": []
+      },
+      "ms": 209.0841999999975
+    },
+    "absent": {
+      "type": "result",
+      "id": 12,
+      "result": {
+        "success": false,
+        "value": null,
+        "typed_value": {
+          "message": "Runtime error: UndefVarError: `basis_private_value` not defined",
+          "type": "error"
+        },
+        "output": "",
+        "error_message": "Runtime error: UndefVarError: `basis_private_value` not defined",
+        "artifacts": []
+      },
+      "ms": 200.12829999999667
+    },
+    "pass": true
+  },
+  "cancellation": {
+    "runaway": {
+      "timedOut": true,
+      "timeoutMs": 1500
+    },
+    "pass": true
+  },
+  "restart": {
+    "type": "ready",
+    "version": "0.12.2",
+    "abi": 3,
+    "initMs": 154.07830000000104
+  },
+  "recovery": {
+    "type": "result",
+    "id": 14,
+    "result": {
+      "success": true,
+      "value": 5,
+      "typed_value": {
+        "display": "5",
+        "julia_type": "Int64",
+        "type": "int",
+        "value": 5
+      },
+      "output": "",
+      "artifacts": []
+    },
+    "ms": 2665.2396999999983
+  }
+}

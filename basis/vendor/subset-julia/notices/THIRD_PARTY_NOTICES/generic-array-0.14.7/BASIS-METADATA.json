@@ -1,0 +1,10 @@
+{
+  "name": "generic-array",
+  "version": "0.14.7",
+  "license": "MIT",
+  "repository": "https://github.com/fizyk20/generic-array.git",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE"
+  ]
+}

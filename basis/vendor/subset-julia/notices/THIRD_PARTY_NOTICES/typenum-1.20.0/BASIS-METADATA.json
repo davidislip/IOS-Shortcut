@@ -1,0 +1,12 @@
+{
+  "name": "typenum",
+  "version": "1.20.0",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/paholg/typenum",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE",
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

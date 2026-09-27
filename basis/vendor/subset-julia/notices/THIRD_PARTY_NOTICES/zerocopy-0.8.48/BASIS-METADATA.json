@@ -1,0 +1,12 @@
+{
+  "name": "zerocopy",
+  "version": "0.8.48",
+  "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+  "repository": "https://github.com/google/zerocopy",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-BSD",
+    "LICENSE-MIT"
+  ]
+}

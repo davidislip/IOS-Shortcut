@@ -1,0 +1,12 @@
+{
+  "name": "byteorder",
+  "version": "1.5.0",
+  "license": "Unlicense OR MIT",
+  "repository": "https://github.com/BurntSushi/byteorder",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "COPYING",
+    "LICENSE-MIT",
+    "UNLICENSE"
+  ]
+}

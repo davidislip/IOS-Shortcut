@@ -1,0 +1,11 @@
+{
+  "name": "ppv-lite86",
+  "version": "0.2.21",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/cryptocorrosion/cryptocorrosion",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

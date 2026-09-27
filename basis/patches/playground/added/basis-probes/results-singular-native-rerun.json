@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-09-26T17:29:50.625Z",
+  "fixture": "basis-probes/fixtures/singular.jl",
+  "timeoutMs": 60000,
+  "fixtureSHA256": "60472156dd68aec432664df1e98c2c12da54a3e95f16cbc5695c6991d3ada86f",
+  "native": {
+    "status": 2,
+    "signal": null,
+    "stdout": "",
+    "stderr": "LoadError: LinearAlgebra.SingularException(2)\nin expression starting at C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\singular.jl:2\n",
+    "ms": 18140.823800000002
+  },
+  "pass": true,
+  "reason": "Targeted native-only rerun after 30-second timeout during concurrent Rust builds; elapsed time is not a runtime benchmark."
+}

@@ -1,0 +1,2590 @@
+{
+  "schemaVersion": 2,
+  "oracle": {
+    "product": "standard Julia",
+    "requiredVersion": "1.12.1",
+    "versionMatches": true
+  },
+  "runtimeContract": {
+    "requiredABI": 3,
+    "executionExport": "run_from_source",
+    "numericResultField": "typed_value"
+  },
+  "createdAt": "2026-09-26T19:12:54.492Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "options": {
+    "wasmDir": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\pkg",
+    "report": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\reports\\results-candidate.json",
+    "timeout": 120000,
+    "julia": "C:\\Users\\david\\.julia\\juliaup\\julia-1.12.1+0.x64.w64.mingw32\\bin\\julia.exe"
+  },
+  "artifacts": {
+    "provenance": {
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\pkg\\runtime-provenance.json",
+      "sha256": "04a88916904c6622313f1f86c7aead88d7712b49042e6013409c9907ae6906ff",
+      "data": {
+        "builtAt": "2026-09-26T19:12:13.0311010Z",
+        "source": "https://github.com/AtelierArith/julia-vm-oss",
+        "revision": "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+        "modified": true,
+        "trackedPatchSHA256": "6f058071f20922deceb0b1032947c87c2b553f8781b0b77ae14ffaa932dde12b",
+        "rust": "rustc 1.95.0 (59807616e 2026-04-14)",
+        "wasmPack": "wasm-pack 0.15.0",
+        "wasmBindgen": "wasm-bindgen 0.2.122",
+        "nativeProfile": "release-fast",
+        "nativeOptLevel": "3, with subset_julia_vm_compile and subset_julia_vm at 1",
+        "nativeIncrementalCrates": [
+          "subset_julia_vm_compile",
+          "subset_julia_vm"
+        ],
+        "wasmProfile": "release-fast",
+        "wasmOptLevel": "1",
+        "wasmLTO": false,
+        "wasmIncremental": true,
+        "buildJobs": 2,
+        "embeddedBaseCache": true,
+        "embeddedPreludeCache": true,
+        "baseCacheSHA256": "f4f4ca1e8d200ec8e2f2709e301c7f604e295e6dbe63ae93efc93ce958e31a90",
+        "preludeCacheSHA256": "c2dbcf7e9bd0413c3288d968c7e82a9ecddb017068f94ec654c31a7692b6e1bd",
+        "nativeSHA256": "fb2968f5a7a9013519e0f094e574c59c45552ab8716d96c9b66a0021a87186ed",
+        "wasmOpt": false,
+        "command": "powershell -File basis/scripts/build-runtime.ps1 -Stage Wasm -WasmProfile release-fast -Jobs 2",
+        "rebuildCommand": "powershell -File basis/scripts/build-runtime.ps1 -Stage All -WasmProfile release-fast -Jobs 2",
+        "wasmSHA256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548"
+      }
+    },
+    "wasm": {
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\pkg\\subset_julia_vm_web_bg.wasm",
+      "sha256": "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548"
+    },
+    "glue": {
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\pkg\\subset_julia_vm_web.js",
+      "sha256": "c4d3b6120ff48cf25114237b3d2bd3741c23511dca2e85d0629d58505999b7ea"
+    },
+    "suite": {
+      "sha256": "1866d9705839d8cd5d49d265c0c9653214c3f4d6fad478a159b71a9d50e8ebae",
+      "runnerSHA256": "de877f75bc7bcc22614559097cf41630441b8f6fea72a507f6cc9daa9f8936fe",
+      "workerSHA256": "a36c9650c8028455d3e04cd293352ef28961c20bed48f3394413a1aa5e985abd",
+      "numericParserSHA256": "09346561a122b8a433ea8187dfe93170abae093087a570ed8d5180fef6af26d2"
+    },
+    "playground": {
+      "revision": "561587e7a6f3914a24afd883a0dba52d51f3453d",
+      "branch": "basis/offline-scope",
+      "status": "?? basis-probes/"
+    }
+  },
+  "scope": "Local Node/V8 execution of local WASM with fetch disabled; not Safari/iPad, PWA, or general Julia compatibility validation.",
+  "cases": [
+    {
+      "name": "columns",
+      "expected": [
+        0,
+        0
+      ],
+      "concept": "matrix columns, slices, functions, loops",
+      "fixtureSHA256": "ee21367656cf04078d6805c75328bb309cf2c5aff0648fefb9747d74eb53a8d1",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.0,0.0\n__BASIS_SHAPE__2\n",
+        "stderr": "",
+        "ms": 4172.0288,
+        "shape": [
+          2
+        ],
+        "values": [
+          0,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0,
+          0
+        ],
+        "shape": [
+          2
+        ],
+        "type": "result",
+        "id": 2,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1766.2391000000007,
+        "linearMemoryBytes": 101777408
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "composition",
+      "expected": [
+        1,
+        3,
+        0
+      ],
+      "concept": "composition and transformed origin",
+      "fixtureSHA256": "9f844797ac6e0a013e152e57af1d54293ab9cbd41bbf0af44db86bbd8ca48a0f",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,3.0,0.0\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 2383.1504999999997,
+        "shape": [
+          3
+        ],
+        "values": [
+          1,
+          3,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1,
+          3,
+          0
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 3,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0, 3.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 3164.6486000000004,
+        "linearMemoryBytes": 129761280
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "dependence",
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "concept": "nullspace and nonunique coefficients",
+      "fixtureSHA256": "145c474f31da5a5266b0859663f6ec51e372aa4d916b5ff9f52d6780c7c31f40",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.0,0.0,0.0\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 2109.6254999999983,
+        "shape": [
+          3
+        ],
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 4,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.0, 0.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2247.1507999999994,
+        "linearMemoryBytes": 129761280
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square",
+      "expected": [
+        1.4,
+        1.2
+      ],
+      "concept": "square solve",
+      "fixtureSHA256": "a52c511b83e4aa0a71589b2b851800cd64efa0a7241bdf334c76b5cb84cc949d",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.4,1.2\n__BASIS_SHAPE__2\n",
+        "stderr": "",
+        "ms": 3462.9810999999972,
+        "shape": [
+          2
+        ],
+        "values": [
+          1.4,
+          1.2
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.4,
+          1.2
+        ],
+        "shape": [
+          2
+        ],
+        "type": "result",
+        "id": 5,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.4, 1.2]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.4",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.4
+              },
+              {
+                "display": "1.2",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.2
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2841.910499999998,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-pivot",
+      "expected": [
+        2,
+        -1,
+        3,
+        0
+      ],
+      "concept": "pivoting and reconstruction",
+      "fixtureSHA256": "949db8aa51842b6c843a303e0496677bb799bbae83b951a11ac71b5027dd78c4",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0,-1.0,3.0,0.0\n__BASIS_SHAPE__4\n",
+        "stderr": "",
+        "ms": 4119.171199999997,
+        "shape": [
+          4
+        ],
+        "values": [
+          2,
+          -1,
+          3,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2,
+          -1,
+          3,
+          0
+        ],
+        "shape": [
+          4
+        ],
+        "type": "result",
+        "id": 6,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.0, -1.0, 3.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "-1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -1
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2883.251199999999,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-matrix-rhs",
+      "expected": [
+        1,
+        -2,
+        3,
+        4,
+        2,
+        2,
+        0
+      ],
+      "concept": "square solve with two right-hand sides",
+      "fixtureSHA256": "db40dbac793383419996783eaab8a9b4d493b8f4630be8d1fd2a73a51d069946",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,-2.0,3.0,4.0,2.0,2.0,0.0\n__BASIS_SHAPE__7\n",
+        "stderr": "",
+        "ms": 2764.0635999999977,
+        "shape": [
+          7
+        ],
+        "values": [
+          1,
+          -2,
+          3,
+          4,
+          2,
+          2,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1,
+          -2,
+          3,
+          4,
+          2,
+          2,
+          0
+        ],
+        "shape": [
+          7
+        ],
+        "type": "result",
+        "id": 7,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0, -2.0, 3.0, 4.0, 2.0, 2.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "-2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -2
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              },
+              {
+                "display": "4.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 7,
+            "shape": [
+              7
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1746.4714999999997,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-small-scale",
+      "expected": [
+        1,
+        -2,
+        0
+      ],
+      "concept": "scale-aware square solve below 1e-14",
+      "fixtureSHA256": "7f22d07b8e04ce41f06d0e04b95ae7e7c2af8334192884b67f926ae1214aa6cf",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0000000000000002,-2.0000000000000004,1.2037062152420224e-16\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 2680.2029,
+        "shape": [
+          3
+        ],
+        "values": [
+          1.0000000000000002,
+          -2.0000000000000004,
+          1.2037062152420224e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.0000000000000002,
+          -2.0000000000000004,
+          1.2037062152420224e-16
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 8,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0000000000000002, -2.0000000000000004, 1.2037062152420224e-16]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0000000000000002",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.0000000000000002
+              },
+              {
+                "display": "-2.0000000000000004",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -2.0000000000000004
+              },
+              {
+                "display": "1.2037062152420224e-16",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.2037062152420224e-16
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1738.2167999999983,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "square-large-scale",
+      "expected": [
+        1,
+        -2,
+        0
+      ],
+      "concept": "scale-aware square solve above 1e14",
+      "fixtureSHA256": "15fdb419abc7885b3b8f6a8c17bab91caed1311027cbd66a625035f7cad05f42",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,-2.0,0.0\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 2574.7391000000025,
+        "shape": [
+          3
+        ],
+        "values": [
+          1,
+          -2,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1,
+          -2,
+          0
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 9,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0, -2.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "-2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -2
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1594.3732999999993,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "projection",
+      "expected": [
+        2,
+        1,
+        0
+      ],
+      "concept": "projection and orthogonal residual",
+      "fixtureSHA256": "078a6f3a3557160a54aa9d9a203d35a9a6c1e761dc9fd6eb34cbb862a4a01fce",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0,1.0,0.0\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 1169.8971999999994,
+        "shape": [
+          3
+        ],
+        "values": [
+          2,
+          1,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2,
+          1,
+          0
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 10,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.0, 1.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1573.412000000004,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "projection-function",
+      "expected": [
+        2,
+        1,
+        0,
+        0
+      ],
+      "concept": "projection implemented as learner function",
+      "fixtureSHA256": "e5dd66fbd24151cdd34423ba48bdc2519b2ac6394fa5ad3b939f629ad236a09b",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0,1.0,0.0,0.0\n__BASIS_SHAPE__4\n",
+        "stderr": "",
+        "ms": 1533.5276000000013,
+        "shape": [
+          4
+        ],
+        "values": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "shape": [
+          4
+        ],
+        "type": "result",
+        "id": 11,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.0, 1.0, 0.0, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2117.257599999997,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "projection-zero",
+      "error": "zero direction",
+      "concept": "explicit zero-direction guard",
+      "fixtureSHA256": "9f2f117db4aa0443faf3be3a0855c3a0f0bc26766bc79ca9ef4e3c60e16020ce",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "zero direction cannot define a line\n",
+        "ms": 1235.7988999999943,
+        "shape": null,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "shape": null,
+        "type": "result",
+        "id": 12,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: ErrorException: ErrorException(\"zero direction cannot define a line\")",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: ErrorException: ErrorException(\"zero direction cannot define a line\")",
+          "artifacts": []
+        },
+        "ms": 1663.3441999999995,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares",
+      "expected": [
+        1.1666666666666667,
+        0.5
+      ],
+      "concept": "direct rectangular least squares",
+      "fixtureSHA256": "950a18e2a0cd6d4022aaa51632f0c72a1a27b7eafa9419c2651f1b02ff96ac47",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666663,0.5000000000000001\n__BASIS_SHAPE__2\n",
+        "stderr": "",
+        "ms": 2214.8650999999954,
+        "shape": [
+          2
+        ],
+        "values": [
+          1.1666666666666663,
+          0.5000000000000001
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.1666666666666665,
+          0.5
+        ],
+        "shape": [
+          2
+        ],
+        "type": "result",
+        "id": 13,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.1666666666666665, 0.5]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.5",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1509.770899999996,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-properties",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        0,
+        0.16666666666666666
+      ],
+      "concept": "nonzero residual with column-space orthogonality",
+      "fixtureSHA256": "0e4d457d05f2493ba4ea6a39144c598e9b58c85941e9ff820b77f759bcf871f7",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666663,0.5000000000000001,9.435081445006126e-17,0.1666666666666666\n__BASIS_SHAPE__4\n",
+        "stderr": "",
+        "ms": 2511.4055000000008,
+        "shape": [
+          4
+        ],
+        "values": [
+          1.1666666666666663,
+          0.5000000000000001,
+          9.435081445006126e-17,
+          0.1666666666666666
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.1666666666666665,
+          0.5,
+          7.401486830834377e-17,
+          0.16666666666666669
+        ],
+        "shape": [
+          4
+        ],
+        "type": "result",
+        "id": 14,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.1666666666666665, 0.5, 7.401486830834377e-17, 0.16666666666666669]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.5",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5
+              },
+              {
+                "display": "7.401486830834377e-17",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 7.401486830834377e-17
+              },
+              {
+                "display": "0.16666666666666669",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.16666666666666669
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1641.2937999999995,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-matrix-rhs",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        2,
+        -1,
+        2,
+        2,
+        0
+      ],
+      "concept": "rectangular solve with two right-hand sides",
+      "fixtureSHA256": "e572747ee7216b23a3a9df77d76865a2baaf5466232a9a221ab1b166aff5f1e0",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666663,0.5000000000000001,2.000000000000001,-1.0000000000000004,2.0,2.0,1.5274575480845734e-16\n__BASIS_SHAPE__7\n",
+        "stderr": "",
+        "ms": 2865.0125999999946,
+        "shape": [
+          7
+        ],
+        "values": [
+          1.1666666666666663,
+          0.5000000000000001,
+          2.000000000000001,
+          -1.0000000000000004,
+          2,
+          2,
+          1.5274575480845734e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.1666666666666665,
+          0.5,
+          2.0000000000000004,
+          -1.0000000000000002,
+          2,
+          2,
+          8.901587530832623e-17
+        ],
+        "shape": [
+          7
+        ],
+        "type": "result",
+        "id": 15,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.1666666666666665, 0.5, 2.0000000000000004, -1.0000000000000002, 2.0, 2.0, 8.901587530832623e-17]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.5",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5
+              },
+              {
+                "display": "2.0000000000000004",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2.0000000000000004
+              },
+              {
+                "display": "-1.0000000000000002",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -1.0000000000000002
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "8.901587530832623e-17",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 8.901587530832623e-17
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 7,
+            "shape": [
+              7
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1782.7350000000006,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-near-dependent",
+      "expected": [
+        2,
+        -1,
+        0
+      ],
+      "atol": 0.000001,
+      "concept": "near dependence without normal equations",
+      "fixtureSHA256": "b2cea471c6d4f7799c22f472ad6b22ecfe27ffa017fbadc951115278ebaaa06b",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__2.0000000118423777,-1.0000000118423775,2.4825341656599437e-16\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 2667.4266999999963,
+        "shape": [
+          3
+        ],
+        "values": [
+          2.0000000118423777,
+          -1.0000000118423775,
+          2.4825341656599437e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          2.00000000061942,
+          -1.0000000006194196,
+          4.440892120705087e-16
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 16,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[2.00000000061942, -1.0000000006194196, 4.440892120705087e-16]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "2.00000000061942",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2.00000000061942
+              },
+              {
+                "display": "-1.0000000006194196",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": -1.0000000006194196
+              },
+              {
+                "display": "4.440892120705087e-16",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4.440892120705087e-16
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1807.6339999999982,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-small-scale",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        0
+      ],
+      "concept": "small-scale rectangular solve",
+      "fixtureSHA256": "5d54170e58a53d9a3421524360cd84e5b74d910e547d8b7eeba054331af29301",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666665,0.4999999999999999,1.4127376785505196e-16\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 3447.7644,
+        "shape": [
+          3
+        ],
+        "values": [
+          1.1666666666666665,
+          0.4999999999999999,
+          1.4127376785505196e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.166666666666667,
+          0.4999999999999999,
+          8.060478337870564e-17
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 17,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.166666666666667, 0.4999999999999999, 8.060478337870564e-17]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.166666666666667",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.166666666666667
+              },
+              {
+                "display": "0.4999999999999999",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.4999999999999999
+              },
+              {
+                "display": "8.060478337870564e-17",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 8.060478337870564e-17
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 1931.4674999999988,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-large-scale",
+      "expected": [
+        1.1666666666666667,
+        0.5,
+        0
+      ],
+      "concept": "large-scale rectangular solve",
+      "fixtureSHA256": "69c460c8974575028811b10db21d7b6b52e59076ddea1cc8e829d370bed8e0c5",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.166666666666666,0.5000000000000006,1.1908365381897762e-16\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 4003.458900000005,
+        "shape": [
+          3
+        ],
+        "values": [
+          1.166666666666666,
+          0.5000000000000006,
+          1.1908365381897762e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.1666666666666665,
+          0.5000000000000001,
+          4.2890135145753675e-17
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 18,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.1666666666666665, 0.5000000000000001, 4.2890135145753675e-17]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.5000000000000001",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5000000000000001
+              },
+              {
+                "display": "4.2890135145753675e-17",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4.2890135145753675e-17
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2216.086000000003,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-rank-deficient",
+      "expected": [
+        0.6,
+        1.2,
+        0,
+        0
+      ],
+      "concept": "rank-deficient minimum-norm least squares",
+      "fixtureSHA256": "12c3de4808b9581ec13cb15c9815f8d7153e883bdbd6b4ee040cef8c8afa3744",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.6000000000000001,1.2000000000000002,1.7764797834319164e-16,0.0\n__BASIS_SHAPE__4\n",
+        "stderr": "",
+        "ms": 5559.110499999995,
+        "shape": [
+          4
+        ],
+        "values": [
+          0.6000000000000001,
+          1.2000000000000002,
+          1.7764797834319164e-16,
+          0
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0.5999999999999998,
+          1.1999999999999995,
+          4.075453620814396e-16,
+          0
+        ],
+        "shape": [
+          4
+        ],
+        "type": "result",
+        "id": 19,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.5999999999999998, 1.1999999999999995, 4.075453620814396e-16, 0.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.5999999999999998",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5999999999999998
+              },
+              {
+                "display": "1.1999999999999995",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1999999999999995
+              },
+              {
+                "display": "4.075453620814396e-16",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4.075453620814396e-16
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 3343.2721999999994,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "wide-minimum-norm",
+      "expected": [
+        0.3333333333333333,
+        1.3333333333333333,
+        1.6666666666666667,
+        0,
+        0
+      ],
+      "concept": "underdetermined minimum-norm solve",
+      "fixtureSHA256": "9df7e5550ac9b3ee803b03e7a313b34e82618e2771db764142bf399f611312c2",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__0.33333333333333304,1.333333333333333,1.666666666666667,0.0,8.881784197001252e-16\n__BASIS_SHAPE__5\n",
+        "stderr": "",
+        "ms": 5016.338499999991,
+        "shape": [
+          5
+        ],
+        "values": [
+          0.33333333333333304,
+          1.333333333333333,
+          1.666666666666667,
+          0,
+          8.881784197001252e-16
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0.33333333333333315,
+          1.3333333333333335,
+          1.6666666666666667,
+          0,
+          2.220446049250313e-16
+        ],
+        "shape": [
+          5
+        ],
+        "type": "result",
+        "id": 20,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[0.33333333333333315, 1.3333333333333335, 1.6666666666666667, 0.0, 2.220446049250313e-16]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "0.33333333333333315",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.33333333333333315
+              },
+              {
+                "display": "1.3333333333333335",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.3333333333333335
+              },
+              {
+                "display": "1.6666666666666667",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.6666666666666667
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "2.220446049250313e-16",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2.220446049250313e-16
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 5,
+            "shape": [
+              5
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 3522.8410000000003,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "conditioning",
+      "expected": [
+        0.000001,
+        1,
+        0,
+        2
+      ],
+      "concept": "small residual versus solution error",
+      "fixtureSHA256": "380b13fb3d1306da04cfc2ec10a399f7e5862707541b76f17a0bee4f76d4fca7",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0e-6,1.0,0.0,2.0\n__BASIS_SHAPE__4\n",
+        "stderr": "",
+        "ms": 4107.97050000001,
+        "shape": [
+          4
+        ],
+        "values": [
+          0.000001,
+          1,
+          0,
+          2
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          0.000001,
+          1,
+          0,
+          2
+        ],
+        "shape": [
+          4
+        ],
+        "type": "result",
+        "id": 21,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0e-6, 1.0, 0.0, 2.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0e-6",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.000001
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 3027.8956000000035,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "conditioning-sweep",
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "concept": "functions and loops over sensitivity examples",
+      "fixtureSHA256": "1cc519d0e7b602a7ef8ec610140db09d7e457e59a25875b2957065e56536b540",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.0,1.0,1.0\n__BASIS_SHAPE__3\n",
+        "stderr": "",
+        "ms": 4017.908899999995,
+        "shape": [
+          3
+        ],
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1,
+          1,
+          1
+        ],
+        "shape": [
+          3
+        ],
+        "type": "result",
+        "id": 22,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.0, 1.0, 1.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 3,
+            "shape": [
+              3
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2828.1166999999987,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "learner-function-solves",
+      "expected": [
+        1.1666666666666667,
+        1.1666666666666667,
+        1.1666666666666667,
+        0.5,
+        0.5,
+        0.5,
+        0.6,
+        0.6,
+        0.6,
+        1.2,
+        1.2,
+        1.2,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        1.3333333333333333,
+        1.3333333333333333,
+        1.3333333333333333,
+        1.6666666666666667,
+        1.6666666666666667,
+        1.6666666666666667
+      ],
+      "shape": [
+        3,
+        7
+      ],
+      "concept": "learner function and loop: tall, rank-deficient, and wide solves at three scales",
+      "fixtureSHA256": "5d113e7aaa3bce2f654206fe80283ff3c1477f4579274470ec4f342f407d4ab1",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.1666666666666665,1.1666666666666663,1.166666666666666,0.4999999999999999,0.5000000000000001,0.5000000000000006,0.5999999999999999,0.6000000000000001,0.5999999999999998,1.2000000000000002,1.2000000000000002,1.2,0.3333333333333335,0.33333333333333304,0.333333333333334,1.3333333333333333,1.333333333333333,1.333333333333333,1.666666666666667,1.666666666666667,1.666666666666667\n__BASIS_SHAPE__3,7\n",
+        "stderr": "",
+        "ms": 3243.1340999999957,
+        "shape": [
+          3,
+          7
+        ],
+        "values": [
+          1.1666666666666665,
+          1.1666666666666663,
+          1.166666666666666,
+          0.4999999999999999,
+          0.5000000000000001,
+          0.5000000000000006,
+          0.5999999999999999,
+          0.6000000000000001,
+          0.5999999999999998,
+          1.2000000000000002,
+          1.2000000000000002,
+          1.2,
+          0.3333333333333335,
+          0.33333333333333304,
+          0.333333333333334,
+          1.3333333333333333,
+          1.333333333333333,
+          1.333333333333333,
+          1.666666666666667,
+          1.666666666666667,
+          1.666666666666667
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.166666666666667,
+          1.1666666666666665,
+          1.1666666666666665,
+          0.4999999999999999,
+          0.5,
+          0.5000000000000001,
+          0.5999999999999999,
+          0.5999999999999998,
+          0.6000000000000001,
+          1.2,
+          1.1999999999999995,
+          1.2000000000000002,
+          0.33333333333333326,
+          0.33333333333333315,
+          0.3333333333333328,
+          1.3333333333333333,
+          1.3333333333333335,
+          1.3333333333333333,
+          1.6666666666666667,
+          1.6666666666666667,
+          1.6666666666666663
+        ],
+        "shape": [
+          3,
+          7
+        ],
+        "type": "result",
+        "id": 23,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.166666666666667 0.4999999999999999 0.5999999999999999 1.2 0.33333333333333326 1.3333333333333333 1.6666666666666667; 1.1666666666666665 0.5 0.5999999999999998 1.1999999999999995 0.33333333333333315 1.3333333333333335 1.6666666666666667; 1.1666666666666665 0.5000000000000001 0.6000000000000001 1.2000000000000002 0.3333333333333328 1.3333333333333333 1.6666666666666663]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.166666666666667",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.166666666666667
+              },
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.4999999999999999",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.4999999999999999
+              },
+              {
+                "display": "0.5",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5
+              },
+              {
+                "display": "0.5000000000000001",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5000000000000001
+              },
+              {
+                "display": "0.5999999999999999",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5999999999999999
+              },
+              {
+                "display": "0.5999999999999998",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5999999999999998
+              },
+              {
+                "display": "0.6000000000000001",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.6000000000000001
+              },
+              {
+                "display": "1.2",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.2
+              },
+              {
+                "display": "1.1999999999999995",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1999999999999995
+              },
+              {
+                "display": "1.2000000000000002",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.2000000000000002
+              },
+              {
+                "display": "0.33333333333333326",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.33333333333333326
+              },
+              {
+                "display": "0.33333333333333315",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.33333333333333315
+              },
+              {
+                "display": "0.3333333333333328",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.3333333333333328
+              },
+              {
+                "display": "1.3333333333333333",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.3333333333333333
+              },
+              {
+                "display": "1.3333333333333335",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.3333333333333335
+              },
+              {
+                "display": "1.3333333333333333",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.3333333333333333
+              },
+              {
+                "display": "1.6666666666666667",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.6666666666666667
+              },
+              {
+                "display": "1.6666666666666667",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.6666666666666667
+              },
+              {
+                "display": "1.6666666666666663",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.6666666666666663
+              }
+            ],
+            "julia_type": "Array{Float64,2}",
+            "length": 21,
+            "shape": [
+              3,
+              7
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2437.3803999999946,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "qr-least-squares",
+      "expected": [
+        1.1666666666666667,
+        0.5
+      ],
+      "concept": "explicit QR calculation",
+      "fixtureSHA256": "bdf63c4e888a9b24e3303beb9622c8d23f90b1a9232e826a94be3e8510b4fd4b",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__1.166666666666667,0.49999999999999967\n__BASIS_SHAPE__2\n",
+        "stderr": "",
+        "ms": 4690.930999999997,
+        "shape": [
+          2
+        ],
+        "values": [
+          1.166666666666667,
+          0.49999999999999967
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          1.1666666666666665,
+          0.5
+        ],
+        "shape": [
+          2
+        ],
+        "type": "result",
+        "id": 24,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[1.1666666666666665, 0.5]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "1.1666666666666665",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1.1666666666666665
+              },
+              {
+                "display": "0.5",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0.5
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 2,
+            "shape": [
+              2
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 3078.8445999999967,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "broadcast",
+      "expected": [
+        5,
+        11,
+        1,
+        4
+      ],
+      "concept": "matrix multiply versus elementwise multiply",
+      "fixtureSHA256": "5f3352862912839227f49dd99b02d32b6aef7d42273f509fb6b2aaff5177fa3e",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__5.0,11.0,1.0,4.0\n__BASIS_SHAPE__4\n",
+        "stderr": "",
+        "ms": 1941.138300000006,
+        "shape": [
+          4
+        ],
+        "values": [
+          5,
+          11,
+          1,
+          4
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          5,
+          11,
+          1,
+          4
+        ],
+        "shape": [
+          4
+        ],
+        "type": "result",
+        "id": 25,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[5.0, 11.0, 1.0, 4.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "5.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 5
+              },
+              {
+                "display": "11.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 11
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "4.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 4
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 4,
+            "shape": [
+              4
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 346.9588999999978,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "array-language",
+      "expected": [
+        7,
+        10,
+        0,
+        1,
+        2,
+        3
+      ],
+      "concept": "mutation, ranges, broadcasting, transpose, array dimensions",
+      "fixtureSHA256": "4ae1dd112cefb7bf4ad9632708e57fafa4f7ed3cb367c69ab431d689618e9617",
+      "native": {
+        "status": 0,
+        "killed": false,
+        "signal": null,
+        "stdout": "__BASIS_RESULT__7.0,10.0,0.0,1.0,2.0,3.0\n__BASIS_SHAPE__6\n",
+        "stderr": "",
+        "ms": 2714.6106,
+        "shape": [
+          6
+        ],
+        "values": [
+          7,
+          10,
+          0,
+          1,
+          2,
+          3
+        ],
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": [
+          7,
+          10,
+          0,
+          1,
+          2,
+          3
+        ],
+        "shape": [
+          6
+        ],
+        "type": "result",
+        "id": 26,
+        "result": {
+          "success": true,
+          "value": null,
+          "typed_value": {
+            "display": "[7.0, 10.0, 0.0, 1.0, 2.0, 3.0]",
+            "element_type": "Float64",
+            "elements": [
+              {
+                "display": "7.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 7
+              },
+              {
+                "display": "10.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 10
+              },
+              {
+                "display": "0.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 0
+              },
+              {
+                "display": "1.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 1
+              },
+              {
+                "display": "2.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 2
+              },
+              {
+                "display": "3.0",
+                "julia_type": "Float64",
+                "type": "float",
+                "value": 3
+              }
+            ],
+            "julia_type": "Array{Float64,1}",
+            "length": 6,
+            "shape": [
+              6
+            ],
+            "type": "array"
+          },
+          "output": "",
+          "artifacts": []
+        },
+        "ms": 2074.5994999999966,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "dimension-error",
+      "error": "dimension|size",
+      "concept": "matrix multiply dimension diagnostic",
+      "fixtureSHA256": "fef7ade062d5b39e5112b243447719edd84c897e0cc32f8ba89a616297b85454",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "DimensionMismatch: incompatible dimensions for matrix multiplication: tried to multiply a matrix of size (2, 2) with a vector of length 3. The second dimension of the matrix: 2, does not match the length of the vector: 3.\n",
+        "ms": 1529.5169000000024,
+        "shape": null,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "shape": null,
+        "type": "result",
+        "id": 27,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: Matrix multiplication dimension mismatch: [2, 2] * [3]",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: Matrix multiplication dimension mismatch: [2, 2] * [3]",
+          "artifacts": []
+        },
+        "ms": 354.51840000000084,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "solve-dimension-error",
+      "error": "dimension|size|length|rows",
+      "concept": "square solve RHS dimension diagnostic",
+      "fixtureSHA256": "3b5ef47d14ac0ce3276480aa27e71eaf79a4365bbab40efa188261c7611a2a14",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "DimensionMismatch: arguments must have the same number of rows\n",
+        "ms": 2411.9574999999895,
+        "shape": null,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "shape": null,
+        "type": "result",
+        "id": 28,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: ErrorException: DimensionMismatch(\"matrix has 2 rows, but right hand side has 3 rows\")",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: ErrorException: DimensionMismatch(\"matrix has 2 rows, but right hand side has 3 rows\")",
+          "artifacts": []
+        },
+        "ms": 1784.3583999999973,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "least-squares-dimension-error",
+      "error": "dimension|size|length|rows",
+      "concept": "rectangular solve RHS dimension diagnostic",
+      "fixtureSHA256": "895030c07b43b72cfd13cfef6bf3b2e20a1f5fce737aac1d176c4976034aa81f",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "DimensionMismatch: arguments must have the same number of rows\n",
+        "ms": 2086.200800000006,
+        "shape": null,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "shape": null,
+        "type": "result",
+        "id": 29,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: ErrorException: DimensionMismatch(\"matrix has 3 rows, but right hand side has 2 rows\")",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: ErrorException: DimensionMismatch(\"matrix has 3 rows, but right hand side has 2 rows\")",
+          "artifacts": []
+        },
+        "ms": 1486.1149999999907,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    },
+    {
+      "name": "singular",
+      "error": "singular",
+      "concept": "singular square solve diagnostic",
+      "fixtureSHA256": "60472156dd68aec432664df1e98c2c12da54a3e95f16cbc5695c6991d3ada86f",
+      "native": {
+        "status": 2,
+        "killed": false,
+        "signal": null,
+        "stdout": "",
+        "stderr": "LinearAlgebra.SingularException(2)\n",
+        "ms": 3231.4807999999903,
+        "shape": null,
+        "values": null,
+        "pass": true
+      },
+      "wasm": {
+        "pass": true,
+        "values": null,
+        "shape": null,
+        "type": "result",
+        "id": 30,
+        "result": {
+          "success": false,
+          "value": null,
+          "typed_value": {
+            "message": "Runtime error: ErrorException: SingularException(2)",
+            "type": "error"
+          },
+          "output": "",
+          "error_message": "Runtime error: ErrorException: SingularException(2)",
+          "artifacts": []
+        },
+        "ms": 1493.1168000000034,
+        "linearMemoryBytes": 139329536
+      },
+      "nativeAgreement": true
+    }
+  ],
+  "nativeRuntime": {
+    "status": 0,
+    "killed": false,
+    "signal": null,
+    "stdout": "julia version 1.12.1\n",
+    "stderr": "",
+    "ms": 459.8579
+  },
+  "runtime": {
+    "type": "ready",
+    "version": "0.11.1",
+    "abi": 3,
+    "initMs": 544.7206000000001,
+    "linearMemoryBytes": 19070976
+  },
+  "warmup": {
+    "type": "result",
+    "id": 1,
+    "result": {
+      "success": true,
+      "value": 2,
+      "typed_value": {
+        "display": "2",
+        "julia_type": "Int64",
+        "type": "int",
+        "value": 2
+      },
+      "output": "",
+      "artifacts": []
+    },
+    "ms": 5389.5766,
+    "linearMemoryBytes": 101777408
+  },
+  "freshState": {
+    "defined": {
+      "type": "result",
+      "id": 31,
+      "result": {
+        "success": true,
+        "value": 99,
+        "typed_value": {
+          "display": "99",
+          "julia_type": "Int64",
+          "type": "int",
+          "value": 99
+        },
+        "output": "",
+        "artifacts": []
+      },
+      "ms": 155.24120000000403,
+      "linearMemoryBytes": 139329536
+    },
+    "absent": {
+      "type": "result",
+      "id": 32,
+      "result": {
+        "success": false,
+        "value": null,
+        "typed_value": {
+          "message": "Runtime error: UndefVarError: `basis_private_value` not defined",
+          "type": "error"
+        },
+        "output": "",
+        "error_message": "Runtime error: UndefVarError: `basis_private_value` not defined",
+        "artifacts": []
+      },
+      "ms": 139.7115999999951,
+      "linearMemoryBytes": 139329536
+    },
+    "pass": true
+  },
+  "cancellation": {
+    "runaway": {
+      "timedOut": true,
+      "timeoutMs": 1500
+    },
+    "pass": true
+  },
+  "restart": {
+    "type": "ready",
+    "version": "0.11.1",
+    "abi": 3,
+    "initMs": 171.49130000000878,
+    "linearMemoryBytes": 19070976
+  },
+  "recovery": {
+    "type": "result",
+    "id": 34,
+    "result": {
+      "success": true,
+      "value": 5,
+      "typed_value": {
+        "display": "5",
+        "julia_type": "Int64",
+        "type": "int",
+        "value": 5
+      },
+      "output": "",
+      "artifacts": []
+    },
+    "ms": 1749.9603999999963,
+    "linearMemoryBytes": 101777408
+  },
+  "summary": {
+    "suiteCount": 29,
+    "selected": 29,
+    "executed": 29,
+    "passed": 29,
+    "failures": 0,
+    "nativePassed": 29,
+    "wasmPassed": 29,
+    "lifecycleSkipped": false,
+    "pass": true,
+    "fullGatePass": true
+  },
+  "completedAt": "2026-09-26T19:14:35.458Z"
+}

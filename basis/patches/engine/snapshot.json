@@ -1,0 +1,15 @@
+{
+  "baseRevision": "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+  "upstream": "https://github.com/AtelierArith/julia-vm-oss.git",
+  "patchSHA256": "6f058071f20922deceb0b1032947c87c2b553f8781b0b77ae14ffaa932dde12b",
+  "addedFiles": {
+    "docs/vm/BASIS_SOLVES.md": "01943f7563a1be43307e3b11e0b0202fb7b92d6048d6c663a37a3ab6e3463551",
+    "scripts/basis_solve_oracle.jl": "f1f8a54c09b1543ca8c2e6e04371d2ec14fb7cf44d21291ba4356f7297852017",
+    "scripts/basis_wasm_injection.mjs": "d4bb3ed05322ee6e2b574c1ffa988346e7a6606c96770b624c077eaff73475c2",
+    "subset_julia_vm/tests/fixtures/linalg/basis_learner_function_solve.jl": "0a838b8b85176ba54687c76edb8cca9cf2109ab5f9e9d3489bdd68278558813d",
+    "subset_julia_vm/tests/fixtures/linalg/basis_rectangular_solve.jl": "a0e9303232b836682c004ee45c6f0e3c765351415b598b299e45672695b93526",
+    "subset_julia_vm/tests/fixtures/linalg/basis_solve_errors_shapes.jl": "4afaeb859583fa16fbf1201851f45be89df0e618a7a311c920affee914f64521",
+    "subset_julia_vm/tests/fixtures/linalg/basis_square_solve.jl": "0b87939022669a3df3f404fe19c0c9573ed05d7ad83c1ba6388fdd5163aaff5f"
+  },
+  "restore": "Check out baseRevision; git apply tracked.patch; copy each addedFiles entry from added/ to its matching checkout path."
+}

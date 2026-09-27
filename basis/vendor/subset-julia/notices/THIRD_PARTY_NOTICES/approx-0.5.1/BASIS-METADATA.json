@@ -1,0 +1,10 @@
+{
+  "name": "approx",
+  "version": "0.5.1",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/brendanzab/approx",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE"
+  ]
+}

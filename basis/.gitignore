@@ -1,0 +1,6 @@
+# Independent local forks, retained on disk with their own Git history.
+/upstream/
+/.tools/
+/dist/
+/runtime-build/
+/node_modules/

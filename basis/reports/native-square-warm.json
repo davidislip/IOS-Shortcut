@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-09-26T18:27:50.039Z",
+  "scope": "Sequential execution of the rebuilt native SubsetJuliaVM CLI; no stock Julia, WASM, browser, or iPad validation.",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "options": {
+    "report": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\reports\\native-square-warm.json",
+    "timeout": 120000,
+    "maxBuffer": 1048576,
+    "executable": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\target\\release-fast\\sjulia.exe",
+    "filter": "basis_square_solve",
+    "skipControl": true
+  },
+  "cacheEnvironment": {
+    "SJULIA_BASE_CACHE": null,
+    "SJULIA_PRELUDE_PROGRAM_CACHE": null
+  },
+  "cliContract": {
+    "invocation": [
+      "sjulia file.jl",
+      "sjulia -e SOURCE"
+    ],
+    "evidence": [
+      "subset_julia_vm/src/bin/sjulia.rs",
+      "subset_julia_vm/src/bin/sjulia/runners.rs"
+    ],
+    "assertionFailureExit": "run_compiled_program uses vm.any_test_failed() to select exit code 1; runtime and pipeline errors also exit 1.",
+    "trailingValues": "Script results are silent, so conditioning-sweep receives an explicit numerical @test and success marker."
+  },
+  "cases": [
+    {
+      "name": "basis_square_solve",
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_square_solve.jl",
+      "mode": "file",
+      "fixtureSHA256": "0b87939022669a3df3f404fe19c0c9573ed05d7ad83c1ba6388fdd5163aaff5f",
+      "invocation": [
+        "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_square_solve.jl"
+      ],
+      "executedSourceSHA256": "0b87939022669a3df3f404fe19c0c9573ed05d7ad83c1ba6388fdd5163aaff5f",
+      "expectedStatus": 0,
+      "pass": true,
+      "status": 0,
+      "signal": null,
+      "killed": false,
+      "timedOut": false,
+      "outputLimited": false,
+      "interrupted": null,
+      "error": null,
+      "stdout": "Test Set: Basis square and factorization solves (BASIS-001)\n  Test Passed: size(A \\ b) == (3,)\n  Test Passed: isapprox(A \\ b, x0; atol = 1e-12)\n  Test Passed: A == A0\n  Test Passed: b == b0\n  Test Passed: isapprox(F.L * F.U, A[F.p, :]; atol = 1e-12)\n  Test Passed: isapprox(F \\ b, x0; atol = 1e-12)\n  Test Passed: isapprox(A \\ B, X0; atol = 1e-12)\n  Test Passed: isapprox(F \\ B, X0; atol = 1e-12)\n  Test Passed: B == B0\n  Test Passed: isapprox([2 1; 1 3] \\ [4, 5], [1.4, 1.2]; atol = 1e-12)\n  Test Passed: isapprox([1.0 2.0; 0.0 3.0] \\ [5.0, 6.0], [1.0, 2.0]; atol = 1e-12)\n  Test Passed: isapprox([2.0 0.0; 1.0 3.0] \\ [2.0, 7.0], [1.0, 2.0]; atol = 1e-12)\n  Test Passed: isapprox(H * (C \\ HB), HB; atol = 1e-12)\n  Test Passed: isapprox(H * (C \\ [1.0, 3.0]), [1.0, 3.0]; atol = 1e-12)\n  Test Passed: norm(E * ex - eb) <= 1e-14 * (norm(E) * norm(ex) + norm(eb))\n  15 passed, 0 failed (15 total)\n",
+      "stderr": "",
+      "durationMs": 3469.0081999999998
+    }
+  ],
+  "binary": {
+    "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\target\\release-fast\\sjulia.exe",
+    "sha256": "dbcdb49b95cf2ac7ab41125559c259c6b5c0f27ba97fd4ee54d0d4d3e38767b0"
+  },
+  "source": {
+    "directory": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss",
+    "revision": "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+    "branch": "basis/offline-scope",
+    "status": "M subset_julia_vm/src/julia/base/array.jl\n M subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl\n M subset_julia_vm/tests/fixtures/array/vec_1d.jl\n M subset_julia_vm/tests/fixtures/array/vec_2d.jl\n M subset_julia_vm/tests/fixtures/linalg/manifest.toml\n M subset_julia_vm_vm/src/vm/builtins_linalg.rs\n?? docs/vm/BASIS_SOLVES.md\n?? scripts/basis_solve_oracle.jl\n?? scripts/basis_wasm_injection.mjs\n?? subset_julia_vm/tests/fixtures/linalg/basis_rectangular_solve.jl\n?? subset_julia_vm/tests/fixtures/linalg/basis_solve_errors_shapes.jl\n?? subset_julia_vm/tests/fixtures/linalg/basis_square_solve.jl",
+    "trackedPatchSHA256": "275bc7cb9a808075f24585b32533dcfe1a794a5bc8351aa5a6d88c9ca6a6d792",
+    "files": {
+      "Cargo.lock": "7b5a6b81450760f4721acde481fd74586dab4715a65b920bfbb39da781c39a13",
+      "Cargo.toml": "81b8aa1b64a360f1ee5fc503c9166e4fcbb3c3fe951c3f9a297e1594ec2ef0c8",
+      "scripts/basis_solve_oracle.jl": "f061ee88b5663051bb0f291081c31f026b2034838276aeb2acf663a11293f15c",
+      "subset_julia_vm/src/bin/sjulia.rs": "78a2659933cc3cc2f5e930876c76131bc2c9309a1f765f5ffd939b0bb1a98acc",
+      "subset_julia_vm/src/bin/sjulia/runners.rs": "a6e18cc956b2e0c81eedf8e6515964659ffcd694d265e011221c13aca14ad5e4",
+      "subset_julia_vm/src/julia/base/array.jl": "bc2ba6fdce0337de5fd24e64ca705a9f939e2f073e4f956303061152136ae4ea",
+      "subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl": "ced92389182d110d13b08c0a854b2ba59de40ce4ac355170ea0054af451817e6",
+      "subset_julia_vm/tests/fixtures/array/vec_1d.jl": "194c104ccc48f25e48e4790b2df2e42f188e2ec6d94a44eaf9d24b0d80175b7d",
+      "subset_julia_vm/tests/fixtures/array/vec_2d.jl": "036587e0024f652261cee00f568dbd2cbf5ead5b639ea96a14f4a78073c034d1",
+      "subset_julia_vm/tests/fixtures/linalg/basis_rectangular_solve.jl": "a0e9303232b836682c004ee45c6f0e3c765351415b598b299e45672695b93526",
+      "subset_julia_vm/tests/fixtures/linalg/basis_solve_errors_shapes.jl": "4afaeb859583fa16fbf1201851f45be89df0e618a7a311c920affee914f64521",
+      "subset_julia_vm/tests/fixtures/linalg/basis_square_solve.jl": "0b87939022669a3df3f404fe19c0c9573ed05d7ad83c1ba6388fdd5163aaff5f",
+      "subset_julia_vm/tests/fixtures/linalg/manifest.toml": "6e02c9eacbcf1c8ce21a2fc45fefc6639f2178255dfc0d3e0858451280a746b8",
+      "subset_julia_vm_vm/src/vm/builtins_linalg.rs": "646155042beb7497d23162b3a53f6141d8c03c31bb8a8dc3b3a7d396ba6b3865"
+    },
+    "note": "Hashes capture the current source snapshot; build provenance is required separately to tie it to the executable."
+  },
+  "runnerSHA256": "1c06cda25ef8333408805db77a4bcdd1402f1dc6a5702c2bf93faf21a508765e",
+  "completedAt": "2026-09-26T18:27:54.861Z",
+  "summary": {
+    "selected": 1,
+    "executed": 1,
+    "passed": 1,
+    "failures": 0,
+    "completeFixtureSelection": false,
+    "failureControlSkipped": true,
+    "interrupted": null,
+    "pass": true,
+    "fullGatePass": false
+  }
+}

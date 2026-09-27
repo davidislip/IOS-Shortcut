@@ -1,0 +1,10 @@
+{
+  "name": "astro-float",
+  "version": "0.9.5",
+  "license": "MIT",
+  "repository": "https://github.com/stencillogic/astro-float",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE"
+  ]
+}

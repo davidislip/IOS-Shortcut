@@ -1,0 +1,11 @@
+{
+  "name": "cfg-if",
+  "version": "1.0.4",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/rust-lang/cfg-if",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

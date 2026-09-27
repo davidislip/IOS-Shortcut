@@ -1,0 +1,11 @@
+{
+  "name": "once_cell",
+  "version": "1.21.4",
+  "license": "MIT OR Apache-2.0",
+  "repository": "https://github.com/matklad/once_cell",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
+  ]
+}

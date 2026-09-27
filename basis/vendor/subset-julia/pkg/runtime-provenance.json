@@ -1,0 +1,30 @@
+{
+    "builtAt":  "2026-09-26T19:12:13.0311010Z",
+    "source":  "https://github.com/AtelierArith/julia-vm-oss",
+    "revision":  "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+    "modified":  true,
+    "trackedPatchSHA256":  "6f058071f20922deceb0b1032947c87c2b553f8781b0b77ae14ffaa932dde12b",
+    "rust":  "rustc 1.95.0 (59807616e 2026-04-14)",
+    "wasmPack":  "wasm-pack 0.15.0",
+    "wasmBindgen":  "wasm-bindgen 0.2.122",
+    "nativeProfile":  "release-fast",
+    "nativeOptLevel":  "3, with subset_julia_vm_compile and subset_julia_vm at 1",
+    "nativeIncrementalCrates":  [
+                                    "subset_julia_vm_compile",
+                                    "subset_julia_vm"
+                                ],
+    "wasmProfile":  "release-fast",
+    "wasmOptLevel":  "1",
+    "wasmLTO":  false,
+    "wasmIncremental":  true,
+    "buildJobs":  2,
+    "embeddedBaseCache":  true,
+    "embeddedPreludeCache":  true,
+    "baseCacheSHA256":  "f4f4ca1e8d200ec8e2f2709e301c7f604e295e6dbe63ae93efc93ce958e31a90",
+    "preludeCacheSHA256":  "c2dbcf7e9bd0413c3288d968c7e82a9ecddb017068f94ec654c31a7692b6e1bd",
+    "nativeSHA256":  "fb2968f5a7a9013519e0f094e574c59c45552ab8716d96c9b66a0021a87186ed",
+    "wasmOpt":  false,
+    "command":  "powershell -File basis/scripts/build-runtime.ps1 -Stage Wasm -WasmProfile release-fast -Jobs 2",
+    "rebuildCommand":  "powershell -File basis/scripts/build-runtime.ps1 -Stage All -WasmProfile release-fast -Jobs 2",
+    "wasmSHA256":  "b9c7256c6d94e6a0529205d9d8e9774ea898b8d4d95ede37eff102c828f35548"
+}

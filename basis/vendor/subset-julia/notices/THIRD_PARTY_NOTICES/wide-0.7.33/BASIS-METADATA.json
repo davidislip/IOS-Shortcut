@@ -1,0 +1,10 @@
+{
+  "name": "wide",
+  "version": "0.7.33",
+  "license": "Zlib OR Apache-2.0 OR MIT",
+  "repository": "https://github.com/Lokathor/wide",
+  "source": "Exact cached crates.io package selected by Cargo.lock and observed in WASM target depfiles.",
+  "noticeFiles": [
+    "LICENSE-ZLIB.md"
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-09-26T18:24:30.779Z",
+  "scope": "Sequential execution of the rebuilt native SubsetJuliaVM CLI; no stock Julia, WASM, browser, or iPad validation.",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "options": {
+    "report": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\reports\\native-runtime.json",
+    "timeout": 120000,
+    "maxBuffer": 1048576,
+    "executable": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\target\\release-fast\\sjulia.exe"
+  },
+  "cacheEnvironment": {
+    "SJULIA_BASE_CACHE": null,
+    "SJULIA_PRELUDE_PROGRAM_CACHE": null
+  },
+  "cliContract": {
+    "invocation": [
+      "sjulia file.jl",
+      "sjulia -e SOURCE"
+    ],
+    "evidence": [
+      "subset_julia_vm/src/bin/sjulia.rs",
+      "subset_julia_vm/src/bin/sjulia/runners.rs"
+    ],
+    "assertionFailureExit": "run_compiled_program uses vm.any_test_failed() to select exit code 1; runtime and pipeline errors also exit 1.",
+    "trailingValues": "Script results are silent, so conditioning-sweep receives an explicit numerical @test and success marker."
+  },
+  "cases": [
+    {
+      "name": "basis_square_solve",
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_square_solve.jl",
+      "mode": "file",
+      "fixtureSHA256": "0b87939022669a3df3f404fe19c0c9573ed05d7ad83c1ba6388fdd5163aaff5f",
+      "invocation": [
+        "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_square_solve.jl"
+      ],
+      "executedSourceSHA256": "0b87939022669a3df3f404fe19c0c9573ed05d7ad83c1ba6388fdd5163aaff5f",
+      "expectedStatus": 0,
+      "pass": false,
+      "status": null,
+      "signal": "SIGTERM",
+      "killed": true,
+      "timedOut": true,
+      "outputLimited": false,
+      "interrupted": null,
+      "error": {
+        "code": null,
+        "message": "Command failed: C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\target\\release-fast\\sjulia.exe C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_square_solve.jl\n"
+      },
+      "stdout": "",
+      "stderr": "",
+      "durationMs": 122526.03850000001
+    },
+    {
+      "name": "basis_rectangular_solve",
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_rectangular_solve.jl",
+      "mode": "file",
+      "fixtureSHA256": "a0e9303232b836682c004ee45c6f0e3c765351415b598b299e45672695b93526",
+      "invocation": [
+        "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_rectangular_solve.jl"
+      ],
+      "executedSourceSHA256": "a0e9303232b836682c004ee45c6f0e3c765351415b598b299e45672695b93526",
+      "expectedStatus": 0,
+      "pass": true,
+      "status": 0,
+      "signal": null,
+      "killed": false,
+      "timedOut": false,
+      "outputLimited": false,
+      "interrupted": null,
+      "error": null,
+      "stdout": "Test Set: Basis rectangular solves (BASIS-001)\n  Test Passed: length(x) == 2\n  Test Passed: size(x) == (2,)\n  Test Passed: isapprox(x, [7.0 / 6.0, 0.5]; atol = 1e-12)\n  Test Passed: norm(transpose(A) * (A * x - b)) < 1e-12\n  Test Passed: isapprox(F \\ b, x; atol = 1e-12)\n  Test Passed: size(X) == (2, 2)\n  Test Passed: isapprox(F \\ B, X; atol = 1e-12)\n  Test Passed: isapprox(X[:, 2], 2.0 * x; atol = 1e-12)\n  Test Passed: isapprox(T \\ tb, [1.0, 2.0]; atol = 1e-6)\n  Test Passed: isapprox(dx, [17.0 / 70.0, 17.0 / 35.0]; atol = 1e-12)\n  Test Passed: norm(transpose(D) * (D * dx - db)) < 1e-12\n  Test Passed: abs(dot(dx, [-2.0, 1.0])) < 1e-12\n  Test Passed: isapprox(svd(D) \\ db, dx; atol = 1e-12)\n  Test Passed: isapprox(svd(D) \\ DB, D \\ DB; atol = 1e-12)\n  Test Passed: size(wx) == (3,)\n  Test Passed: isapprox(wx, [0.0, 1.0, 1.0]; atol = 1e-12)\n  Test Passed: isapprox(W * wx, wb; atol = 1e-12)\n  Test Passed: abs(dot(wx, [-1.0, -1.0, 1.0])) < 1e-12\n  Test Passed: expression throws expected exception; Thrown: DimensionMismatch: DimensionMismatch: QR solve requires at least as many rows as columns\n  Test Passed: isapprox(W \\ WB, [0.0 1.0; 1.0 0.0; 1.0 1.0]; atol = 1e-12)\n  Test Passed: isapprox(zeros(3, 2) \\ ones(3), zeros(2); atol = 1e-12)\n  Test Passed: isnan(zx[1]) && isnan(zx[2])\n  22 passed, 0 failed (22 total)\n",
+      "stderr": "",
+      "durationMs": 8072.949299999993
+    },
+    {
+      "name": "basis_solve_errors_shapes",
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_solve_errors_shapes.jl",
+      "mode": "file",
+      "fixtureSHA256": "4afaeb859583fa16fbf1201851f45be89df0e618a7a311c920affee914f64521",
+      "invocation": [
+        "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\linalg\\basis_solve_errors_shapes.jl"
+      ],
+      "executedSourceSHA256": "4afaeb859583fa16fbf1201851f45be89df0e618a7a311c920affee914f64521",
+      "expectedStatus": 0,
+      "pass": true,
+      "status": 0,
+      "signal": null,
+      "killed": false,
+      "timedOut": false,
+      "outputLimited": false,
+      "interrupted": null,
+      "error": null,
+      "stdout": "Test Set: Basis solve errors and shapes (BASIS-001)\n  Test Passed: expression throws expected exception; Thrown: DimensionMismatch: DimensionMismatch: matrix has 2 rows, but right hand side has 3 rows\n  Test Passed: expression throws expected exception; Thrown: DimensionMismatch: DimensionMismatch: matrix has 2 rows, but right hand side has 3 rows\n  Test Passed: expression throws expected exception; Thrown: DimensionMismatch: DimensionMismatch: matrix has 2 rows, but right hand side has 1 rows\n  Test Passed: expression throws expected exception; Thrown: DimensionMismatch: DimensionMismatch: matrix has 2 rows, but right hand side has 1 rows\n  Test Passed: expression throws expected exception; Thrown: DimensionMismatch: DimensionMismatch: matrix has 2 rows, but right hand side has 1 rows\n  Test Passed: expression throws expected exception; Thrown: SingularException: SingularException\n  Test Passed: expression throws expected exception; Thrown: SingularException: SingularException\n  Test Passed: expression throws expected exception; Thrown: ArgumentError: ArgumentError: matrix contains Infs or NaNs\n  Test Passed: size(A \\ zeros(2, 0)) == (2, 0)\n  Test Passed: size([1.0 0.0; 1.0 1.0; 1.0 2.0] \\ zeros(3, 0)) == (2, 0)\n  Test Passed: size(zeros(0, 2) \\ zeros(0)) == (2,)\n  Test Passed: size(zeros(3, 0) \\ ones(3)) == (0,)\n  Test Passed: size(zeros(0, 2) \\ zeros(0, 3)) == (2, 3)\n  Test Passed: size(zeros(0, 0) \\ zeros(0, 2)) == (0, 2)\n  14 passed, 0 failed (14 total)\n",
+      "stderr": "",
+      "durationMs": 6103.0129000000015
+    },
+    {
+      "name": "vec_1d",
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\array\\vec_1d.jl",
+      "mode": "file",
+      "fixtureSHA256": "194c104ccc48f25e48e4790b2df2e42f188e2ec6d94a44eaf9d24b0d80175b7d",
+      "invocation": [
+        "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\array\\vec_1d.jl"
+      ],
+      "executedSourceSHA256": "194c104ccc48f25e48e4790b2df2e42f188e2ec6d94a44eaf9d24b0d80175b7d",
+      "expectedStatus": 0,
+      "pass": true,
+      "status": 0,
+      "signal": null,
+      "killed": false,
+      "timedOut": false,
+      "outputLimited": false,
+      "interrupted": null,
+      "error": null,
+      "stdout": "Test Set: vec: flatten 1D preserves length (Int64)\n  Test Passed: (length(b)) == 4\n  Test Passed: size(b) == (4,)\n  Test Passed: b === a\n  3 passed, 0 failed (3 total)\n",
+      "stderr": "",
+      "durationMs": 2025.5627999999851
+    },
+    {
+      "name": "vec_2d",
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\array\\vec_2d.jl",
+      "mode": "file",
+      "fixtureSHA256": "036587e0024f652261cee00f568dbd2cbf5ead5b639ea96a14f4a78073c034d1",
+      "invocation": [
+        "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss\\subset_julia_vm\\tests\\fixtures\\array\\vec_2d.jl"
+      ],
+      "executedSourceSHA256": "036587e0024f652261cee00f568dbd2cbf5ead5b639ea96a14f4a78073c034d1",
+      "expectedStatus": 0,
+      "pass": true,
+      "status": 0,
+      "signal": null,
+      "killed": false,
+      "timedOut": false,
+      "outputLimited": false,
+      "interrupted": null,
+      "error": null,
+      "stdout": "Test Set: vec: flatten 2D matrix (column-major)\n  Test Passed: (v[3]) == 3.0\n  Test Passed: size(v) == (6,)\n  Test Passed: v == [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]\n  Test Passed: m[2, 1] == 20.0\n  Test Passed: v[3] == 30.0\n  Test Passed: size(vec(zeros(0, 3))) == (0,)\n  6 passed, 0 failed (6 total)\n",
+      "stderr": "",
+      "durationMs": 2108.2842999999993
+    },
+    {
+      "name": "conditioning-sweep",
+      "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\subset_julia\\basis-probes\\fixtures\\conditioning-sweep.jl",
+      "mode": "expression",
+      "fixtureSHA256": "1cc519d0e7b602a7ef8ec610140db09d7e457e59a25875b2957065e56536b540",
+      "invocation": [
+        "-e",
+        "using LinearAlgebra\nfunction scaled_sensitivity(epsilon)\n    A = [1.0 1.0; 0.0 epsilon]\n    b = [2.0, epsilon]\n    x = A \\ b\n    y = A \\ (b + [0.0, epsilon])\n    return norm(y - x) / norm(x)\nend\nepsilons = [1.0e-2, 1.0e-4, 1.0e-6]\nchanges = zeros(3)\nfor i in 1:length(epsilons)\n    changes[i] = scaled_sensitivity(epsilons[i])\nend\nchanges\n\nusing Test\n@test isapprox(changes, [1.0, 1.0, 1.0]; atol=1e-10, rtol=1e-9)\nprintln(\"__BASIS_CONDITIONING_PASS__\")\n"
+      ],
+      "executedSourceSHA256": "0ad1e97315ee51b388c326c4575fb3701cd2647e316d2bc702fd76eb5adfb685",
+      "expectedStatus": 0,
+      "pass": false,
+      "status": 1,
+      "signal": null,
+      "killed": false,
+      "timedOut": false,
+      "outputLimited": false,
+      "interrupted": null,
+      "error": {
+        "code": 1,
+        "message": "Command failed: C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\target\\release-fast\\sjulia.exe -e using LinearAlgebra\nfunction scaled_sensitivity(epsilon)\n    A = [1.0 1.0; 0.0 epsilon]\n    b = [2.0, epsilon]\n    x = A \\ b\n    y = A \\ (b + [0.0, epsilon])\n    return norm(y - x) / norm(x)\nend\nepsilons = [1.0e-2, 1.0e-4, 1.0e-6]\nchanges = zeros(3)\nfor i in 1:length(epsilons)\n    changes[i] = scaled_sensitivity(epsilons[i])\nend\nchanges\n\nusing Test\n@test isapprox(changes, [1.0, 1.0, 1.0]; atol=1e-10, rtol=1e-9)\nprintln(\"__BASIS_CONDITIONING_PASS__\")\n\nRuntime error: UndefVarError: `Unbound type parameter: T` not defined\nStacktrace:\n [1] zero()\n [2] zeros()\n [3] LinearAlgebra._solve_zeros()\n   @ Main ./none:1546\n [4] LinearAlgebra._back_substitute()\n   @ Main ./none:1591\n [5] LinearAlgebra._matrix_solve()\n   @ Main ./none:1673\n [6] LinearAlgebra.\\()\n   @ Main ./none:1694\n [7] scaled_sensitivity()\n   @ Main ./none:5\n"
+      },
+      "stdout": "",
+      "stderr": "Runtime error: UndefVarError: `Unbound type parameter: T` not defined\nStacktrace:\n [1] zero()\n [2] zeros()\n [3] LinearAlgebra._solve_zeros()\n   @ Main ./none:1546\n [4] LinearAlgebra._back_substitute()\n   @ Main ./none:1591\n [5] LinearAlgebra._matrix_solve()\n   @ Main ./none:1673\n [6] LinearAlgebra.\\()\n   @ Main ./none:1694\n [7] scaled_sensitivity()\n   @ Main ./none:5\n",
+      "durationMs": 4867.036699999997
+    }
+  ],
+  "binary": {
+    "path": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\target\\release-fast\\sjulia.exe",
+    "sha256": "dbcdb49b95cf2ac7ab41125559c259c6b5c0f27ba97fd4ee54d0d4d3e38767b0"
+  },
+  "source": {
+    "directory": "C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\upstream\\julia-vm-oss",
+    "revision": "4fde7027e533214e9e97c0799b523bc6ee7d1396",
+    "branch": "basis/offline-scope",
+    "status": "M subset_julia_vm/src/julia/base/array.jl\n M subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl\n M subset_julia_vm/tests/fixtures/array/vec_1d.jl\n M subset_julia_vm/tests/fixtures/array/vec_2d.jl\n M subset_julia_vm/tests/fixtures/linalg/manifest.toml\n M subset_julia_vm_vm/src/vm/builtins_linalg.rs\n?? docs/vm/BASIS_SOLVES.md\n?? scripts/basis_solve_oracle.jl\n?? scripts/basis_wasm_injection.mjs\n?? subset_julia_vm/tests/fixtures/linalg/basis_rectangular_solve.jl\n?? subset_julia_vm/tests/fixtures/linalg/basis_solve_errors_shapes.jl\n?? subset_julia_vm/tests/fixtures/linalg/basis_square_solve.jl",
+    "trackedPatchSHA256": "275bc7cb9a808075f24585b32533dcfe1a794a5bc8351aa5a6d88c9ca6a6d792",
+    "files": {
+      "Cargo.lock": "7b5a6b81450760f4721acde481fd74586dab4715a65b920bfbb39da781c39a13",
+      "Cargo.toml": "81b8aa1b64a360f1ee5fc503c9166e4fcbb3c3fe951c3f9a297e1594ec2ef0c8",
+      "scripts/basis_solve_oracle.jl": "f061ee88b5663051bb0f291081c31f026b2034838276aeb2acf663a11293f15c",
+      "subset_julia_vm/src/bin/sjulia.rs": "78a2659933cc3cc2f5e930876c76131bc2c9309a1f765f5ffd939b0bb1a98acc",
+      "subset_julia_vm/src/bin/sjulia/runners.rs": "a6e18cc956b2e0c81eedf8e6515964659ffcd694d265e011221c13aca14ad5e4",
+      "subset_julia_vm/src/julia/base/array.jl": "bc2ba6fdce0337de5fd24e64ca705a9f939e2f073e4f956303061152136ae4ea",
+      "subset_julia_vm/src/julia/stdlib/LinearAlgebra/src/LinearAlgebra.jl": "ced92389182d110d13b08c0a854b2ba59de40ce4ac355170ea0054af451817e6",
+      "subset_julia_vm/tests/fixtures/array/vec_1d.jl": "194c104ccc48f25e48e4790b2df2e42f188e2ec6d94a44eaf9d24b0d80175b7d",
+      "subset_julia_vm/tests/fixtures/array/vec_2d.jl": "036587e0024f652261cee00f568dbd2cbf5ead5b639ea96a14f4a78073c034d1",
+      "subset_julia_vm/tests/fixtures/linalg/basis_rectangular_solve.jl": "a0e9303232b836682c004ee45c6f0e3c765351415b598b299e45672695b93526",
+      "subset_julia_vm/tests/fixtures/linalg/basis_solve_errors_shapes.jl": "4afaeb859583fa16fbf1201851f45be89df0e618a7a311c920affee914f64521",
+      "subset_julia_vm/tests/fixtures/linalg/basis_square_solve.jl": "0b87939022669a3df3f404fe19c0c9573ed05d7ad83c1ba6388fdd5163aaff5f",
+      "subset_julia_vm/tests/fixtures/linalg/manifest.toml": "6e02c9eacbcf1c8ce21a2fc45fefc6639f2178255dfc0d3e0858451280a746b8",
+      "subset_julia_vm_vm/src/vm/builtins_linalg.rs": "646155042beb7497d23162b3a53f6141d8c03c31bb8a8dc3b3a7d396ba6b3865"
+    },
+    "note": "Hashes capture the current source snapshot; build provenance is required separately to tie it to the executable."
+  },
+  "runnerSHA256": "1c06cda25ef8333408805db77a4bcdd1402f1dc6a5702c2bf93faf21a508765e",
+  "failureControl": {
+    "source": "using Test\n@test false\n",
+    "sourceSHA256": "11e747e414c14947fc7a3989ca9a75fa69ef826fbc22d85cf57a692b62606ac0",
+    "expectedStatus": 1,
+    "pass": true,
+    "status": 1,
+    "signal": null,
+    "killed": false,
+    "timedOut": false,
+    "outputLimited": false,
+    "interrupted": null,
+    "error": {
+      "code": 1,
+      "message": "Command failed: C:\\Users\\david\\Documents\\IOS Shortcut\\basis\\runtime-build\\target\\release-fast\\sjulia.exe -e using Test\n@test false\n\n"
+    },
+    "stdout": "  Test Failed: false\n",
+    "stderr": "",
+    "durationMs": 1936.5713000000105
+  },
+  "completedAt": "2026-09-26T18:27:05.341Z",
+  "summary": {
+    "selected": 6,
+    "executed": 6,
+    "passed": 4,
+    "failures": 2,
+    "completeFixtureSelection": true,
+    "failureControlSkipped": false,
+    "interrupted": null,
+    "pass": false,
+    "fullGatePass": false
+  }
+}
